@@ -1048,6 +1048,20 @@ select:focus {
     outline-offset: 2px;
 }
 
+/* Outline button (used for secondary actions like Ask a Question) */
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
 /* Reduced motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -1059,6 +1073,13 @@ select:focus {
     html {
         scroll-behavior: auto;
     }
+}
+
+/* Limit line length for service text on the services page for readability */
+#services-list .service-content,
+#services-list .service-description p,
+#services-list .service-summary {
+    max-width: 70ch;
 }
 
 /* Print styles */
@@ -1260,10 +1281,29 @@ select:focus {
     font-weight: bold;
 }
 
+/* Chip styling for "Who It Helps" so it reads better */
+.helps-list li {
+    padding-left: 0;
+    position: static;
+    margin-bottom: 0;
+    background: var(--background-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 6px 12px;
+}
+
+.helps-list li::before { content: none; }
+
+/* Keep footer logo a sensible size */
+.footer-logo-img {
+    height: 36px;
+    width: auto;
+}
+
 .helps-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-sm);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
 }
 
 .service-actions {
