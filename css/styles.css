@@ -1190,6 +1190,75 @@ select:focus {
     transition: var(--transition);
 }
 
+/* Image overlay for "More about this treatment" */
+#services-list .service-image { position: relative; }
+#services-list .service-overlay {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    z-index: 2;
+}
+#services-list .service-overlay summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: var(--space-md);
+    padding: 8px 14px;
+    background: rgba(43, 43, 43, 0.6);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    backdrop-filter: blur(4px);
+}
+#services-list .service-overlay summary::-webkit-details-marker { display: none; }
+#services-list .service-overlay[open] summary { background: rgba(43, 43, 43, 0.8); }
+
+#services-list .service-overlay .overlay-content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.65) 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2xl);
+}
+#services-list .service-overlay:not([open]) .overlay-content { display: none; }
+
+#services-list .service-overlay .overlay-inner {
+    max-width: 720px;
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    padding: var(--space-xl) var(--space-2xl);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+#services-list .service-overlay h4,
+#services-list .service-overlay h5,
+#services-list .service-overlay p,
+#services-list .service-overlay li { color: #fff; }
+#services-list .service-overlay ul { list-style: disc; padding-left: 1.25rem; }
+
+#services-list .service-overlay .overlay-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+#services-list .service-overlay .overlay-close:hover {
+    background: rgba(255,255,255,0.25);
+}
+
 .service-card:hover .service-image img {
     transform: scale(1.05);
 }
@@ -1266,6 +1335,13 @@ select:focus {
     border-radius: 999px;
     padding: 6px 12px;
     font-size: 0.95rem;
+}
+
+/* Tick styling for benefits list */
+.benefit-item .tick {
+    color: var(--primary-color);
+    font-weight: 800;
+    line-height: 1;
 }
 
 /* Inline SVG icon styling */
@@ -1383,6 +1459,7 @@ select:focus {
 }
 
 .helps-list li::before { content: none; }
+.helps-list { list-style: none; padding-left: 0; }
 
 /* Keep footer logo a sensible size */
 .footer-logo-img {
