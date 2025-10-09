@@ -1245,6 +1245,75 @@ select:focus {
     font-style: italic;
 }
 
+/* Condensed services */
+.clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-clamp: 2; }
+.clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-clamp: 3; }
+
+.benefits-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    list-style: none;
+}
+
+.benefit-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--background-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+}
+
+.meta-chip {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.meta-chip.price { color: var(--primary-color); border-color: var(--primary-color); font-weight: 700; }
+
+.service-tags { margin: var(--space-lg) 0; }
+.tags-title { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: var(--space-sm); }
+
+.service-details {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-alt);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.service-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-color);
+    list-style: none;
+}
+
+.service-details summary::-webkit-details-marker { display: none; }
+
+.service-details summary::after {
+    content: '▾';
+    margin-left: var(--space-sm);
+    transition: transform 0.2s ease;
+}
+
+.service-details[open] summary::after { transform: rotate(180deg); }
+
+.service-details .details-body { margin-top: var(--space-md); }
+
+/* Service card image height alignment */
+#services-list .service-image { height: 260px; }
+#services-list .service-image img { height: 100%; object-fit: cover; }
+
 .service-description {
     margin-bottom: var(--space-xl);
 }

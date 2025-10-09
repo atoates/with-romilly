@@ -22,7 +22,9 @@ function displayServices(services) {
     const servicesGrid = document.getElementById('services-grid');
     if (!servicesGrid) return;
     
-    servicesGrid.innerHTML = services.map(service => `
+    servicesGrid.innerHTML = services.map(service => {
+        const topBenefits = (service.bullets || []).slice(0, 3);
+        return `
         <div class="service-card" id="${service.slug}">
             <div class="service-image">
                 <img src="${service.heroImage}" alt="${service.title}" loading="lazy">
@@ -31,33 +33,46 @@ function displayServices(services) {
                 <div class="service-header">
                     <h3 class="service-title">${service.title}</h3>
                     <div class="service-meta">
-                        <span class="service-duration">${service.duration}</span>
-                        <span class="service-price">£${service.price}</span>
+                        <span class="meta-chip duration" aria-label="duration">${service.duration}</span>
+                        <span class="meta-chip price" aria-label="price">\u00a3${service.price}</span>
                     </div>
                 </div>
-                <p class="service-summary">${service.summary}</p>
-                <div class="service-description">
-                    <p>${service.description}</p>
-                </div>
-                <div class="service-benefits">
-                    <h4>Key Benefits:</h4>
-                    <ul>
-                        ${service.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
-                    </ul>
-                </div>
-                <div class="service-helps">
-                    <h4>Who It Helps:</h4>
+                <p class="service-summary clamp-3">${service.summary}</p>
+
+                ${topBenefits.length ? `
+                <ul class="benefits-inline" aria-label="Key benefits">
+                    ${topBenefits.map(b => `<li class="benefit-item">${benefitIcon(b)}<span>${b}</span></li>`).join('')}
+                </ul>` : ''}
+
+                ${(service.whoItHelps && service.whoItHelps.length) ? `
+                <div class="service-tags" aria-label="Who it helps">
+                    <h4 class="tags-title">Who it helps</h4>
                     <ul class="helps-list">
                         ${service.whoItHelps.map(help => `<li>${help}</li>`).join('')}
                     </ul>
-                </div>
+                </div>` : ''}
+
+                <details class="service-details">
+                    <summary>More about this treatment</summary>
+                    <div class="details-body">
+                        <div class="service-description"><p>${service.description}</p></div>
+                        ${(service.bullets && service.bullets.length) ? `
+                        <div class="service-benefits-full">
+                            <h4>Key benefits</h4>
+                            <ul>
+                                ${service.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                            </ul>
+                        </div>` : ''}
+                    </div>
+                </details>
+
                 <div class="service-actions">
                     <a href="book.html" class="btn btn-primary">Book This Service</a>
                     <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
                 </div>
             </div>
-        </div>
-    `).join('');
+        </div>`;
+    }).join('');
     
     // Add animation
     const serviceCards = document.querySelectorAll('.service-card');
@@ -68,6 +83,19 @@ function displayServices(services) {
 
     // Render TOC for quick navigation
     renderServicesToc(services);
+}
+
+// Map benefit text to a simple icon (emoji) for quick visual scanning
+function benefitIcon(text) {
+    const t = text.toLowerCase();
+    if (/(calm|relax|stress|anxiety|sleep|rest)/.test(t)) return '😌';
+    if (/(skin|glow|face|rejuvenat)/.test(t)) return '✨';
+    if (/(balance|hormone|cycle|peri|meno)/.test(t)) return '⚖️';
+    if (/(pain|aches|tension|migraine|headache)/.test(t)) return '🩹';
+    if (/(energy|circulation|detox)/.test(t)) return '🌿';
+    if (/(pregnan|fertilit|pre\-?concept)/.test(t)) return '🤰';
+    if (/(sleep)/.test(t)) return '🛌';
+    return '✓';
 }
 
 function renderServicesToc(services) {
