@@ -43,32 +43,42 @@
     </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-wrapper">
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
                 <a href="index.html" class="nav-logo">
                     <img src="assets/images/infinity-no-bg-logo.webp" alt="With Romilly" class="nav-logo-img">
                     <span class="nav-logo-text">With Romilly</span>
                 </a>
-                
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="services.html" class="nav-link active">Services</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="recommends.html" class="nav-link">Recommends</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="book.html" class="btn btn-primary nav-cta">Book Now</a>
-                </div>
-                
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link active">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="recommends.html" class="nav-link">Recommends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="book.html" class="btn btn-primary nav-cta">Book Now</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -80,40 +90,15 @@
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="services-detail">
+    <!-- Services Grid (clean layout) -->
+    <section class="section section-alt">
         <div class="container">
             <div class="services-grid" id="services-grid">
                 <!-- Services will be loaded dynamically -->
             </div>
-        </div>
-    </section>
-
-    <!-- Book Section -->
-    <section id="book" class="book">
-        <div class="container">
-            <div class="book-content">
-                <h2 class="section-title">Book Your Session</h2>
-                <p class="section-subtitle">Ready to begin your journey to wellness? Get in touch to book your reflexology session.</p>
-                
-                <div class="book-methods">
-                    <div class="book-method">
-                        <h3>Call or Text</h3>
-                        <p>Speak directly with Romilly</p>
-                        <a href="tel:+447974182612" class="btn btn-primary">07974 182 612</a>
-                    </div>
-                    
-                    <div class="book-method">
-                        <h3>Email</h3>
-                        <p>Send us a message</p>
-                        <a href="mailto:withromilly@gmail.com" class="btn btn-outline">withromilly@gmail.com</a>
-                    </div>
-                </div>
-                
-                <div class="contact-note">
-                    <p><strong>Location:</strong> 43 Croxley Road, Queens Park, W9 3HJ, London</p>
-                    <p><strong>Please note:</strong> All treatments require advance booking. We'll confirm your appointment via phone or email.</p>
-                </div>
+            <div class="btn-group" style="margin-top: var(--space-3xl);">
+                <a href="book.html" class="btn btn-primary">Book a Treatment</a>
+                <a href="contact.html" class="btn btn-secondary">Ask a Question</a>
             </div>
         </div>
     </section>
@@ -154,6 +139,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="js/script.js"></script>
     <script src="js/services.js"></script>
 </body>
 </html>
