@@ -85,17 +85,38 @@ function displayServices(services) {
     renderServicesToc(services);
 }
 
-// Map benefit text to a simple icon (emoji) for quick visual scanning
+// Map benefit text to an inline SVG icon for consistent visuals
 function benefitIcon(text) {
-    const t = text.toLowerCase();
-    if (/(calm|relax|stress|anxiety|sleep|rest)/.test(t)) return '😌';
-    if (/(skin|glow|face|rejuvenat)/.test(t)) return '✨';
-    if (/(balance|hormone|cycle|peri|meno)/.test(t)) return '⚖️';
-    if (/(pain|aches|tension|migraine|headache)/.test(t)) return '🩹';
-    if (/(energy|circulation|detox)/.test(t)) return '🌿';
-    if (/(pregnan|fertilit|pre\-?concept)/.test(t)) return '🤰';
-    if (/(sleep)/.test(t)) return '🛌';
-    return '✓';
+    const t = (text || '').toLowerCase();
+    const icon = (name) => {
+        switch (name) {
+            case 'calm': // relaxing/calm
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12c4 0 6-6 9-6s5 6 9 6"/><path d="M3 17c4 0 6-3 9-3s5 3 9 3"/></svg></span>';
+            case 'skin': // skin/face/glow
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></span>';
+            case 'balance': // balance/hormones
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M6 7h12"/><path d="M5 7l-3 3 3 3 3-3-3-3z"/><path d="M19 7l-3 3 3 3 3-3-3-3z"/></svg></span>';
+            case 'pain': // pain/aches
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M2 12h20"/></svg></span>';
+            case 'energy': // energy/circulation/detox
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></span>';
+            case 'pregnancy':
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6-3.5-6-8a6 6 0 1 1 12 0c0 4.5-6 8-6 8z"/></svg></span>';
+            case 'sleep':
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 1 1-8-8 6 6 0 0 0 8 8z"/></svg></span>';
+            default: // check
+                return '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>';
+        }
+    };
+
+    if (/(calm|relax|stress|anxiety|rest)/.test(t)) return icon('calm');
+    if (/(skin|glow|face|rejuvenat)/.test(t)) return icon('skin');
+    if (/(balance|hormone|cycle|peri|meno)/.test(t)) return icon('balance');
+    if (/(pain|aches|tension|migraine|headache)/.test(t)) return icon('pain');
+    if (/(energy|circulation|detox)/.test(t)) return icon('energy');
+    if (/(pregnan|fertilit|pre\-?concept)/.test(t)) return icon('pregnancy');
+    if (/(sleep)/.test(t)) return icon('sleep');
+    return icon('default');
 }
 
 function renderServicesToc(services) {
