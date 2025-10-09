@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load services for quick reference
 async function loadServicesQuickRef() {
     try {
-        const response = await fetch('/src/data/content.json');
+        const response = await fetch('src/data/content.json');
         const data = await response.json();
         
         displayServicesQuickRef(data.services);

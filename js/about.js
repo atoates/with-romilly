@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load and display about content
 async function loadAboutContent() {
     try {
-        const response = await fetch('/src/data/content.json');
+        const response = await fetch('src/data/content.json');
         const data = await response.json();
         
         displayAboutStory(data.about);

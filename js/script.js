@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load and render content data
 async function loadContentData() {
     try {
-        const response = await fetch('/src/data/content.json');
+        const response = await fetch('src/data/content.json');
         const data = await response.json();
         
         renderServices(data.services);

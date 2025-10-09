@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load and display services
 async function loadServices() {
     try {
-        const response = await fetch('/src/data/content.json');
+        const response = await fetch('src/data/content.json');
         const data = await response.json();
         
         displayServices(data.services);
@@ -52,7 +52,7 @@ function displayServices(services) {
                     </ul>
                 </div>
                 <div class="service-actions">
-                    <a href="/book.html" class="btn btn-primary">Book This Service</a>
+                    <a href="book.html" class="btn btn-primary">Book This Service</a>
                     <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
                 </div>
             </div>

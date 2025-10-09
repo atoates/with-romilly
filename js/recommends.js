@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load and display products
 async function loadProducts() {
     try {
-        const response = await fetch('/src/data/content.json');
+        const response = await fetch('src/data/content.json');
         const data = await response.json();
         
         displayProducts(data.recommends);
