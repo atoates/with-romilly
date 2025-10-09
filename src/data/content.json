@@ -5,7 +5,7 @@
     "email": "withromilly@gmail.com",
     "phone": "+44 7974 182 612",
     "phoneDisplay": "07974 182 612",
-    "location": "Queen's Park, W9 3HJ, London",
+    "location": "43 Croxley Road, Queens Park, W9 3HJ, London",
     "social": { 
       "instagram": "https://instagram.com/with_romilly" 
     }
@@ -17,19 +17,20 @@
       "duration": "50 min",
       "price": 75,
       "heroImage": "/assets/images/service_reflexology.jpg",
-      "summary": "Deeply relaxing and restorative; supports nervous and immune systems, encourages detoxification.",
-      "description": "A deeply relaxing, non-invasive therapy that supports the nervous and immune systems, encourages detoxification and restores balance. By stimulating reflex points mapped to the body's organs and systems, Reflexology helps release stagnation and promotes natural healing.",
+      "summary": "Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.",
+      "description": "Reflexology is a well-established, non-invasive complementary therapy which is recognised by the NHS and many hospices. It is a deeply relaxing and stress relieving therapy which can help a wide-range of mental and physical conditions as well as aiding detoxification. It is well known to calm the nervous system and boost the immune system. The body's organs, glands and systems are mapped on our feet, hands and face, and by stimulating these reflex points with reflexology it un-blocks any stagnation, restores balance and promotes the body's own healing processes. Reflexology encourages the body to return to a state of homeostasis and brings it back to optimum health. Each treatment promotes the release of endorphins in the body (feel good hormones), improves circulation and boosts mood and wellbeing.",
       "bullets": [
         "Calms the nervous system and boosts immunity",
         "Stimulates mapped reflex points to release stagnation",
-        "Promotes the body's natural healing"
+        "Promotes the body's natural healing processes",
+        "Improves circulation and boosts mood and wellbeing"
       ],
       "whoItHelps": [
         "Stress and anxiety",
         "Sleep disorders",
         "Digestive issues",
         "Circulation problems",
-        "General wellbeing"
+        "General wellbeing and detoxification"
       ]
     },
     {
@@ -38,19 +39,20 @@
       "duration": "45 min",
       "price": 80,
       "heroImage": "/assets/images/service_Facial_reflexology.png",
-      "summary": "Powerfully calming; boosts circulation, eases tension and rejuvenates skin.",
-      "description": "Combines cleanse, hot towel steam and luxury facial massage. Powerfully calming for the nervous system due to proximity to cranial nerves; boosts circulation, eases tension and rejuvenates skin for a radiant, relaxed complexion.",
+      "summary": "Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.",
+      "description": "Facial Reflexology has the same benefits and principles of foot reflexology and due to the face's close proximity to the brain and cranial nerves, it is very powerful in regards to the level of relaxation and the impact on the body's systems. It helps open up neural pathways, helping to reduce stress levels. Each treatment includes a cleanse, hot towel steam and luxury massage. Facial Reflexology boosts circulation, reduces muscle tension and relieves congestion. It releases emotions held in the face, soothing the nervous system to reduce stress and anxiety and has the added benefit of rejuvenating the skin leaving you calm and radiant.",
       "bullets": [
         "Cleanse, hot towel steam and luxury facial massage",
         "Supports cranial nerves for deep relaxation",
-        "Radiant, calm complexion"
+        "Releases emotions held in the face",
+        "Rejuvenates skin for a radiant, calm complexion"
       ],
       "whoItHelps": [
-        "Facial tension and TMJ",
-        "Headaches and migraines",
-        "Sinus congestion",
-        "Skin concerns",
-        "Stress relief"
+        "Migraines and headaches",
+        "Teeth grinding",
+        "Sinusitis and hay fever",
+        "Bell's palsy",
+        "Stress and anxiety"
       ]
     },
     {
@@ -59,18 +61,19 @@
       "duration": "50 min",
       "price": 75,
       "heroImage": "/assets/images/service_Preconceptual_reflexology .png",
-      "summary": "Supports hormonal balance, reduces stress and helps during pregnancy.",
-      "description": "Supports hormonal balance, reduces stress and prepares the body for conception and a healthy pregnancy. During pregnancy, it helps ease common symptoms and maintain equilibrium. Post-partum, it aids recovery and re-balancing.",
+      "summary": "Supports hormonal balance, reduces stress and helps during conception and pregnancy.",
+      "description": "One of the major ways that Reflexology helps couples to conceive is by reducing stress and balancing hormones because stress and hormonal imbalances can have a major impact on a couple's chance of conceiving. Pre-conceptual Reflexology helps to create the perfect body ecology for a viable and healthy pregnancy. By stimulating certain reflex points, we help balance the endocrine system (responsible for hormonal health). Reflexology gives your body a re-boot - kick-starting the reproductive system, regulating hormonal functions and aiding detoxification so that you are in the best stead for a successful conception. Throughout your pregnancy, reflexology helps reduce aches and pains and brings balance to your mind and body. Reflexology can be helpful post-partum to re-energise, re-balance and aid healing.",
       "bullets": [
-        "Prepares the body for conception",
-        "Eases pregnancy symptoms naturally",
-        "Supports post-partum recovery"
+        "Balances hormones and reduces stress for conception",
+        "Creates optimal body ecology for healthy pregnancy",
+        "Reduces pregnancy aches, pains and morning sickness",
+        "Supports post-partum recovery and re-balancing"
       ],
       "notes": ["Not carried out in the first trimester."],
       "whoItHelps": [
-        "Trying to conceive",
+        "Couples trying to conceive",
         "Pregnancy nausea and fatigue",
-        "Anxiety during pregnancy",
+        "Pregnancy aches and pains",
         "Post-partum recovery",
         "Hormonal imbalances"
       ]
@@ -81,19 +84,20 @@
       "duration": "60 min",
       "price": 95,
       "heroImage": "/assets/images/service_Zone_Face_Lift.png",
-      "summary": "Award-winning holistic facial; lifts, sculpts and revives with a natural glow.",
-      "description": "An award-winning holistic facial combining facial reflexology, sculpting Gua Sha and specialised massage. Promotes collagen and elastin, de-puffs and lifts for a brighter appearance — while leaving you deeply relaxed.",
+      "summary": "Award-winning holistic facial combining reflexology, Gua Sha and massage techniques for natural lifting.",
+      "description": "The Zone Face Lift facial is an award-winning therapy developed by Ziggie Bergman which has been hailed a credible alternative to Botox. It is a kinder holistic approach to helping you naturally look your best. The results speak for themselves! Each treatment starts with a cleanse, hot towel steam and luxury massage. ZFL combines pressure-point massage, sculpting Gua Sha, along with Native American and Asian massage techniques to gently release emotions held in the face. You will leave the session feeling revived and with a more youthful and 'bright' appearance. Zone Face Lift promotes collagen and elastin production and helps to de-puff the face. It sculpts and smooths your skin, lifts the face and neck, and leaves you feeling deeply relaxed with a truly healthy glow.",
       "bullets": [
-        "Facial reflexology, sculpting Gua Sha and specialised massage",
-        "Promotes collagen and elastin",
-        "De-puffs and lifts face and neck"
+        "Combines facial reflexology, Gua Sha and massage techniques",
+        "Promotes collagen and elastin production",
+        "De-puffs and lifts face and neck naturally",
+        "Releases emotions held in the face"
       ],
       "whoItHelps": [
-        "Signs of ageing",
-        "Facial puffiness",
+        "Signs of ageing and fine lines",
+        "Facial puffiness and tension",
         "Dull complexion",
-        "Muscle tension",
-        "Overall skin health"
+        "Emotional stress held in face",
+        "Overall skin health and glow"
       ]
     }
   ],
@@ -105,7 +109,7 @@
   },
   "testimonials": [
     {
-      "quote": "Romilly's treatments are so therapeutic — I could feel the tension melting away. After 4 sessions I felt physically rejuvenated and emotionally refreshed.",
+      "quote": "Romilly's treatments are so therapeutic, and I can feel the tension melting away throughout each session. After 4 sessions my symptoms really improved and I felt not only physically rejuvenated but also mentally and emotionally refreshed. Romilly has a remarkable ability to create a soothing atmosphere that instantly puts you at ease and I'd wholeheartedly recommend her to anyone seeking alternative healing, relaxation or stress relief.",
       "author": "Alexandra S"
     },
     {
@@ -144,13 +148,15 @@
     }
   ],
   "about": {
-    "short": "I'm Romilly — a qualified Reflexologist trained at the London School of Reflexology and a member of the Association of Reflexologists. I specialise in women's health across Reflexology, Facial Reflexology, Pre-conceptual & Pregnancy Reflexology, and Zone Face Lift. My approach is gentle, restorative and tailored to help you feel calm, balanced and well.",
-    "long": "Welcome to With Romilly. I'm a qualified Reflexologist, trained at the prestigious London School of Reflexology and a member of the Association of Reflexologists. My practice focuses on women's health and wellbeing, offering a sanctuary where you can truly relax, rebalance and restore. I specialise in traditional Reflexology, Facial Reflexology, Pre-conceptual & Pregnancy Reflexology, and the award-winning Zone Face Lift technique. My approach is gentle, restorative and completely tailored to your individual needs. Whether you're seeking stress relief, support during pregnancy, or simply want to reconnect with your sense of calm, I'm here to guide you on that journey.",
+    "short": "I am a qualified Reflexology practitioner and an insured member of the Association of Reflexologists, trained at the prestigious London School of Reflexology. As well as classic Reflexology, I am trained in Pre-Conceptual and Pregnancy Reflexology, Facial Reflexology and holistic Zone Face Lift facials. I also have a diploma in Naturopathy and have a wide knowledge and interest in other complementary therapies and how they can help and heal us in different ways.",
+    "long": "I am a qualified Reflexology practitioner and an insured member of the Association of Reflexologists, trained at the prestigious London School of Reflexology. As well as classic Reflexology, I am trained in Pre-Conceptual and Pregnancy Reflexology, Facial Reflexology and holistic Zone Face Lift facials. I also have a diploma in Naturopathy and have a wide knowledge and interest in other complementary therapies and how they can help and heal us in different ways. I have a particular interest in women's health and how balancing the mind, body and emotions with Reflexology is often exactly what we need to lead a happier and healthier life. I truly believe that our bodies have the ability to heal themselves, with a little nurturing and gentle rebalancing.",
     "qualifications": [
       "Qualified Reflexologist, London School of Reflexology",
       "Member of the Association of Reflexologists",
-      "Fully insured and certified",
-      "Specialist in women's health and pregnancy"
+      "Diploma in Naturopathy",
+      "Pre-Conceptual and Pregnancy Reflexology trained",
+      "Facial Reflexology and Zone Face Lift certified",
+      "Fully insured and certified"
     ]
   }
 }
