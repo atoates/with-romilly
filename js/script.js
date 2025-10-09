@@ -138,7 +138,7 @@ function renderServices(services) {
                     <span class="service-duration">${service.duration}</span>
                     <span class="service-price">${service.price}</span>
                 </div>
-                <a href="/services/${service.slug}" class="btn btn-primary">Learn More</a>
+                <a href="services.html#${service.slug}" class="btn btn-primary">Learn More</a>
             </div>
         </div>
     `).join('');
@@ -197,7 +197,7 @@ function renderFallbackContent() {
                         <span class="service-duration">50 min</span>
                         <span class="service-price">75</span>
                     </div>
-                    <a href="/services/reflexology" class="btn btn-primary">Learn More</a>
+                    <a href="services.html#reflexology" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         `;
