@@ -52,7 +52,7 @@ function displayServices(services) {
                     </ul>
                 </div>
                 <div class="service-actions">
-                    <a href="#book" class="btn btn-primary">Book This Service</a>
+                    <a href="/book.html" class="btn btn-primary">Book This Service</a>
                     <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
                 </div>
             </div>
@@ -82,7 +82,7 @@ function displayFallbackServices() {
                 </div>
                 <p class="service-summary">Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.</p>
                 <div class="service-actions">
-                    <a href="#book" class="btn btn-primary">Book This Service</a>
+                    <a href="/book.html" class="btn btn-primary">Book This Service</a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@ function displayFallbackServices() {
                 </div>
                 <p class="service-summary">Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.</p>
                 <div class="service-actions">
-                    <a href="#book" class="btn btn-primary">Book This Service</a>
+                    <a href="/book.html" class="btn btn-primary">Book This Service</a>
                 </div>
             </div>
         </div>
