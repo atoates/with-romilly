@@ -145,10 +145,25 @@ p {
     color: var(--primary-color);
     text-decoration: none;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
 }
 
 .nav-logo:hover {
     color: var(--primary-light);
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
 }
 
 .nav-menu {
@@ -309,8 +324,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/assets/images/hero.jpg') center/cover;
-    opacity: 0.2;
+    background: linear-gradient(135deg, rgba(59, 95, 86, 0.3) 0%, rgba(168, 192, 176, 0.2) 100%);
     z-index: -1;
 }
 
@@ -501,6 +515,27 @@ p {
     max-width: 400px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    background: var(--accent-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0 auto;
+    border: 2px dashed var(--primary-color);
+}
+
+.image-placeholder small {
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
 
 .qualifications {
@@ -867,6 +902,14 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-logo-text {
+        display: none;
+    }
+    
+    .nav-logo-img {
+        height: 35px;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;

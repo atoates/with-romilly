@@ -16,7 +16,7 @@
       "title": "Reflexology",
       "duration": "50 min",
       "price": 75,
-      "heroImage": "/assets/images/svc-reflexology.jpg",
+      "heroImage": "/assets/images/service_reflexology.jpg",
       "summary": "Deeply relaxing and restorative; supports nervous and immune systems, encourages detoxification.",
       "description": "A deeply relaxing, non-invasive therapy that supports the nervous and immune systems, encourages detoxification and restores balance. By stimulating reflex points mapped to the body's organs and systems, Reflexology helps release stagnation and promotes natural healing.",
       "bullets": [
@@ -37,7 +37,7 @@
       "title": "Facial Reflexology",
       "duration": "45 min",
       "price": 80,
-      "heroImage": "/assets/images/svc-facial-reflexology.jpg",
+      "heroImage": "/assets/images/service_Facial_reflexology.png",
       "summary": "Powerfully calming; boosts circulation, eases tension and rejuvenates skin.",
       "description": "Combines cleanse, hot towel steam and luxury facial massage. Powerfully calming for the nervous system due to proximity to cranial nerves; boosts circulation, eases tension and rejuvenates skin for a radiant, relaxed complexion.",
       "bullets": [
@@ -58,7 +58,7 @@
       "title": "Pre-Conceptual & Pregnancy Reflexology",
       "duration": "50 min",
       "price": 75,
-      "heroImage": "/assets/images/svc-preconception.jpg",
+      "heroImage": "/assets/images/service_Preconceptual_reflexology .png",
       "summary": "Supports hormonal balance, reduces stress and helps during pregnancy.",
       "description": "Supports hormonal balance, reduces stress and prepares the body for conception and a healthy pregnancy. During pregnancy, it helps ease common symptoms and maintain equilibrium. Post-partum, it aids recovery and re-balancing.",
       "bullets": [
@@ -80,7 +80,7 @@
       "title": "Zone Face Lift",
       "duration": "60 min",
       "price": 95,
-      "heroImage": "/assets/images/svc-zfl.jpg",
+      "heroImage": "/assets/images/service_Zone_Face_Lift.png",
       "summary": "Award-winning holistic facial; lifts, sculpts and revives with a natural glow.",
       "description": "An award-winning holistic facial combining facial reflexology, sculpting Gua Sha and specialised massage. Promotes collagen and elastin, de-puffs and lifts for a brighter appearance — while leaving you deeply relaxed.",
       "bullets": [
@@ -120,25 +120,25 @@
   "recommends": [
     { 
       "name": "Hayou Method Bamboo Body Tapper", 
-      "image": "/assets/images/rec-hayou.jpg", 
+      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=Hayou+Method", 
       "description": "Gentle body tapping for circulation and lymphatic drainage",
       "url": "#" 
     },
     { 
       "name": "Theta Naturals Co. Connect & Restore Bath Salts", 
-      "image": "/assets/images/rec-theta.jpg", 
+      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=Theta+Naturals", 
       "description": "Mineral-rich salts for deep relaxation and muscle relief",
       "url": "#" 
     },
     { 
       "name": "White Sage Smudge Stick", 
-      "image": "/assets/images/rec-sage.jpg", 
+      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=White+Sage", 
       "description": "Cleansing and purifying ritual for your space",
       "url": "#" 
     },
     { 
       "name": "Two Libras Amethyst Heart Worry Stone", 
-      "image": "/assets/images/rec-amethyst.jpg", 
+      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=Amethyst+Stone", 
       "description": "Calming crystal for stress relief and emotional balance",
       "url": "#" 
     }
