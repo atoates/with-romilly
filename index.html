@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A modern website with responsive design">
-    <title>My Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Qualified Reflexology in Queen's Park, W9. Facial Reflexology, Pre-conceptual & Pregnancy Reflexology, and Zone Face Lift. Calm, restorative treatments. Book now.">
+    <meta name="keywords" content="reflexology, facial reflexology, pregnancy reflexology, zone face lift, queen's park, london, wellness, women's health">
+    <title>With Romilly | Reflexology in Queen's Park, W9 | Relax. Rebalance. Restore.</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://withromilly.com/#business",
+      "name": "With Romilly",
+      "image": "https://withromilly.com/assets/images/hero.jpg",
+      "url": "https://withromilly.com",
+      "telephone": "+44 7974 182 612",
+      "email": "withromilly@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "postalCode": "W9 3HJ",
+        "addressCountry": "GB"
+      },
+      "areaServed": "London",
+      "priceRange": "££",
+      "sameAs": ["https://www.instagram.com/with_romilly"]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <a href="#" class="nav-logo">MyWebsite</a>
+                <a href="/" class="nav-logo">With Romilly</a>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -23,16 +51,22 @@
                 </button>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
+                        <a href="/" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="/services" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#services" class="nav-link">Services</a>
+                        <a href="/about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="/recommends" class="nav-link">Recommends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/book" class="nav-cta">Book Now</a>
                     </li>
                 </ul>
             </div>
@@ -42,97 +76,112 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero">
+        <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Welcome to My Website</h1>
-                    <p class="hero-subtitle">Creating amazing digital experiences with modern web technologies</p>
+                    <h1 class="hero-title">Relax & Rebalance</h1>
+                    <p class="hero-subtitle">Qualified Reflexologist in Queen's Park, W9 — specialising in Facial, Pre-conceptual & Pregnancy Reflexology, and Zone Face Lift.</p>
                     <div class="hero-buttons">
-                        <a href="#about" class="btn btn-primary">Learn More</a>
-                        <a href="#contact" class="btn btn-secondary">Get Started</a>
+                        <a href="/book" class="btn btn-primary btn-large">Book Now</a>
+                        <a href="https://wa.me/447974182612" class="btn btn-secondary btn-large">WhatsApp</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="container">
+                <div class="trust-content">
+                    <div class="trust-badge">
+                        <img src="/assets/icons/aor-badge.svg" alt="Association of Reflexologists" loading="lazy">
+                        <span>Member of the Association of Reflexologists</span>
+                    </div>
+                    <div class="trust-badge">
+                        <img src="/assets/icons/lsr-badge.svg" alt="London School of Reflexology" loading="lazy">
+                        <span>London School of Reflexology Trained</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span>✓ Fully Insured</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Teaser -->
+        <section id="services-teaser" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">About Us</h2>
-                    <p class="section-subtitle">Discover what makes us different</p>
+                    <h2 class="section-title">Treatments</h2>
+                    <div class="divider"></div>
+                    <p class="section-subtitle">Gentle, restorative treatments tailored to help you feel calm, balanced and well.</p>
                 </div>
+                <div class="services-grid" id="services-grid">
+                    <!-- Services will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Snippet -->
+        <section id="about-snippet" class="section section-alt">
+            <div class="container">
                 <div class="about-grid">
-                    <div class="about-card">
-                        <div class="card-icon">🎨</div>
-                        <h3 class="card-title">Creative Design</h3>
-                        <p class="card-description">We create beautiful, user-friendly designs that engage and inspire your audience.</p>
+                    <div class="about-content">
+                        <h2>About Romilly</h2>
+                        <div class="divider" style="margin-left: 0;"></div>
+                        <p class="text-large" id="about-text">
+                            <!-- Content will be loaded by JavaScript -->
+                        </p>
+                        <a href="/about" class="btn btn-primary">Read More</a>
                     </div>
-                    <div class="about-card">
-                        <div class="card-icon">⚡</div>
-                        <h3 class="card-title">Fast Performance</h3>
-                        <p class="card-description">Our websites are optimized for speed and performance across all devices.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-icon">📱</div>
-                        <h3 class="card-title">Responsive Design</h3>
-                        <p class="card-description">Your website will look perfect on desktop, tablet, and mobile devices.</p>
+                    <div class="about-image">
+                        <img src="/assets/images/romilly-portrait.jpg" alt="Romilly - Qualified Reflexologist" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="section section-alt">
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Our Services</h2>
-                    <p class="section-subtitle">What we can do for you</p>
+                    <h2 class="section-title">What Clients Say</h2>
+                    <div class="divider"></div>
                 </div>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h3>Web Development</h3>
-                        <p>Custom websites built with the latest technologies and best practices.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>UI/UX Design</h3>
-                        <p>User-centered design that creates engaging and intuitive experiences.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>SEO Optimization</h3>
-                        <p>Improve your search engine rankings and online visibility.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Maintenance</h3>
-                        <p>Ongoing support and updates to keep your website running smoothly.</p>
-                    </div>
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- Testimonials will be loaded by JavaScript -->
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
+        <!-- Recommends Teaser -->
+        <section id="recommends-teaser" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Ready to start your project?</p>
+                    <h2 class="section-title">Romilly Recommends</h2>
+                    <div class="divider"></div>
+                    <p class="section-subtitle">Carefully curated products to support your wellness journey.</p>
                 </div>
-                <div class="contact-content">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="recommends-grid" id="recommends-grid">
+                    <!-- Recommends will be loaded by JavaScript -->
+                </div>
+                <div style="text-align: center; margin-top: var(--space-2xl);">
+                    <a href="/recommends" class="btn btn-secondary">View All Recommendations</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location CTA -->
+        <section id="location-cta" class="location-cta">
+            <div class="container">
+                <div class="location-content">
+                    <h2>Ready to Begin Your Journey?</h2>
+                    <p>Treatments at my home space in Queen's Park, W9. Mobile visits within 5 miles (+£10).</p>
+                    <div class="cta-buttons">
+                        <a href="/book" class="btn btn-primary btn-large">Book Now</a>
+                        <a href="mailto:withromilly@gmail.com" class="btn btn-secondary btn-large">Email</a>
+                        <a href="https://wa.me/447974182612" class="btn btn-secondary btn-large">WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -142,10 +191,40 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 MyWebsite. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
+                <div class="footer-section">
+                    <h4>With Romilly</h4>
+                    <p>Relax. Rebalance. Restore.</p>
+                    <p>Qualified Reflexologist specialising in women's health and wellness.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="/services/reflexology">Reflexology</a></li>
+                        <li><a href="/services/facial-reflexology">Facial Reflexology</a></li>
+                        <li><a href="/services/pre-conceptual-pregnancy">Pre-conceptual & Pregnancy</a></li>
+                        <li><a href="/services/zone-face-lift">Zone Face Lift</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:withromilly@gmail.com">withromilly@gmail.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/447974182612">07974 182 612</a></p>
+                    <p>Location: Queen's Park, W9 3HJ, London</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com/with_romilly" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 With Romilly. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                    </div>
                 </div>
             </div>
         </div>
