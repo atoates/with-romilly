@@ -23,7 +23,7 @@ function displayServices(services) {
     if (!servicesGrid) return;
     
     servicesGrid.innerHTML = services.map(service => `
-        <div class="service-card">
+        <div class="service-card" id="${service.slug}">
             <div class="service-image">
                 <img src="${service.heroImage}" alt="${service.title}" loading="lazy">
             </div>
@@ -65,6 +65,17 @@ function displayServices(services) {
         card.style.animationDelay = `${index * 0.1}s`;
         card.classList.add('fade-in-up');
     });
+
+    // Render TOC for quick navigation
+    renderServicesToc(services);
+}
+
+function renderServicesToc(services) {
+    const toc = document.getElementById('services-toc');
+    if (!toc) return;
+    toc.innerHTML = services.map(s => `
+        <a class="btn btn-secondary" href="#${s.slug}">${s.title}</a>
+    `).join('');
 }
 
 // Fallback services if JSON fails to load

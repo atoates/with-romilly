@@ -1082,6 +1082,18 @@ select:focus {
     max-width: 70ch;
 }
 
+/* Services TOC */
+#services-list .services-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+}
+
+#services-list .services-toc a {
+    font-size: 0.9rem;
+}
+
 /* Print styles */
 @media print {
     .nav-toggle,
