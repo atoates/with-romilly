@@ -1194,14 +1194,16 @@ select:focus {
 #services-list .service-image { position: relative; }
 #services-list .service-overlay {
     position: absolute;
-    left: 0; right: 0; bottom: 0;
-    z-index: 2;
+    left: 0; right: 0; top: 0; bottom: 0; /* fill the image area */
+    z-index: 5; /* ensure above the image */
 }
 #services-list .service-overlay summary {
+    position: absolute;
+    bottom: var(--space-md);
+    left: var(--space-md);
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin: var(--space-md);
     padding: 8px 14px;
     background: rgba(43, 43, 43, 0.6);
     color: #fff;
@@ -1210,6 +1212,7 @@ select:focus {
     cursor: pointer;
     list-style: none;
     backdrop-filter: blur(4px);
+    z-index: 2;
 }
 #services-list .service-overlay summary::-webkit-details-marker { display: none; }
 #services-list .service-overlay[open] summary { background: rgba(43, 43, 43, 0.8); }
@@ -1223,7 +1226,9 @@ select:focus {
     align-items: center; /* center vertically */
     justify-content: center;
     padding: var(--space-2xl);
+    z-index: 1;
 }
+#services-list .service-overlay[open] .overlay-content { display: flex !important; }
 #services-list .service-overlay:not([open]) .overlay-content { display: none; }
 
 #services-list .service-overlay .overlay-inner {
@@ -1237,8 +1242,9 @@ select:focus {
     max-height: calc(100% - 64px);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    transform: translateY(5vh); /* nudge slightly lower than center */
+    transform: translateY(0); /* ensure visible */
 }
+#services-list .service-overlay[open] summary { opacity: 0; pointer-events: none; }
 #services-list .service-overlay h4,
 #services-list .service-overlay h5,
 #services-list .service-overlay p,
