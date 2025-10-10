@@ -53,8 +53,8 @@ function displayServices(services) {
                         <span class="meta-chip duration" aria-label="duration">${service.duration}</span>
                         <span class="meta-chip price" aria-label="price">\u00a3${service.price}</span>
                     </div>
+                    <p class="service-summary clamp-3">${service.summary}</p>
                 </div>
-                <p class="service-summary clamp-3">${service.summary}</p>
 
                 ${topBenefits.length ? `
                 <ul class="benefits-inline" aria-label="Key benefits">
