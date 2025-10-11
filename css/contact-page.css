@@ -1,0 +1,335 @@
+/* ===================================
+   CONTACT PAGE PREMIUM DESIGN
+   =================================== */
+
+/* Hero Section */
+.contact-page-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 88px;
+}
+
+.contact-page-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.contact-page-hero .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.contact-page-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(59, 95, 86, 0.75) 0%, 
+        rgba(168, 192, 176, 0.6) 50%,
+        rgba(239, 203, 209, 0.35) 100%);
+    z-index: 2;
+}
+
+.contact-page-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.contact-page-hero .page-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.contact-page-hero .page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-page-hero .page-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Methods Section */
+.contact-methods {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.method-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(59, 95, 86, 0.1);
+    border: 1px solid #E8E8E8;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15);
+}
+
+.method-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.method-card h3 {
+    font-size: 1.5rem;
+    color: #3B5F56;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.method-card p {
+    font-size: 1.05rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.method-card address {
+    font-style: normal;
+    font-size: 1.05rem;
+    color: #5a5a5a;
+    line-height: 1.8;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.form-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-intro h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 1rem;
+}
+
+.form-intro p {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+}
+
+.contact-form {
+    background: #F7F3EF;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(59, 95, 86, 0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3B5F56;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    border: 2px solid #E8E8E8;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3B5F56;
+    box-shadow: 0 0 0 3px rgba(59, 95, 86, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.contact-form .btn-large {
+    width: 100%;
+    padding: 1.125rem 2rem;
+    font-size: 1.125rem;
+}
+
+/* Practice Info Section */
+.practice-info {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #3B5F56 0%, #2d4a44 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.practice-info::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 192, 176, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card li {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.info-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #EFCBD1;
+    font-weight: bold;
+}
+
+.info-card li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.info-card li em {
+    color: #EFCBD1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-page-hero {
+        min-height: 45vh;
+    }
+    
+    .contact-methods,
+    .contact-form-section,
+    .practice-info {
+        padding: 3rem 0;
+    }
+    
+    .methods-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+}

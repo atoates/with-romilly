@@ -131,31 +131,32 @@
 /* Service Card */
 .services-main .service-card,
 #services-list .service-card {
-    background: #ffffff;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(59, 95, 86, 0.1);
-    border: 1px solid #E8E8E8;
-    transition: all 0.3s ease;
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    min-height: 450px;
-    opacity: 1;
-    transform: none;
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 32px rgba(59, 95, 86, 0.1) !important;
+    border: 1px solid #E8E8E8 !important;
+    transition: all 0.3s ease !important;
+    display: grid !important;
+    grid-template-columns: 1fr 400px !important;
+    min-height: 450px !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .services-main .service-card:hover,
 #services-list .service-card:hover {
-    box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15);
-    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15) !important;
+    transform: translateY(-4px) !important;
 }
 
 /* Service Content */
 .services-main .service-content,
 #services-list .service-content {
-    padding: 2.5rem 2rem;
-    display: flex;
-    flex-direction: column;
+    padding: 2.5rem 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    order: 1 !important;
 }
 
 .services-main .service-header,
@@ -220,23 +221,23 @@
 /* Service Image Section */
 .services-main .service-image,
 #services-list .service-image {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-    order: -1;
+    position: relative !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    order: 2 !important;
 }
 
 .services-main .service-image img,
 #services-list .service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.5s ease !important;
 }
 
 .services-main .service-card:hover .service-image img,
 #services-list .service-card:hover .service-image img {
-    transform: scale(1.08);
+    transform: scale(1.08) !important;
 }
 
 /* Service Overlay for Details */
