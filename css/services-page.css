@@ -129,7 +129,8 @@
 }
 
 /* Service Card */
-.service-card {
+.services-main .service-card,
+#services-list .service-card {
     background: #ffffff;
     border-radius: 24px;
     overflow: hidden;
@@ -139,38 +140,54 @@
     display: grid;
     grid-template-columns: 400px 1fr;
     min-height: 450px;
+    opacity: 1;
+    transform: none;
 }
 
-.service-card:hover {
+.services-main .service-card:hover,
+#services-list .service-card:hover {
     box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15);
     transform: translateY(-4px);
 }
 
 /* Service Content */
-.service-content {
+.services-main .service-content,
+#services-list .service-content {
     padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
 }
 
-.service-header {
+.services-main .service-header,
+#services-list .service-header {
     margin-bottom: 1.5rem;
+    display: block;
+    grid-template-columns: none;
+    grid-template-areas: none;
 }
 
-.service-title {
+.services-main .service-title,
+#services-list .service-title {
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     color: #3B5F56;
     margin-bottom: 1rem;
     font-weight: 700;
+    grid-area: auto;
 }
 
-.service-meta {
+.services-main .service-meta,
+#services-list .service-meta {
     display: flex;
+    flex-direction: row;
     gap: 0.75rem;
     margin-bottom: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    grid-area: auto;
 }
 
-.meta-chip {
+.services-main .meta-chip,
+#services-list .meta-chip {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -183,14 +200,17 @@
     border: 1px solid rgba(59, 95, 86, 0.2);
 }
 
-.service-summary {
+.services-main .service-summary,
+#services-list .service-summary {
     font-size: 1.05rem;
     color: #5a5a5a;
     line-height: 1.7;
     margin: 0;
+    grid-area: auto;
 }
 
-.clamp-3 {
+.services-main .clamp-3,
+#services-list .clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -198,26 +218,30 @@
 }
 
 /* Service Image Section */
-.service-image {
+.services-main .service-image,
+#services-list .service-image {
     position: relative;
     height: 100%;
     overflow: hidden;
     order: -1;
 }
 
-.service-image img {
+.services-main .service-image img,
+#services-list .service-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.service-card:hover .service-image img {
+.services-main .service-card:hover .service-image img,
+#services-list .service-card:hover .service-image img {
     transform: scale(1.08);
 }
 
 /* Service Overlay for Details */
-.service-overlay {
+.services-main .service-overlay,
+#services-list .service-overlay {
     position: absolute;
     inset: 0;
     background: transparent;
@@ -227,7 +251,8 @@
     z-index: 10;
 }
 
-.service-overlay summary {
+.services-main .service-overlay summary,
+#services-list .service-overlay summary {
     background: rgba(255, 255, 255, 0.95);
     color: #3B5F56;
     padding: 0.75rem 1.5rem;
@@ -241,24 +266,29 @@
     list-style: none;
 }
 
-.service-overlay summary::-webkit-details-marker {
+.services-main .service-overlay summary::-webkit-details-marker,
+#services-list .service-overlay summary::-webkit-details-marker {
     display: none;
 }
 
-.service-overlay summary:hover {
+.services-main .service-overlay summary:hover,
+#services-list .service-overlay summary:hover {
     background: #ffffff;
     transform: translateY(-2px);
 }
 
-.service-overlay[open] {
+.services-main .service-overlay[open],
+#services-list .service-overlay[open] {
     background: rgba(59, 95, 86, 0.97);
 }
 
-.service-overlay[open] summary {
+.services-main .service-overlay[open] summary,
+#services-list .service-overlay[open] summary {
     display: none;
 }
 
-.overlay-content {
+.services-main .overlay-content,
+#services-list .overlay-content {
     position: absolute;
     inset: 0;
     padding: 2rem;
@@ -266,25 +296,32 @@
     display: none;
 }
 
-.service-overlay[open] .overlay-content {
-    display: block;
+.services-main .service-overlay[open] .overlay-content,
+#services-list .service-overlay[open] .overlay-content {
+    display: block !important;
 }
 
-.overlay-inner {
+.services-main .overlay-inner,
+#services-list .overlay-inner {
     background: rgba(255, 255, 255, 0.98);
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: none;
+    max-height: none;
+    transform: none;
 }
 
-.overlay-inner h4 {
+.services-main .overlay-inner h4,
+#services-list .overlay-inner h4 {
     font-size: 1.5rem;
     color: #3B5F56;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.overlay-close {
+.services-main .overlay-close,
+#services-list .overlay-close {
     background: #3B5F56;
     color: #ffffff;
     border: none;
@@ -300,34 +337,42 @@
     float: right;
     margin-left: 1rem;
     margin-bottom: 0.5rem;
+    position: static;
+    top: auto;
+    right: auto;
 }
 
-.overlay-close:hover {
+.services-main .overlay-close:hover,
+#services-list .overlay-close:hover {
     background: #2d4a44;
     transform: rotate(90deg);
 }
 
-.service-description p {
+.services-main .service-description p,
+#services-list .service-description p {
     font-size: 1rem;
     color: #5a5a5a;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
 
-.service-benefits-full h5 {
+.services-main .service-benefits-full h5,
+#services-list .service-benefits-full h5 {
     font-size: 1.1rem;
     color: #3B5F56;
     margin-bottom: 0.75rem;
     font-weight: 600;
 }
 
-.service-benefits-full ul {
+.services-main .service-benefits-full ul,
+#services-list .service-benefits-full ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.service-benefits-full li {
+.services-main .service-benefits-full li,
+#services-list .service-benefits-full li {
     display: flex;
     align-items: start;
     gap: 0.75rem;
@@ -337,7 +382,8 @@
     line-height: 1.6;
 }
 
-.service-benefits-full li:before {
+.services-main .service-benefits-full li:before,
+#services-list .service-benefits-full li:before {
     content: '✓';
     color: #3B5F56;
     font-weight: bold;
@@ -348,13 +394,15 @@
 
 
 /* Benefits Inline */
-.benefits-inline {
+.services-main .benefits-inline,
+#services-list .benefits-inline {
     list-style: none;
     padding: 0;
     margin: 0 0 1.5rem;
 }
 
-.benefit-item {
+.services-main .benefit-item,
+#services-list .benefit-item {
     display: flex;
     align-items: start;
     gap: 0.75rem;
@@ -364,11 +412,13 @@
     line-height: 1.6;
 }
 
-.benefit-item:last-child {
+.services-main .benefit-item:last-child,
+#services-list .benefit-item:last-child {
     margin-bottom: 0;
 }
 
-.benefit-item .tick {
+.services-main .benefit-item .tick,
+#services-list .benefit-item .tick {
     color: #3B5F56;
     font-weight: bold;
     font-size: 1.1rem;
@@ -376,18 +426,21 @@
 }
 
 /* Service Tags */
-.service-tags {
+.services-main .service-tags,
+#services-list .service-tags {
     margin-bottom: 1.5rem;
 }
 
-.tags-title {
+.services-main .tags-title,
+#services-list .tags-title {
     font-size: 1rem;
     color: #3B5F56;
     margin-bottom: 0.75rem;
     font-weight: 600;
 }
 
-.helps-list {
+.services-main .helps-list,
+#services-list .helps-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -396,7 +449,8 @@
     gap: 0.5rem;
 }
 
-.helps-list li {
+.services-main .helps-list li,
+#services-list .helps-list li {
     background: rgba(59, 95, 86, 0.1);
     color: #3B5F56;
     padding: 0.4rem 0.9rem;
@@ -407,14 +461,16 @@
 }
 
 /* Service Actions */
-.service-actions {
+.services-main .service-actions,
+#services-list .service-actions {
     margin-top: auto;
     display: flex;
     gap: 1rem;
     padding-top: 1.5rem;
 }
 
-.service-actions .btn {
+.services-main .service-actions .btn,
+#services-list .service-actions .btn {
     flex: 1;
 }
 
@@ -452,12 +508,14 @@
 
 /* Responsive */
 @media (max-width: 968px) {
-    .service-card {
+    .services-main .service-card,
+    #services-list .service-card {
         grid-template-columns: 1fr;
         min-height: auto;
     }
     
-    .service-image {
+    .services-main .service-image,
+    #services-list .service-image {
         height: 280px;
         order: 0;
     }
@@ -482,19 +540,23 @@
         margin-bottom: 3rem;
     }
     
-    .service-content {
+    .services-main .service-content,
+    #services-list .service-content {
         padding: 2rem 1.5rem;
     }
     
-    .service-image {
+    .services-main .service-image,
+    #services-list .service-image {
         height: 220px;
     }
     
-    .service-actions {
+    .services-main .service-actions,
+    #services-list .service-actions {
         flex-direction: column;
     }
     
-    .service-actions .btn {
+    .services-main .service-actions .btn,
+    #services-list .service-actions .btn {
         width: 100%;
     }
     
