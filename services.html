@@ -18,6 +18,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services-page.css">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -81,7 +82,11 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header services-page-header">
+    <section class="services-page-hero">
+        <div class="hero-background">
+            <img src="assets/images/stones.png" alt="" class="hero-bg-img">
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="page-header-content">
                 <h1 class="page-title">Our Services</h1>
@@ -91,17 +96,28 @@
     </section>
 
     <!-- Services Grid (clean layout) -->
-    <section class="section section-alt" id="services-list">
+    <section class="services-main" id="services-list">
         <div class="container">
+            <div class="services-intro">
+                <h2>Discover Our Treatments</h2>
+                <p>Each treatment is tailored to your unique needs, creating the optimal conditions for healing and relaxation.</p>
+            </div>
+            
             <div class="services-toc" id="services-toc" aria-label="Services navigation">
                 <!-- Filled by JS -->
             </div>
+            
             <div class="services-grid" id="services-grid">
                 <!-- Services will be loaded dynamically -->
             </div>
-            <div class="btn-group" style="margin-top: var(--space-3xl);">
-                <a href="book.html" class="btn btn-primary">Book a Treatment</a>
-                <a href="contact.html" class="btn btn-secondary">Ask a Question</a>
+            
+            <div class="services-cta">
+                <h3>Ready to Begin Your Journey?</h3>
+                <p>Book your consultation and take the first step towards balance and wellbeing.</p>
+                <div class="btn-group">
+                    <a href="book.html" class="btn btn-primary btn-large">Book a Treatment</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Ask a Question</a>
+                </div>
             </div>
         </div>
     </section>
