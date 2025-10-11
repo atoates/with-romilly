@@ -1128,12 +1128,13 @@ select:focus {
     text-align: center;
 }
 
-/* Services Page Header with Fixed Parallax Background */
+/* Services Page Header with Parallax Background */
 .services-page-header {
     background: 
         linear-gradient(135deg, rgba(59, 95, 86, 0.7) 0%, rgba(168, 192, 176, 0.6) 100%),
-        url('../assets/images/spa.png') center/cover fixed;
+        url('../assets/images/spa.png') center/cover;
     background-attachment: fixed;
+    position: relative;
 }
 
 .page-header-content {
