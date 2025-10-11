@@ -26,26 +26,6 @@ function displayServices(services) {
         const topBenefits = (service.bullets || []).slice(0, 3);
         return `
         <div class="service-card" id="${service.slug}">
-            <div class="service-image">
-                <img src="${service.heroImage}" alt="${service.title}" loading="lazy">
-                <details class="service-overlay">
-                    <summary>More about this treatment</summary>
-                    <div class="overlay-content">
-                        <div class="overlay-inner">
-                            <button class="overlay-close" aria-label="Close details" type="button">&times;</button>
-                            <h4>${service.title}</h4>
-                            <div class="service-description"><p>${service.description}</p></div>
-                            ${(service.bullets && service.bullets.length) ? `
-                            <div class="service-benefits-full">
-                                <h5>Key benefits</h5>
-                                <ul>
-                                    ${service.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
-                                </ul>
-                            </div>` : ''}
-                        </div>
-                    </div>
-                </details>
-            </div>
             <div class="service-content">
                 <div class="service-header">
                     <h3 class="service-title">${service.title}</h3>
@@ -73,6 +53,26 @@ function displayServices(services) {
                     <a href="book.html" class="btn btn-primary">Book This Service</a>
                     <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
                 </div>
+            </div>
+            <div class="service-image">
+                <img src="${service.heroImage}" alt="${service.title}" loading="lazy">
+                <details class="service-overlay">
+                    <summary>More about this treatment</summary>
+                    <div class="overlay-content">
+                        <div class="overlay-inner">
+                            <button class="overlay-close" aria-label="Close details" type="button">&times;</button>
+                            <h4>${service.title}</h4>
+                            <div class="service-description"><p>${service.description}</p></div>
+                            ${(service.bullets && service.bullets.length) ? `
+                            <div class="service-benefits-full">
+                                <h5>Key benefits</h5>
+                                <ul>
+                                    ${service.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                                </ul>
+                            </div>` : ''}
+                        </div>
+                    </div>
+                </details>
             </div>
         </div>`;
     }).join('');
@@ -102,7 +102,7 @@ function renderServicesToc(services) {
     const toc = document.getElementById('services-toc');
     if (!toc) return;
     toc.innerHTML = services.map(s => `
-        <a class="btn btn-secondary" href="#${s.slug}">${s.title}</a>
+        <a class="toc-btn" href="#${s.slug}">${s.title}</a>
     `).join('');
 }
 
