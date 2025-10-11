@@ -1086,6 +1086,7 @@ select:focus {
 #services-list .services-toc {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-md);
     margin-bottom: var(--space-2xl);
 }
@@ -1125,6 +1126,14 @@ select:focus {
     padding: 6rem 0 4rem;
     margin-top: 88px;
     text-align: center;
+}
+
+/* Services Page Header with Fixed Parallax Background */
+.services-page-header {
+    background: 
+        linear-gradient(135deg, rgba(59, 95, 86, 0.7) 0%, rgba(168, 192, 176, 0.6) 100%),
+        url('../assets/images/spa.png') center/cover fixed;
+    background-attachment: fixed;
 }
 
 .page-header-content {
@@ -1300,10 +1309,10 @@ select:focus {
 
 .service-meta {
     display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: var(--space-sm);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--space-xs);
     grid-area: meta;
 }
 
