@@ -2103,6 +2103,32 @@ select:focus {
 .footer-section a:hover, .footer-contact a:hover, .footer-social a:hover {
     color: var(--gold);
 }
+
+/* Footer Accreditation */
+.footer-accreditation {
+    text-align: center;
+}
+
+.footer-accreditation h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: #5a5a5a;
+}
+
+.accreditation-logo {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.accreditation-logo:hover {
+    opacity: 1;
+}
+
 .footer-bottom {
     color: #888;
     font-size: 0.95rem;

@@ -124,26 +124,26 @@
   "recommends": [
     { 
       "name": "Hayou Method Bamboo Body Tapper", 
-      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=Hayou+Method", 
-      "description": "Gentle body tapping for circulation and lymphatic drainage",
-      "url": "#" 
+      "image": "assets/images/bamboobodytapper.png", 
+      "description": "Gentle body tapping for circulation and lymphatic drainage. The Hayou Method body tapper helps stimulate blood flow and supports the lymphatic system.",
+      "url": "https://hayoumethod.com" 
     },
     { 
       "name": "Theta Naturals Co. Connect & Restore Bath Salts", 
-      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=Theta+Naturals", 
-      "description": "Mineral-rich salts for deep relaxation and muscle relief",
-      "url": "#" 
+      "image": "assets/images/theta-salts.jpeg", 
+      "description": "Mineral-rich bath salts for deep relaxation and muscle relief. Infused with natural ingredients to help you unwind and restore.",
+      "url": "https://thetanaturalsco.com" 
     },
     { 
       "name": "White Sage Smudge Stick", 
-      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=White+Sage", 
-      "description": "Cleansing and purifying ritual for your space",
+      "image": "assets/images/Smudge.webp", 
+      "description": "Traditional cleansing and purifying ritual for your space. Used for centuries to clear negative energy and create sacred space.",
       "url": "#" 
     },
     { 
       "name": "Two Libras Amethyst Heart Worry Stone", 
-      "image": "https://via.placeholder.com/300x300/EFCBD1/3B5F56?text=Amethyst+Stone", 
-      "description": "Calming crystal for stress relief and emotional balance",
+      "image": "assets/images/Amethyst.webp", 
+      "description": "Calming crystal for stress relief and emotional balance. Amethyst is known for its soothing properties and ability to promote inner peace.",
       "url": "#" 
     }
   ],

@@ -1,0 +1,416 @@
+/* ===================================
+   RECOMMENDS PAGE PREMIUM DESIGN
+   =================================== */
+
+/* Hero Section */
+.recommends-page-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 88px;
+}
+
+.recommends-page-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.recommends-page-hero .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.recommends-page-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(59, 95, 86, 0.75) 0%, 
+        rgba(168, 192, 176, 0.6) 50%,
+        rgba(239, 203, 209, 0.35) 100%);
+    z-index: 2;
+}
+
+.recommends-page-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.recommends-page-hero .page-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.recommends-page-hero .page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.recommends-page-hero .page-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Introduction Section */
+.recommends-intro {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.intro-note {
+    background: rgba(59, 95, 86, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid #3B5F56;
+    text-align: left;
+}
+
+.intro-note p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.intro-note strong {
+    color: #3B5F56;
+}
+
+/* Products Section */
+.products {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(59, 95, 86, 0.1);
+    border: 1px solid #E8E8E8;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #F7F3EF 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-content {
+    padding: 2rem 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    color: #3B5F56;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.product-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.product-actions .btn {
+    flex: 1;
+}
+
+/* Self-Care Tips Section */
+.self-care-tips {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #3B5F56 0%, #2d4a44 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.self-care-tips::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 192, 176, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.tips-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tips-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem 1.75rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+    font-size: 1.35rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.tip-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Book Section */
+.book {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.book-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book-content .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 1rem;
+}
+
+.book-content .section-subtitle {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    margin-bottom: 3rem;
+}
+
+.book-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.book-method {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 24px rgba(59, 95, 86, 0.08);
+    border: 1px solid #E8E8E8;
+    transition: all 0.3s ease;
+}
+
+.book-method:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 36px rgba(59, 95, 86, 0.15);
+}
+
+.book-method h3 {
+    font-size: 1.5rem;
+    color: #3B5F56;
+    margin-bottom: 0.75rem;
+}
+
+.book-method p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin-bottom: 1.5rem;
+}
+
+.contact-note {
+    background: rgba(59, 95, 86, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid #3B5F56;
+    text-align: left;
+}
+
+.contact-note p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.contact-note p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-note strong {
+    color: #3B5F56;
+}
+
+/* Footer Accreditation */
+.footer-accreditation {
+    text-align: center;
+}
+
+.footer-accreditation h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: #5a5a5a;
+}
+
+.accreditation-logo {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.accreditation-logo:hover {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recommends-page-hero {
+        min-height: 45vh;
+    }
+    
+    .recommends-intro,
+    .products,
+    .self-care-tips,
+    .book {
+        padding: 3rem 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .book-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
