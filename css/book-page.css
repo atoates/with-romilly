@@ -1,0 +1,450 @@
+/* ===================================
+   BOOK PAGE PREMIUM DESIGN
+   =================================== */
+
+/* Hero Section */
+.book-page-hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 88px;
+}
+
+.book-page-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.book-page-hero .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.book-page-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(59, 95, 86, 0.75) 0%, 
+        rgba(168, 192, 176, 0.6) 100%);
+    z-index: 2;
+}
+
+.book-page-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.book-page-hero .page-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.book-page-hero .page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.book-page-hero .page-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Booking Main Section */
+.booking-main {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.booking-intro-section {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.booking-intro-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #3B5F56;
+    margin-bottom: 1rem;
+}
+
+.booking-intro-section .intro-text {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+}
+
+/* Services Showcase */
+.services-showcase {
+    margin-bottom: 4rem;
+}
+
+.showcase-title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: #3B5F56;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.book-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.book-service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(59, 95, 86, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #E8E8E8;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 36px rgba(59, 95, 86, 0.15);
+}
+
+.service-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.book-service-card:hover .service-card-image img {
+    transform: scale(1.1);
+}
+
+.service-card-content {
+    padding: 1.75rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-content h4 {
+    font-size: 1.35rem;
+    color: #3B5F56;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.service-card-content p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Booking Widget Section */
+.booking-widget-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-widget {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(59, 95, 86, 0.12);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    border: 2px solid #A8C0B0;
+}
+
+.booking-widget h3 {
+    font-size: 1.75rem;
+    color: #3B5F56;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.booking-widget p {
+    font-size: 1.05rem;
+    color: #5a5a5a;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.booking-button-container {
+    margin-bottom: 2rem;
+}
+
+.booking-cta {
+    min-width: 240px;
+    font-size: 1.15rem;
+    padding: 1rem 3rem;
+    box-shadow: 0 4px 16px rgba(59, 95, 86, 0.2);
+}
+
+.booking-cta:hover {
+    box-shadow: 0 6px 24px rgba(59, 95, 86, 0.3);
+}
+
+.booking-note {
+    background: rgba(59, 95, 86, 0.05);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border-left: 4px solid #3B5F56;
+}
+
+.booking-note p {
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    margin: 0;
+    text-align: left;
+}
+
+.booking-note strong {
+    color: #3B5F56;
+}
+
+/* Info Cards */
+.booking-info {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.info-content h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 3rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(59, 95, 86, 0.08);
+    border: 1px solid #E8E8E8;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(59, 95, 86, 0.12);
+}
+
+.info-icon {
+    font-size: 2.25rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.info-card h4 {
+    font-size: 1.25rem;
+    color: #3B5F56;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.info-card p {
+    font-size: 0.98rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Preparation Tips */
+.preparation-tips {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.tips-content h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 3rem;
+}
+
+.tips-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.tips-column h3 {
+    font-size: 1.5rem;
+    color: #3B5F56;
+    margin-bottom: 1.5rem;
+}
+
+.tips-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-column li {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #5a5a5a;
+    line-height: 1.6;
+}
+
+.tips-column li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3B5F56;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Alternative Contact */
+.alternative-contact {
+    padding: 5rem 0;
+    background: #3B5F56;
+    color: #ffffff;
+}
+
+.alternative-contact .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.alternative-contact h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.alternative-contact > .container > .contact-content > p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.contact-method {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details h4 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.contact-link {
+    color: #EFCBD1;
+    font-size: 1.15rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.5rem;
+}
+
+.location-reminder {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #EFCBD1;
+}
+
+.location-reminder p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.location-reminder p:last-child {
+    margin-bottom: 0;
+}
+
+.location-reminder strong {
+    color: #ffffff;
+}
+
+.location-reminder em {
+    color: #EFCBD1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .book-page-hero {
+        min-height: 40vh;
+    }
+    
+    .booking-main {
+        padding: 3rem 0;
+    }
+    
+    .book-services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .booking-widget {
+        padding: 2rem 1.5rem;
+    }
+    
+    .info-grid,
+    .tips-columns,
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

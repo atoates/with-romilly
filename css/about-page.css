@@ -1,0 +1,594 @@
+/* ===================================
+   ABOUT PAGE PREMIUM DESIGN
+   =================================== */
+
+/* Hero Section */
+.about-page-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 88px;
+}
+
+.about-page-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.about-page-hero .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+.about-page-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(59, 95, 86, 0.7) 0%, 
+        rgba(168, 192, 176, 0.5) 50%,
+        rgba(239, 203, 209, 0.3) 100%);
+    z-index: 2;
+}
+
+.about-page-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.about-page-hero .page-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.about-page-hero .page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-page-hero .page-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Main Section */
+.about-main {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-intro {
+    margin-bottom: 3rem;
+}
+
+.about-intro h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 1.5rem;
+}
+
+.about-intro .lead {
+    font-size: 1.25rem;
+    color: #5a5a5a;
+    line-height: 1.8;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.about-text-main {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.about-focus {
+    background: rgba(59, 95, 86, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid #3B5F56;
+    margin-top: 2rem;
+}
+
+.about-focus h3 {
+    font-size: 1.5rem;
+    color: #3B5F56;
+    margin-bottom: 1rem;
+}
+
+.about-focus p {
+    font-size: 1.05rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: translateY(-8px);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(59, 95, 86, 0.95) 0%, transparent 100%);
+    padding: 3rem 2rem 2rem;
+    color: #ffffff;
+}
+
+.image-caption p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.image-caption em {
+    color: #EFCBD1;
+    font-size: 0.95rem;
+}
+
+/* Qualifications Section */
+.qualifications {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.qualifications-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.qualifications-content .section-title {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 3rem;
+}
+
+.qualifications-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.qualification-item {
+    display: flex;
+    align-items: start;
+    gap: 1.25rem;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 4px 16px rgba(59, 95, 86, 0.08);
+    border: 1px solid #E8E8E8;
+    transition: all 0.3s ease;
+}
+
+.qualification-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 24px rgba(59, 95, 86, 0.12);
+    border-color: #A8C0B0;
+}
+
+.qualification-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3B5F56 0%, #A8C0B0 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.qualification-text {
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+    padding-top: 0.25rem;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #3B5F56 0%, #2d4a44 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophy::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 192, 176, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.philosophy-text h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.philosophy blockquote {
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #EFCBD1;
+    margin: 0 0 2rem;
+    padding: 2rem;
+    border-left: 4px solid #EFCBD1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.philosophy-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Testimonials Section */
+.testimonials-about {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.testimonials-about .section-title {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 24px rgba(59, 95, 86, 0.08);
+    border: 1px solid #E8E8E8;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 5rem;
+    color: #EFCBD1;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+    opacity: 0.3;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 36px rgba(59, 95, 86, 0.15);
+}
+
+.testimonial-quote {
+    font-size: 1.05rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    color: #3B5F56;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Instagram Feed Section */
+.instagram-feed {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.instagram-header .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 1rem;
+}
+
+.instagram-header .section-subtitle {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    margin-bottom: 2rem;
+}
+
+.instagram-cta {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.instagram-cta svg {
+    flex-shrink: 0;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.instagram-placeholder {
+    display: contents;
+}
+
+.instagram-post {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f7f3ef 0%, #e8e8e8 100%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #3B5F56;
+    border: 2px solid #E8E8E8;
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-post::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(59, 95, 86, 0.05) 0%, 
+        rgba(239, 203, 209, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-post:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 36px rgba(59, 95, 86, 0.15);
+    border-color: #A8C0B0;
+}
+
+.instagram-post:hover::before {
+    opacity: 1;
+}
+
+.instagram-icon {
+    position: relative;
+    z-index: 2;
+    color: #3B5F56;
+    transition: transform 0.3s ease;
+}
+
+.instagram-post:hover .instagram-icon {
+    transform: scale(1.1);
+}
+
+.instagram-post p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3B5F56;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Book Section */
+.book {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 100%);
+}
+
+.book-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book-content .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B5F56;
+    margin-bottom: 1rem;
+}
+
+.book-content .section-subtitle {
+    font-size: 1.125rem;
+    color: #5a5a5a;
+    margin-bottom: 3rem;
+}
+
+.book-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.book-method {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 24px rgba(59, 95, 86, 0.08);
+    border: 1px solid #E8E8E8;
+    transition: all 0.3s ease;
+}
+
+.book-method:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 36px rgba(59, 95, 86, 0.15);
+}
+
+.book-method h3 {
+    font-size: 1.5rem;
+    color: #3B5F56;
+    margin-bottom: 0.75rem;
+}
+
+.book-method p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin-bottom: 1.5rem;
+}
+
+.contact-note {
+    background: rgba(59, 95, 86, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid #3B5F56;
+    text-align: left;
+}
+
+.contact-note p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.contact-note p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-note strong {
+    color: #3B5F56;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page-hero {
+        min-height: 45vh;
+    }
+    
+    .about-main {
+        padding: 4rem 0;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-text {
+        order: 2;
+    }
+    
+    .about-image {
+        order: 1;
+    }
+    
+    .qualifications,
+    .philosophy,
+    .testimonials-about,
+    .instagram-feed,
+    .book {
+        padding: 3rem 0;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .book-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+}

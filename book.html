@@ -18,6 +18,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/book-page.css">
     
     <!-- Setmore Booking Script -->
     <script id="setmore_script" type="text/javascript" src="https://assets.setmore.com/integration/websiteBooking/js/setmoreIframeLive.js"></script>
@@ -84,14 +85,15 @@
     </header>
 
     <!-- Page Header with Hero Banner -->
-    <section class="page-header book-hero">
-        <img src="assets/images/hero_image.webp" alt="Spa stones" class="book-hero-img">
-        <div class="book-hero-overlay">
-            <div class="container">
-                <div class="page-header-content">
-                    <h1 class="page-title">Book Your Appointment</h1>
-                    <p class="page-subtitle">Schedule your reflexology session online – choose your preferred date and time</p>
-                </div>
+    <section class="page-header book-page-hero">
+        <div class="hero-background">
+            <img src="assets/images/hero_image.webp" alt="Spa stones" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Book Your Appointment</h1>
+                <p class="page-subtitle">Schedule your reflexology session online – choose your preferred date and time</p>
             </div>
         </div>
     </section>
@@ -99,40 +101,48 @@
     <!-- Booking Section -->
     <section class="booking-main">
         <div class="container">
-            <div class="booking-content">
-                <div class="booking-intro">
-                    <h2>Ready to Begin Your Wellness Journey?</h2>
-                    <p class="intro-text">Use our online booking system to schedule your appointment. Select your preferred service, date, and time from the available slots below.</p>
-                </div>
-                
+            <div class="booking-intro-section">
+                <h2>Ready to Begin Your Wellness Journey?</h2>
+                <p class="intro-text">Use our online booking system to schedule your appointment. Select your preferred service, date, and time from the available slots below.</p>
+            </div>
+            
+            <div class="booking-content-wrapper">
                 <!-- Services Quick Reference -->
-                <div class="services-quick-ref">
-                    <h3>Our Services</h3>
+                <div class="services-showcase">
+                    <h3 class="showcase-title">Our Services</h3>
                     <div class="book-services-grid">
                         <div class="book-service-card">
-                            <img src="assets/images/service_reflexology.webp" alt="Reflexology" class="book-service-img">
-                            <div class="book-service-info">
+                            <div class="service-card-image">
+                                <img src="assets/images/service_reflexology.webp" alt="Reflexology" loading="lazy">
+                            </div>
+                            <div class="service-card-content">
                                 <h4>Reflexology</h4>
                                 <p>Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.</p>
                             </div>
                         </div>
                         <div class="book-service-card">
-                            <img src="assets/images/service_Facial_reflexology.webp" alt="Facial Reflexology" class="book-service-img">
-                            <div class="book-service-info">
+                            <div class="service-card-image">
+                                <img src="assets/images/service_Facial_reflexology.webp" alt="Facial Reflexology" loading="lazy">
+                            </div>
+                            <div class="service-card-content">
                                 <h4>Facial Reflexology</h4>
                                 <p>Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.</p>
                             </div>
                         </div>
                         <div class="book-service-card">
-                            <img src="assets/images/service_Preconceptual_reflexology.webp" alt="Preconceptual Reflexology" class="book-service-img">
-                            <div class="book-service-info">
+                            <div class="service-card-image">
+                                <img src="assets/images/service_Preconceptual_reflexology.webp" alt="Preconceptual Reflexology" loading="lazy">
+                            </div>
+                            <div class="service-card-content">
                                 <h4>Preconceptual Reflexology</h4>
                                 <p>Supporting fertility, hormonal balance and wellbeing for those trying to conceive.</p>
                             </div>
                         </div>
                         <div class="book-service-card">
-                            <img src="assets/images/service_Zone_Face_Lift.webp" alt="Zone Face Lift" class="book-service-img">
-                            <div class="book-service-info">
+                            <div class="service-card-image">
+                                <img src="assets/images/service_Zone_Face_Lift.webp" alt="Zone Face Lift" loading="lazy">
+                            </div>
+                            <div class="service-card-content">
                                 <h4>Zone Face Lift</h4>
                                 <p>Holistic facial treatment combining reflexology and massage for rejuvenation and radiance.</p>
                             </div>
@@ -141,18 +151,18 @@
                 </div>
                 
                 <!-- Setmore Booking Widget -->
-                <div class="booking-widget">
-                    <div class="widget-header">
+                <div class="booking-widget-section">
+                    <div class="booking-widget">
                         <h3>Book Your Appointment</h3>
                         <p>Click below to open our booking calendar and select your preferred time slot.</p>
-                    </div>
-                    <div class="booking-button-container">
-                        <a id="Setmore_button_iframe" class="booking-button" href="https://with-romilly.setmore.com">
-                            <img border="none" src="https://assets.setmore.com/integration/images/newdesign/others/book-now-button.svg" alt="Book an appointment with With Romilly using Setmore" />
-                        </a>
-                    </div>
-                    <div class="booking-note">
-                        <p><strong>Note:</strong> After selecting your appointment time, you'll receive a confirmation email with all the details including our address and any preparation instructions.</p>
+                        <div class="booking-button-container">
+                            <a id="Setmore_button_iframe" class="btn btn-primary btn-large booking-cta" href="https://with-romilly.setmore.com">
+                                Book now
+                            </a>
+                        </div>
+                        <div class="booking-note">
+                            <p><strong>Note:</strong> After selecting your appointment time, you'll receive a confirmation email with all the details including our address and any preparation instructions.</p>
+                        </div>
                     </div>
                 </div>
             </div>
