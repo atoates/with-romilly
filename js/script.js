@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial calls
     updateActiveNavLink();
     updateHeaderBackground();
+    
+    // Set dynamic copyright year
+    updateCopyrightYear();
 
     console.log('With Romilly website initialized successfully!');
 });
@@ -449,4 +452,13 @@ function throttle(func, limit) {
             setTimeout(() => inThrottle = false, limit);
         }
     };
+}
+
+// Update copyright year dynamically
+function updateCopyrightYear() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+    }
 }
