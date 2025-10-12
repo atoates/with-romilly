@@ -15,4 +15,3 @@ This is a modern website project with HTML, CSS, and JavaScript. The project inc
 - Use modern CSS features
 - Ensure cross-browser compatibility
 - Maintain responsive design principles
-- Always use UK spelling
