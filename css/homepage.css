@@ -195,11 +195,41 @@
     box-shadow: 0 6px 24px rgba(59, 95, 86, 0.08);
     transition: all 0.3s ease;
     border: none;
+    display: flex;
+    flex-direction: row;
+    min-height: 320px;
 }
 
 .services-home .service-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 12px 40px rgba(59, 95, 86, 0.15);
+}
+
+/* Image Column - Left Side */
+.service-image-column {
+    flex: 0 0 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image-column .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.services-home .service-card:hover .service-image {
+    transform: scale(1.08);
+}
+
+/* Content Column - Right Side */
+.service-content-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: #F5F0EB;
 }
 
 /* Service Header with Lines */
@@ -213,7 +243,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 0;
     gap: 1rem;
 }
 
@@ -251,40 +281,17 @@
     border: 1.5px solid var(--gold-accent);
 }
 
-/* Service Content */
-.services-home .service-content {
-    padding: 2rem;
-    padding-top: 1.5rem;
-}
-
-.services-home .service-image {
-    width: 100%;
-    height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-}
-
-.services-home .service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.services-home .service-card:hover .service-image img {
-    transform: scale(1.08);
-}
-
-.services-home .service-summary {
+/* Service Summary and Button */
+.service-content-column .service-summary {
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     font-style: italic;
+    flex: 1;
 }
 
-.services-home .btn-learn {
+.service-content-column .btn-learn {
     background: var(--deep-sage);
     color: white;
     padding: 0.75rem 2rem;
@@ -294,19 +301,30 @@
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
+    align-self: flex-start;
 }
 
-.services-home .btn-learn:hover {
+.service-content-column .btn-learn:hover {
     background: #2E4A43;
     transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+    .services-home .service-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .service-image-column {
+        flex: 0 0 250px;
+    }
+    
     .service-header-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+        padding: 1rem 0;
     }
     
     .services-home .service-title {

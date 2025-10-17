@@ -133,17 +133,19 @@ function renderServices(services) {
 
     servicesGrid.innerHTML = services.map(service => `
         <div class="service-card fade-in-up">
-            <div class="service-header-line"></div>
-            <div class="service-header-row">
-                <h3 class="service-title">${service.title}</h3>
-                <div class="service-pills-inline">
-                    <span class="pill-duration">${service.duration}</span>
-                    <span class="pill-price">£${service.price}</span>
-                </div>
-            </div>
-            <div class="service-header-line"></div>
-            <div class="service-content">
+            <div class="service-image-column">
                 <img src="${service.heroImage}" alt="${service.title}" class="service-image" loading="lazy">
+            </div>
+            <div class="service-content-column">
+                <div class="service-header-line"></div>
+                <div class="service-header-row">
+                    <h3 class="service-title">${service.title}</h3>
+                    <div class="service-pills-inline">
+                        <span class="pill-duration">${service.duration}</span>
+                        <span class="pill-price">£${service.price}</span>
+                    </div>
+                </div>
+                <div class="service-header-line"></div>
                 <p class="service-summary">${service.summary}</p>
                 <a href="services.html#${service.slug}" class="btn btn-primary btn-learn">Learn More</a>
             </div>
