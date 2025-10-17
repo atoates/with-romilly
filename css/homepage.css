@@ -208,10 +208,20 @@
     font-size: 0.95rem;
 }
 
+.trust-badge-logo {
+    gap: 1rem;
+}
+
+.trust-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 .trust-icon {
-    width: 28px;
-    height: 28px;
-    color: #3B5F56;
+    width: 24px;
+    height: 24px;
+    color: var(--deep-sage);
     flex-shrink: 0;
 }
 
