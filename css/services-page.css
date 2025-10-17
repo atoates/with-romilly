@@ -48,7 +48,7 @@
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
-    padding: 3rem 1.5rem;
+    padding: 2.25rem 1.5rem 2.75rem;
 }
 
 .services-page-hero .page-title {
@@ -66,6 +66,11 @@
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* TOC in hero */
+.hero-toc { margin-top: 1.25rem; display:flex; flex-wrap: wrap; gap: .625rem; justify-content: center; }
+.hero-toc .toc-btn { background: rgba(255,255,255,.9); color: var(--deep-sage); border: 2px solid rgba(255,255,255,.7); padding: .5rem 1rem; border-radius: 999px; font-weight: 700; text-decoration: none; backdrop-filter: blur(6px); }
+.hero-toc .toc-btn:hover { background: #fff; border-color: #fff; transform: translateY(-2px); }
+
 /* Services Main Section */
 .services-main {
     padding: 5rem 0;
@@ -74,7 +79,7 @@
 
 /* Services Intro */
 /* Services Grid (vertical stack) */
-.services-grid { max-width: 1200px; margin: 0 auto 4rem; display: grid; gap: 3.5rem; grid-template-columns: 1fr; }
+.services-grid { max-width: 1200px; margin: 0 auto 4rem; display: grid; gap: 3.5rem; grid-template-columns: 1fr; margin-top: 2rem; }
 .services-main .services-grid { grid-template-columns: 1fr; }
 
 /* Clean Panel */
