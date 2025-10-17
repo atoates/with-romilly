@@ -28,11 +28,15 @@ function displayServices(services) {
         <div class="service-card" id="${service.slug}">
             <div class="service-content">
                 <div class="service-header">
-                    <h3 class="service-title">${service.title}</h3>
-                    <div class="service-meta">
-                        <span class="meta-chip duration" aria-label="duration">${service.duration}</span>
-                        <span class="meta-chip price" aria-label="price">\u00a3${service.price}</span>
+                    <div class="service-header-line"></div>
+                    <div class="service-header-row">
+                        <h3 class="service-title">${service.title}</h3>
+                        <div class="service-meta">
+                            <span class="meta-chip duration" aria-label="duration">${service.duration}</span>
+                            <span class="meta-chip price" aria-label="price">\u00a3${service.price}</span>
+                        </div>
                     </div>
+                    <div class="service-header-line"></div>
                     <p class="service-summary clamp-3">${service.summary}</p>
                 </div>
 
