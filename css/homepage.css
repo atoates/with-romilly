@@ -76,6 +76,68 @@
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+/* Hero Service Quick Links */
+.hero-services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-service-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.hero-service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.hero-service-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.hero-service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--deep-sage);
+}
+
+.hero-service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-service-box h3 {
+    font-size: 1.1rem;
+    color: var(--deep-sage);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-service-box p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
 }
 
 /* Trust Bar Enhancement */
@@ -205,6 +267,29 @@
     .hero-home .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-services {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .hero-service-box h3 {
+        font-size: 0.95rem;
+    }
+    
+    .hero-service-box p {
+        font-size: 0.85rem;
+    }
+    
+    .hero-service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .hero-service-link {
+        padding: 1rem 0.5rem;
     }
     
     .trust-content {
