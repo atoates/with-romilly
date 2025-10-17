@@ -25,12 +25,12 @@ function displayServices(services) {
     servicesGrid.innerHTML = services.map((service, idx) => {
         const topBenefits = (service.bullets || []).slice(0, 3);
         const reverseClass = (idx % 2 === 1) ? ' reverse' : '';
-        return `
+                return `
         <section class="service-panel${reverseClass}" id="${service.slug}">
           <div class="panel-inner">
             <figure class="panel-media">
-              <img src="${service.heroImage}" alt="${service.title}" loading="lazy" />
-              <a href="services.html#${service.slug}" class="media-more">More about this treatment</a>
+                            <img src="${service.heroImage}" alt="${service.title}" loading="lazy" />
+                            <button type="button" class="media-more" aria-haspopup="dialog" aria-controls="overlay-${service.slug}">More about this treatment</button>
             </figure>
             <div class="panel-content">
               <header class="panel-header">
@@ -56,6 +56,24 @@ function displayServices(services) {
               </div>
             </div>
           </div>
+
+                    <!-- Overlay -->
+                    <div class="panel-overlay" id="overlay-${service.slug}" aria-hidden="true" role="dialog" aria-label="More about ${service.title}">
+                        <div class="overlay-card" role="document">
+                            <button type="button" class="overlay-close" aria-label="Close">&times;</button>
+                            <h4 class="overlay-title">${service.title}</h4>
+                            <div class="overlay-body">
+                                ${service.description ? `<p>${service.description}</p>` : ''}
+                                ${(service.bullets && service.bullets.length) ? `
+                                    <div class="overlay-benefits">
+                                        <h5>Key benefits</h5>
+                                        <ul>
+                                            ${service.bullets.map(b => `<li>${b}</li>`).join('')}
+                                        </ul>
+                                    </div>` : ''}
+                            </div>
+                        </div>
+                    </div>
         </section>`;
     }).join('');
     
@@ -70,7 +88,49 @@ function displayServices(services) {
     renderServicesToc(services);
 
     // Wire up overlay close buttons
-    // No overlays in clean design; link on image provided instead.
+    // Wire overlay open/close
+    document.querySelectorAll('.service-panel .media-more').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const panel = e.currentTarget.closest('.service-panel');
+            const overlay = panel && panel.querySelector('.panel-overlay');
+            if (overlay) {
+                overlay.classList.add('open');
+                overlay.setAttribute('aria-hidden', 'false');
+                const closeBtn = overlay.querySelector('.overlay-close');
+                if (closeBtn) closeBtn.focus();
+            }
+        });
+    });
+
+    document.querySelectorAll('.service-panel .overlay-close').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const overlay = e.currentTarget.closest('.panel-overlay');
+            if (overlay) {
+                overlay.classList.remove('open');
+                overlay.setAttribute('aria-hidden', 'true');
+            }
+        });
+    });
+
+    // Close on background click
+    document.querySelectorAll('.service-panel .panel-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('open');
+                overlay.setAttribute('aria-hidden', 'true');
+            }
+        });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.panel-overlay.open').forEach(overlay => {
+                overlay.classList.remove('open');
+                overlay.setAttribute('aria-hidden', 'true');
+            });
+        }
+    });
 }
 
 // (Removed) benefitIcon mapping - using simple tick marks now for benefits
