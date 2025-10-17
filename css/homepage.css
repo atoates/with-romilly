@@ -33,9 +33,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-        rgba(59, 95, 86, 0.7) 0%, 
-        rgba(168, 192, 176, 0.5) 50%,
-        rgba(239, 203, 209, 0.3) 100%);
+        rgba(59, 95, 86, 0.65) 0%, 
+        rgba(168, 192, 176, 0.45) 50%,
+        rgba(239, 203, 209, 0.25) 100%);
     z-index: 2;
 }
 
@@ -49,138 +49,80 @@
     margin: 0 auto;
     text-align: center;
     animation: fadeInUp 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-.hero-home .hero-title {
-    font-size: clamp(3rem, 7vw, 5.5rem);
+/* Hero Dot Decorations */
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(168, 192, 176, 0.6);
+    border-radius: 50%;
+}
+
+/* Main Title */
+.hero-main-title {
+    font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 1.5rem;
+    margin: 0;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     letter-spacing: 0.02em;
 }
 
-.hero-home .hero-subtitle {
-    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 3rem;
-    line-height: 1.7;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-home .hero-buttons {
+/* Services List */
+.hero-services-list {
     display: flex;
+    flex-direction: column;
     gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
+    width: 100%;
 }
 
-.hero-home .btn-secondary {
-    background: rgba(255, 255, 255, 0.15);
+.hero-service-name {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.01em;
+}
+
+/* Hero Book Button */
+.btn-hero {
+    background: rgba(168, 192, 176, 0.85);
+    color: #ffffff;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
     backdrop-filter: blur(10px);
-    color: #ffffff;
-    border: 3px solid rgba(255, 255, 255, 0.9);
 }
 
-.hero-home .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    border-color: #ffffff;
+.btn-hero:hover {
+    background: rgba(168, 192, 176, 1);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Hero Service Quick Links */
-.hero-services {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-service-box {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.hero-service-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-}
-
-.hero-service-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.5rem 1rem;
-    text-align: center;
-}
-
-.hero-service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--deep-sage);
-}
-
-.hero-service-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-service-box h3 {
-    font-size: 1.1rem;
-    color: var(--deep-sage);
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-}
-
-.service-meta-pills {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.pill-duration,
-.pill-price {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-
-.pill-duration {
-    background: rgba(168, 192, 176, 0.15);
-    color: var(--deep-sage);
-    border: 1.5px solid rgba(168, 192, 176, 0.3);
-}
-
-.pill-price {
-    background: var(--gold-accent);
-    color: #ffffff;
-    border: 1.5px solid var(--gold-accent);
-}
-
-.hero-service-box p {
-    font-size: 0.95rem;
-    color: #666;
-    margin: 0;
-    font-weight: 500;
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-service-name {
+        font-size: 1.5rem;
+    }
+    
+    .btn-hero {
+        padding: 0.875rem 2.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* Trust Bar Enhancement */
