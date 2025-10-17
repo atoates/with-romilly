@@ -22,69 +22,46 @@ function displayServices(services) {
     const servicesGrid = document.getElementById('services-grid');
     if (!servicesGrid) return;
     
-    servicesGrid.innerHTML = services.map(service => {
+    servicesGrid.innerHTML = services.map((service, idx) => {
         const topBenefits = (service.bullets || []).slice(0, 3);
+        const reverseClass = (idx % 2 === 1) ? ' reverse' : '';
         return `
-        <div class="service-card" id="${service.slug}">
-            <div class="service-content">
-                <div class="service-header">
-                    <div class="service-pills-center">
-                        <span class="meta-chip duration" aria-label="duration">${service.duration}</span>
-                        <span class="meta-chip price" aria-label="price">\u00a3${service.price}</span>
-                    </div>
-                    <div class="service-title-row">
-                        <div class="title-line-left"></div>
-                        <h3 class="service-title">${service.title}</h3>
-                        <div class="title-line-right"></div>
-                    </div>
-                    <div class="service-separator-line"></div>
-                    <p class="service-summary clamp-3">${service.summary}</p>
+        <section class="service-panel${reverseClass}" id="${service.slug}">
+          <div class="panel-inner">
+            <figure class="panel-media">
+              <img src="${service.heroImage}" alt="${service.title}" loading="lazy" />
+              <a href="services.html#${service.slug}" class="media-more">More about this treatment</a>
+            </figure>
+            <div class="panel-content">
+              <header class="panel-header">
+                <div class="chips">
+                  <span class="chip duration" aria-label="duration">${service.duration}</span>
+                  <span class="chip price" aria-label="price">\u00a3${service.price}</span>
                 </div>
-
-                ${topBenefits.length ? `
-                <ul class="benefits-inline" aria-label="Key benefits">
-                    ${topBenefits.map(b => `<li class=\"benefit-item\">${b}</li>`).join('')}
-                </ul>` : ''}
-
-                ${(service.whoItHelps && service.whoItHelps.length) ? `
-                <div class="service-tags" aria-label="Who it helps">
-                    <h4 class="tags-title">Who it helps</h4>
-                    <ul class="helps-list">
-                        ${service.whoItHelps.map(help => `<li>${help}</li>`).join('')}
-                    </ul>
-                </div>` : ''}
-
-                <div class="service-actions">
-                    <a href="book.html" class="btn btn-primary">Book This Service</a>
-                    <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
+                <div class="title-row">
+                  <span class="title-line"></span>
+                  <h3 class="title">${service.title}</h3>
+                  <span class="title-line"></span>
                 </div>
+              </header>
+              <div class="panel-sep"></div>
+              <p class="summary">${service.summary}</p>
+              ${topBenefits.length ? `
+              <ul class="benefits" aria-label="Key benefits">
+                ${topBenefits.map(b => `<li class=\"benefit\">${b}</li>`).join('')}
+              </ul>` : ''}
+              <div class="cta-row">
+                <a href="book.html" class="btn btn-primary">Book This Service</a>
+                <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
+              </div>
             </div>
-            <div class="service-image">
-                <img src="${service.heroImage}" alt="${service.title}" loading="lazy">
-                <details class="service-overlay">
-                    <summary>More about this treatment</summary>
-                    <div class="overlay-content">
-                        <div class="overlay-inner">
-                            <button class="overlay-close" aria-label="Close details" type="button">&times;</button>
-                            <h4>${service.title}</h4>
-                            <div class="service-description"><p>${service.description}</p></div>
-                            ${(service.bullets && service.bullets.length) ? `
-                            <div class="service-benefits-full">
-                                <h5>Key benefits</h5>
-                                <ul>
-                                    ${service.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
-                                </ul>
-                            </div>` : ''}
-                        </div>
-                    </div>
-                </details>
-            </div>
-        </div>`;
+          </div>
+        </section>`;
     }).join('');
     
     // Add animation
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach((card, index) => {
+    const servicePanels = document.querySelectorAll('.service-panel');
+    servicePanels.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
         card.classList.add('fade-in-up');
     });
@@ -93,12 +70,7 @@ function displayServices(services) {
     renderServicesToc(services);
 
     // Wire up overlay close buttons
-    document.querySelectorAll('.service-overlay .overlay-close').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const details = e.currentTarget.closest('details');
-            if (details) details.removeAttribute('open');
-        });
-    });
+    // No overlays in clean design; link on image provided instead.
 }
 
 // (Removed) benefitIcon mapping - using simple tick marks now for benefits
