@@ -206,7 +206,7 @@
 .service-header-line {
     height: 1px;
     background: var(--deep-sage);
-    margin: 0 2rem;
+    width: 100%;
 }
 
 .service-header-row {
