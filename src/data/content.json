@@ -2,10 +2,13 @@
   "brand": {
     "name": "With Romilly",
     "tagline": "Relax. Rebalance. Restore.",
+    "subtitle": "Mobile Reflexologist in West London",
     "email": "withromilly@gmail.com",
     "phone": "+44 7974 182 612",
     "phoneDisplay": "07974 182 612",
-    "location": "43 Croxley Road, Queens Park, W9 3HJ, London",
+    "whatsapp": "https://wa.me/447974182612",
+    "location": "Mobile Reflexology in West and NW London",
+    "locationShort": "West and NW London",
     "social": { 
       "instagram": "https://instagram.com/with_romilly" 
     }
@@ -15,15 +18,14 @@
       "slug": "reflexology",
       "title": "Reflexology",
       "duration": "50 min",
-      "price": 75,
+      "price": 85,
       "heroImage": "assets/images/service_reflexology.webp",
-      "summary": "Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.",
+      "summary": "Deeply relaxing and therapeutic; encourages the body to return to a state of homeostasis and bring you back to optimum health.",
       "description": "Reflexology is a well-established, non-invasive complementary therapy which is recognised by the NHS and many hospices. It is a deeply relaxing and stress relieving therapy which can help a wide-range of mental and physical conditions as well as aiding detoxification. It is well known to calm the nervous system and boost the immune system. The body's organs, glands and systems are mapped on our feet, hands and face, and by stimulating these reflex points with reflexology it un-blocks any stagnation, restores balance and promotes the body's own healing processes. Reflexology encourages the body to return to a state of homeostasis and brings it back to optimum health. Each treatment promotes the release of endorphins in the body (feel good hormones), improves circulation and boosts mood and wellbeing.",
       "bullets": [
-        "Calms the nervous system and boosts immunity",
-        "Stimulates mapped reflex points to release stagnation",
-        "Promotes the body's natural healing processes",
-        "Improves circulation and boosts mood and wellbeing"
+        "Stimulates the body's natural healing processes",
+        "Calms the nervous system and promotes relaxation",
+        "Boosts immunity and improves mood"
       ],
       "whoItHelps": [
         "Stress and anxiety",
@@ -37,15 +39,15 @@
       "slug": "facial-reflexology",
       "title": "Facial Reflexology",
       "duration": "45 min",
-      "price": 80,
+      "price": 90,
       "heroImage": "assets/images/service_Facial_reflexology.webp",
-      "summary": "Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.",
+      "summary": "Wonderfully calming for your nervous system; relaxes your mind, reduces tension and rejuvenates skin.",
       "description": "Facial Reflexology has the same benefits and principles of foot reflexology and due to the face's close proximity to the brain and cranial nerves, it is very powerful in regards to the level of relaxation and the impact on the body's systems. It helps open up neural pathways, helping to reduce stress levels. Each treatment includes a cleanse, hot towel steam and luxury massage. Facial Reflexology boosts circulation, reduces muscle tension and relieves congestion. It releases emotions held in the face, soothing the nervous system to reduce stress and anxiety and has the added benefit of rejuvenating the skin leaving you calm and radiant.",
       "bullets": [
-        "Cleanse, hot towel steam and luxury facial massage",
-        "Supports cranial nerves for deep relaxation",
-        "Releases emotions held in the face",
-        "Rejuvenates skin for a radiant, calm complexion"
+        "Deeply relaxing and calms the nervous system",
+        "Boosts circulation, improves lymph flow and smooths skin",
+        "Reduces muscle tension and emotions held in the face",
+        "Promotes sleep and smooth skin"
       ],
       "whoItHelps": [
         "Migraines and headaches",
@@ -59,15 +61,14 @@
       "slug": "pre-conceptual-pregnancy",
       "title": "Pre-Conceptual & Pregnancy Reflexology",
       "duration": "50 min",
-      "price": 75,
+      "price": 85,
       "heroImage": "assets/images/service_Preconceptual_reflexology.webp",
-      "summary": "Supports hormonal balance, reduces stress and helps during conception and pregnancy.",
+      "summary": "Hugely beneficial for your reproductive system; reduces stress, promotes hormonal balance and reduces pregnancy aches and pains.",
       "description": "One of the major ways that Reflexology helps couples to conceive is by reducing stress and balancing hormones because stress and hormonal imbalances can have a major impact on a couple's chance of conceiving. Pre-conceptual Reflexology helps to create the perfect body ecology for a viable and healthy pregnancy. By stimulating certain reflex points, we help balance the endocrine system (responsible for hormonal health). Reflexology gives your body a re-boot - kick-starting the reproductive system, regulating hormonal functions and aiding detoxification so that you are in the best stead for a successful conception. Throughout your pregnancy, reflexology helps reduce aches and pains and brings balance to your mind and body. Reflexology can be helpful post-partum to re-energise, re-balance and aid healing.",
       "bullets": [
-        "Balances hormones and reduces stress for conception",
-        "Creates optimal body ecology for healthy pregnancy",
-        "Reduces pregnancy aches, pains and morning sickness",
-        "Supports post-partum recovery and re-balancing"
+        "Helps to balance hormones and reduce stress",
+        "Promotes optimal body ecology for a healthy pregnancy",
+        "Calms pregnancy aches, pains and morning sickness"
       ],
       "notes": ["Not carried out in the first trimester."],
       "whoItHelps": [
@@ -82,15 +83,16 @@
       "slug": "zone-face-lift",
       "title": "Zone Face Lift",
       "duration": "60 min",
-      "price": 95,
+      "price": 110,
       "heroImage": "assets/images/service_Zone_Face_Lift.webp",
       "summary": "Award-winning holistic facial combining reflexology, Gua Sha and massage techniques for natural lifting.",
       "description": "The Zone Face Lift facial is an award-winning therapy developed by Ziggie Bergman which has been hailed a credible alternative to Botox. It is a kinder holistic approach to helping you naturally look your best. The results speak for themselves! Each treatment starts with a cleanse, hot towel steam and luxury massage. ZFL combines pressure-point massage, sculpting Gua Sha, along with Native American and Asian massage techniques to gently release emotions held in the face. You will leave the session feeling revived and with a more youthful and 'bright' appearance. Zone Face Lift promotes collagen and elastin production and helps to de-puff the face. It sculpts and smooths your skin, lifts the face and neck, and leaves you feeling deeply relaxed with a truly healthy glow.",
       "bullets": [
-        "Combines facial reflexology, Gua Sha and massage techniques",
-        "Promotes collagen and elastin production",
-        "De-puffs and lifts face and neck naturally",
-        "Releases emotions held in the face"
+        "Combines manual massage with other tools to promote a natural lift",
+        "Improves lymphatic drainage and skin elasticity",
+        "Hailed a credible alternative to botox",
+        "Reduces puffiness and tension, releases stress held in face",
+        "Boosts collagen and elastin"
       ],
       "whoItHelps": [
         "Signs of ageing and fine lines",
@@ -102,10 +104,12 @@
     }
   ],
   "policies": {
-    "deposit": "A 25% deposit is required.",
-    "cancellation": "24 hours' notice to cancel or rearrange; otherwise full fee applies.",
+    "payment": "25% taken at time of booking. 75% balance taken after treatment.",
+    "cancellation": "-48hrs prior appt: postpone/cancel free of charge. -25hrs prior appt: postpone by 1 week free of charge or 50% cancellation charge. Less than 25hrs prior appt/On the day of appt/no show: 100% cancellation charge.",
     "consultation": "Please complete the consultation form before your treatment.",
-    "mobile": "Mobile visits within 5 miles of W9 carry a £10 fee."
+    "mobile": "Mobile reflexology treatments available in West and NW London.",
+    "eveningFee": "Appointments after 6:30pm have a 10% surcharge.",
+    "note": "Please note: Reflexologists do not give medical diagnosis or treatment but do correct imbalances that are revealed in each session. It is your responsibility to consult your GP about any pain, problem or illness that you are presently aware of, or become alerted to the possibility of as a result of a session."
   },
   "testimonials": [
     {
