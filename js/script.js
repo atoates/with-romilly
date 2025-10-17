@@ -137,11 +137,13 @@ function renderServices(services) {
             <div class="service-content">
                 <h3 class="service-title">${service.title}</h3>
                 <p class="service-summary">${service.summary}</p>
-                <div class="service-meta">
-                    <span class="service-duration">${service.duration}</span>
-                    <span class="service-price">${service.price}</span>
+                <div class="service-meta-bottom">
+                    <div class="service-pills">
+                        <span class="pill-duration">${service.duration}</span>
+                        <a href="services.html#${service.slug}" class="btn btn-primary btn-learn">Learn More</a>
+                    </div>
+                    <span class="service-price-large">£${service.price}</span>
                 </div>
-                <a href="services.html#${service.slug}" class="btn btn-primary">Learn More</a>
             </div>
         </div>
     `).join('');
