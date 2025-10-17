@@ -202,10 +202,67 @@
     box-shadow: 0 12px 40px rgba(59, 95, 86, 0.15);
 }
 
+/* Service Header with Lines */
+.service-header-line {
+    height: 1px;
+    background: var(--deep-sage);
+    margin: 0 2rem;
+}
+
+.service-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+}
+
+.services-home .service-title {
+    font-size: 1.75rem;
+    color: var(--deep-sage);
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.service-pills-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.service-pills-inline .pill-duration {
+    background: #ffffff;
+    color: var(--deep-sage);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1.5px solid var(--deep-sage);
+}
+
+.service-pills-inline .pill-price {
+    background: var(--gold-accent);
+    color: #ffffff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1.5px solid var(--gold-accent);
+}
+
+/* Service Content */
+.services-home .service-content {
+    padding: 2rem;
+    padding-top: 1.5rem;
+}
+
 .services-home .service-image {
-    height: 240px;
-    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
     overflow: hidden;
+    margin-bottom: 1.5rem;
 }
 
 .services-home .service-image img {
@@ -219,16 +276,6 @@
     transform: scale(1.08);
 }
 
-.services-home .service-content {
-    padding: 2rem;
-}
-
-.services-home .service-title {
-    font-size: 1.75rem;
-    color: var(--deep-sage);
-    margin-bottom: 1rem;
-}
-
 .services-home .service-summary {
     font-size: 1rem;
     color: #666;
@@ -237,48 +284,39 @@
     font-style: italic;
 }
 
-.service-meta-bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.service-pills {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.service-pills .pill-duration {
-    background: rgba(168, 192, 176, 0.2);
-    color: var(--deep-sage);
-    padding: 0.5rem 1.25rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1.5px solid rgba(168, 192, 176, 0.4);
-}
-
-.service-pills .btn-learn {
+.services-home .btn-learn {
     background: var(--deep-sage);
     color: white;
-    padding: 0.65rem 1.75rem;
+    padding: 0.75rem 2rem;
     border-radius: 50px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.service-pills .btn-learn:hover {
+.services-home .btn-learn:hover {
     background: #2E4A43;
     transform: translateY(-2px);
 }
 
-.service-price-large {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--deep-sage);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .services-home .service-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-pills-inline {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
 
 /* Section Header Improvements */
