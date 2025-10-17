@@ -38,7 +38,7 @@ function displayServices(services) {
 
                 ${topBenefits.length ? `
                 <ul class="benefits-inline" aria-label="Key benefits">
-                    ${topBenefits.map(b => `<li class=\"benefit-item\"><span class=\"hand-icon\" aria-hidden=\"true\">🤚</span><span>${b}</span></li>`).join('')}
+                    ${topBenefits.map(b => `<li class=\"benefit-item\">${b}</li>`).join('')}
                 </ul>` : ''}
 
                 ${(service.whoItHelps && service.whoItHelps.length) ? `

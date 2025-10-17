@@ -129,8 +129,36 @@
 .hero-service-box h3 {
     font-size: 1.1rem;
     color: var(--deep-sage);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 600;
+}
+
+.service-meta-pills {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pill-duration,
+.pill-price {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.pill-duration {
+    background: rgba(168, 192, 176, 0.15);
+    color: var(--deep-sage);
+    border: 1.5px solid rgba(168, 192, 176, 0.3);
+}
+
+.pill-price {
+    background: var(--gold-accent);
+    color: #ffffff;
+    border: 1.5px solid var(--gold-accent);
 }
 
 .hero-service-box p {
@@ -279,8 +307,10 @@
         font-size: 0.95rem;
     }
     
-    .hero-service-box p {
-        font-size: 0.85rem;
+    .pill-duration,
+    .pill-price {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.85rem;
     }
     
     .hero-service-icon {
