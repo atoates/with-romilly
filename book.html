@@ -169,6 +169,214 @@
         </div>
     </section>
 
+    <!-- Consultation Form Section -->
+    <section class="consultation-section">
+        <div class="container">
+            <div class="consultation-content">
+                <h2>Health Consultation Questions</h2>
+                <p class="consultation-intro">Please complete these essential questions before your appointment. This information helps ensure your safety and allows me to tailor the treatment to your needs.</p>
+                
+                <form class="consultation-form" id="consultationForm">
+                    <!-- Medical Consent -->
+                    <div class="form-section consent-section">
+                        <div class="consent-box">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkmark"></span>
+                                <span class="consent-text">I understand that reflexologists do not give medical diagnosis or treatment but do correct imbalances that are revealed in each session. I further agree that it is my responsibility to consult my GP about my pain, problem or illness that I am presently aware of, or become alerted to the possibility of as a result of a session.</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Medical History -->
+                    <div class="form-section">
+                        <label for="medicalHistory">
+                            <strong>Medical History:</strong> (illnesses, diseases, disorders, accidents, injuries, operations, PMS? etc) Please state rough dates:
+                        </label>
+                        <textarea id="medicalHistory" name="medicalHistory" rows="4" placeholder="Please describe your medical history..."></textarea>
+                    </div>
+
+                    <!-- Allergies -->
+                    <div class="form-section">
+                        <label for="allergies">
+                            <strong>Do you have any allergies?</strong> If yes please state
+                        </label>
+                        <textarea id="allergies" name="allergies" rows="2" placeholder="List any allergies..."></textarea>
+                    </div>
+
+                    <!-- Reason for Seeking Reflexology -->
+                    <div class="form-section">
+                        <label for="reason">
+                            <strong>Reason for seeking reflexology:</strong> How can I help you?
+                        </label>
+                        <textarea id="reason" name="reason" rows="3" placeholder="What brings you to reflexology today?"></textarea>
+                    </div>
+
+                    <!-- Contraindications Table -->
+                    <div class="form-section contraindications-section">
+                        <h3>Contraindications</h3>
+                        <p class="contraindications-note"><strong>CONTRAINDICATIONS:</strong> Reflexology is a very safe therapy however some contraindications require medical permission OR informed consent before treatment. Please select any that apply.<br>I will contact you for further details if required.</p>
+                        
+                        <div class="contraindications-table">
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="pregnancy-first-trimester">
+                                        Pregnancy (in first trimester)
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="slipped-disc">
+                                        Slipped disc
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="cardiovascular">
+                                        Cardiovascular conditions (thrombosis, phlebitis, hypertension, hypotension, heart conditions)
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="lumps-swellings">
+                                        Undiagnosed lumps, swellings
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="oedema">
+                                        Medical oedema
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="pain">
+                                        Undiagnosed pain
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="osteoporosis">
+                                        Osteoporosis
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="asthma">
+                                        Asthma
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="arthritis">
+                                        Arthritis
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="nervous-system">
+                                        Any dysfunction of the nervous system (e.g. Multiple sclerosis, Parkinson's disease, Motor neurone disease)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="psychotic">
+                                        Nervous/Psychotic conditions
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="trapped-nerve">
+                                        Trapped/Pinched nerve (e.g. sciatica)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="epilepsy">
+                                        Epilepsy
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="whiplash">
+                                        Whiplash
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="diabetes">
+                                        Diabetes
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="botox">
+                                        Botox/filler in the last 3-4 weeks
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="operations">
+                                        Recent operations and/or imminent medical tests or procedures
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="kidney">
+                                        Kidney infections
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="contraindications-row">
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="injury">
+                                        Injury or condition linked to area worked
+                                    </label>
+                                </div>
+                                <div class="contraindication-item">
+                                    <label>
+                                        <input type="checkbox" name="contraindication" value="fever">
+                                        Fever
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contraindications-details">
+                                If you have answered yes to any of the above, please give details:
+                            </label>
+                            <textarea id="contraindications-details" name="contraindications-details" rows="3" placeholder="Please provide details..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <p class="form-note"><strong>SEE MORE Q'S ON NEXT PAGE</strong> - This information will be sent with your booking confirmation.</p>
+                        <button type="submit" class="btn btn-primary btn-large">Submit Consultation Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking Information -->
     <section class="booking-info">
         <div class="container">
@@ -185,15 +393,24 @@
                     <div class="info-card">
                         <div class="info-icon">💳</div>
                         <div>
-                            <h4>Deposit Required</h4>
-                            <p>A 25% deposit is required to secure your appointment. This can be paid online or over the phone.</p>
+                            <h4>Payment Terms</h4>
+                            <p>25% taken at time of booking. 75% balance taken after treatment.</p>
                         </div>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">⏰</div>
                         <div>
                             <h4>Cancellation Policy</h4>
-                            <p>24 hours' notice required for cancellations or changes. Otherwise, the full fee applies.</p>
+                            <p><strong>-48hrs:</strong> postpone/cancel free<br>
+                            <strong>-25hrs:</strong> postpone by 1 week free or 50% charge<br>
+                            <strong>&lt;25hrs/no show:</strong> 100% charge</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🌙</div>
+                        <div>
+                            <h4>Evening Appointments</h4>
+                            <p>Appointments after 6:30pm have a 10% surcharge.</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -268,8 +485,8 @@
                 </div>
                 
                 <div class="location-reminder">
-                    <p><strong>Location:</strong> 43 Croxley Road, Queens Park, W9 3HJ, London</p>
-                    <p><em>Mobile visits available within 5 miles for an additional £10</em></p>
+                    <p><strong>Location:</strong> Mobile Reflexology in West and NW London</p>
+                    <p><em>All treatments come to you - relax in the comfort of your own home</em></p>
                 </div>
             </div>
         </div>
@@ -288,7 +505,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact</h4>
-                    <p>43 Croxley Road<br>Queens Park, W9 3HJ<br>London</p>
+                    <p>Mobile Reflexology in West and NW London</p>
                     <p>
                         <a href="tel:+447974182612">07974 182 612</a><br>
                         <a href="mailto:withromilly@gmail.com">withromilly@gmail.com</a>
