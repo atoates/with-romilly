@@ -79,6 +79,21 @@
     margin-bottom: 3rem;
 }
 
+.hero-home .btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.hero-home .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
 /* Hero Service Quick Links */
 .hero-services {
     display: grid;
