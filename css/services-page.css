@@ -399,7 +399,7 @@
     padding: 0;
     margin: 0 0 2.5rem;
     background: #ffffff;
-    padding: 2rem 1.75rem;
+    padding: 2.5rem 2rem;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
@@ -408,13 +408,15 @@
     display: flex;
     align-items: flex-start;
     gap: 0;
-    margin-bottom: 1.25rem;
-    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
     color: #333;
-    line-height: 1.65;
-    padding: 0.5rem 0;
-    padding-left: 0.5rem;
-    border-left: 3px solid var(--gold-accent);
+    line-height: 1.7;
+    padding: 1.25rem 1.75rem;
+    padding-left: 2rem;
+    border-left: 4px solid var(--gold-accent);
+    background: #fafafa;
+    border-radius: 50px;
 }
 
 .benefit-item:last-child {
@@ -664,6 +666,12 @@
     
     .benefits-inline,
     .service-tags {
-        padding: 1.25rem;
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .benefit-item {
+        padding: 1rem 1.25rem;
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
     }
 }
