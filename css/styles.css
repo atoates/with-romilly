@@ -1340,6 +1340,8 @@ p {
     gap: 3.5rem; /* more breathing room between columns */
     margin-bottom: 3rem;
 }
+/* Allow footer to exceed standard container width */
+.footer > .container { max-width: 1360px; }
 
 .footer-brand {
     display: flex;
@@ -1383,11 +1385,11 @@ p {
 .footer-social .social-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
 
 /* Footer navigation columns */
-.footer-nav { display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 2.25rem; }
+.footer-nav { display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 2.5rem; }
 .footer-col h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; letter-spacing: .01em; }
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
 .footer-col li { margin-bottom: .85rem; }
-.footer-col a { color: rgba(255,255,255,.8); text-decoration: none; transition: color .2s ease; white-space: nowrap; }
+.footer-col a { color: rgba(255,255,255,.8); text-decoration: none; transition: color .2s ease; }
 .footer-col a:hover { color: var(--gold); }
 
 /* Contact */
