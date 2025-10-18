@@ -123,10 +123,10 @@
     content: "";
     position: absolute;
     left: 0;
-    top: .25rem;
+    top: .3rem;
     width: 16px;
     height: 16px;
-    background-image: url('../assets/images/logo_dark.png');
+    background-image: url('../assets/images/logo_dark_bullet.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
