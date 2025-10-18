@@ -123,10 +123,10 @@
     content: "";
     position: absolute;
     left: 0;
-    top: .2rem;
-    width: 18px;
-    height: 18px;
-    background-image: url('../assets/images/logo_green.png');
+    top: .25rem;
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/images/logo_dark.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
