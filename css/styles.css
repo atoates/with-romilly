@@ -56,7 +56,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 var(--space-lg);
 }
@@ -288,13 +288,19 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
+    .book-services-grid { gap: 1.2rem; }
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-nav { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
+    .footer-accredit { margin-top: .5rem; }
         font-size: 15px;
     }
-    
+    .book-hero-overlay { padding: 1.2rem 0.5rem; }
     .container {
         padding: 0 var(--space-md);
     }
+    /* Footer */
+    .footer-nav { grid-template-columns: 1fr; gap: 1rem; }
     
     .nav-logo-text {
         display: none;
@@ -1326,13 +1332,12 @@ p {
 
 /* New unified footer grid */
 .footer-grid {
-    max-width: 1200px;
+    max-width: 1360px; /* widen footer content area */
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.2fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    grid-template-columns: 1.7fr 2.3fr 1.2fr; /* brand | nav (wider) | accreditation */
+    gap: 3.5rem; /* more breathing room between columns */
     margin-bottom: 3rem;
 }
 
@@ -1378,11 +1383,11 @@ p {
 .footer-social .social-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
 
 /* Footer navigation columns */
-.footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.footer-col h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; }
+.footer-nav { display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 2.25rem; }
+.footer-col h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; letter-spacing: .01em; }
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-col li { margin-bottom: .75rem; }
-.footer-col a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s ease; }
+.footer-col li { margin-bottom: .85rem; }
+.footer-col a { color: rgba(255,255,255,.8); text-decoration: none; transition: color .2s ease; white-space: nowrap; }
 .footer-col a:hover { color: var(--gold); }
 
 /* Contact */
