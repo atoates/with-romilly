@@ -1324,15 +1324,76 @@ p {
     );
 }
 
-.footer-content {
+/* New unified footer grid */
+.footer-grid {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 3rem;
     margin-bottom: 3rem;
 }
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo span {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.footer-tagline {
+    color: rgba(255,255,255,.8) !important;
+    margin: .25rem 0 0.5rem;
+}
+
+.footer-social { display: flex; gap: .75rem; margin-top: .25rem; }
+.footer-social .social-link { 
+    width: 38px; height: 38px; border-radius: 50%; display: inline-flex; 
+    align-items: center; justify-content: center; color: #1F1F1F; background: #fff; 
+    text-decoration: none; border: 1px solid rgba(255,255,255,.2);
+}
+.footer-social .social-link svg { width: 18px; height: 18px; color: #2B2B2B; }
+.footer-social .social-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+
+/* Footer navigation columns */
+.footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.footer-col h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: .75rem; }
+.footer-col a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s ease; }
+.footer-col a:hover { color: var(--gold); }
+
+/* Contact */
+.footer-contact h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; }
+.footer-contact p { margin: 0 0 .5rem; color: rgba(255,255,255,.8); }
+.footer-contact a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Accreditation badge with light background so logo is visible */
+.footer-accredit { align-self: start; }
+.footer-accredit h4 { color: #fff; margin-bottom: .75rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; opacity: .9; }
+.accreditation-badge { background: #fff; border-radius: 12px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+.accreditation-logo { max-height: 64px; width: auto; display: block; object-fit: contain; filter: none; }
 
 .footer-section h4 {
     color: white;
@@ -1571,10 +1632,9 @@ p {
     }
 
     /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
+    .footer-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+    .footer-nav { grid-template-columns: 1fr 1fr; }
+    .footer-accredit { margin-top: .5rem; }
 
     .footer-section.about {
         max-width: 100%;
