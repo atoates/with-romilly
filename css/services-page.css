@@ -117,8 +117,21 @@
 .overlay-title { margin: 0 0 1rem; color: var(--deep-sage); font-size: 1.5rem; }
 .overlay-body p { color: #444; line-height: 1.7; margin-bottom: 1rem; }
 .overlay-benefits h5 { color: var(--deep-sage); margin: 1rem 0 .75rem; font-size: 1.35rem; font-weight: 700; letter-spacing: .01em; }
-.overlay-benefits ul { margin: 0; padding-left: 1.25rem; }
-.overlay-benefits li { margin-bottom: .5rem; }
+.overlay-benefits ul { margin: 0; padding-left: 0; list-style: none; }
+.overlay-benefits li { position: relative; margin-bottom: .5rem; padding-left: 2rem; }
+.overlay-benefits li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .2rem;
+    width: 18px;
+    height: 18px;
+    background-image: url('../assets/images/logo_green.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
 
 @media (max-width: 1024px) {
   .service-panel .panel-inner, .service-panel.reverse .panel-inner { grid-template-columns: 1fr; }
