@@ -293,8 +293,7 @@ p {
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     .footer-nav { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
     .footer-accredit { margin-top: .5rem; }
-        font-size: 15px;
-    }
+    
     .book-hero-overlay { padding: 1.2rem 0.5rem; }
     .container {
         padding: 0 var(--space-md);
