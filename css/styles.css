@@ -1333,6 +1333,7 @@ p {
     grid-template-columns: 2fr 1fr 1fr 1.2fr;
     gap: 3rem;
     margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .footer-brand {
@@ -1391,9 +1392,9 @@ p {
 
 /* Accreditation badge with light background so logo is visible */
 .footer-accredit { align-self: start; }
-.footer-accredit h4 { color: #fff; margin-bottom: .75rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; opacity: .9; }
-.accreditation-badge { background: #fff; border-radius: 12px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
-.accreditation-logo { max-height: 64px; width: auto; display: block; object-fit: contain; filter: none; }
+.footer-accredit h4 { color: #fff; margin-bottom: .85rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; opacity: .95; }
+.accreditation-badge { background: linear-gradient(180deg,#fff, #f6f6f6); border-radius: 16px; padding: 14px 16px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(0,0,0,.06); box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+.accreditation-logo { max-height: 72px; width: auto; display: block; object-fit: contain; filter: none; mix-blend-mode: normal; }
 
 .footer-section h4 {
     color: white;
@@ -1828,7 +1829,7 @@ select:focus {
 .services-page-header {
     background: 
         linear-gradient(135deg, rgba(59, 95, 86, 0.7) 0%, rgba(168, 192, 176, 0.6) 100%),
-        url('../assets/images/spa.png') center/cover;
+    url('../assets/images/spa.webp') center/cover;
     background-attachment: fixed;
     position: relative;
 }
@@ -2365,7 +2366,7 @@ select:focus {
     display: none;
 }
 
-.accreditation-logo {
+.footer-accreditation .accreditation-logo {
     max-width: 140px;
     height: auto;
     opacity: 0.9;
@@ -2373,7 +2374,7 @@ select:focus {
     filter: brightness(0) invert(1);
 }
 
-.accreditation-logo:hover {
+.footer-accreditation .accreditation-logo:hover {
     opacity: 1;
     transform: scale(1.05);
 }

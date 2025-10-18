@@ -128,13 +128,13 @@
   "recommends": [
     { 
       "name": "Hayou Method Bamboo Body Tapper", 
-      "image": "assets/images/bamboobodytapper.png", 
+  "image": "assets/images/bamboobodytapper.webp", 
       "description": "Gentle body tapping for circulation and lymphatic drainage. The Hayou Method body tapper helps stimulate blood flow and supports the lymphatic system.",
       "url": "https://hayoumethod.com" 
     },
     { 
       "name": "Theta Naturals Co. Connect & Restore Bath Salts", 
-      "image": "assets/images/theta-salts.jpeg", 
+  "image": "assets/images/theta-salts.webp", 
       "description": "Mineral-rich bath salts for deep relaxation and muscle relief. Infused with natural ingredients to help you unwind and restore.",
       "url": "https://thetanaturalsco.com" 
     },

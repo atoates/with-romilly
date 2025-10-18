@@ -155,11 +155,12 @@
 }
 
 .trust-logo-img {
-    height: 50px;
+    height: 28px;
     width: auto;
+    opacity: .95;
+    filter: none;
     object-fit: contain;
 }
-
 .trust-icon {
     width: 24px;
     height: 24px;
