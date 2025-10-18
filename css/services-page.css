@@ -104,7 +104,7 @@
 .title-row .title-line { height:1px; background:var(--deep-sage); width:96px; flex-shrink:0; }
 .title { margin:0; color: var(--deep-sage); font-size: 2rem; line-height:1.15; text-align:center; }
 .panel-sep { display: none; }
-.summary { color:#5a5a5a; line-height:1.7; font-size:1.05rem; text-align:left; margin: 0 0 1.25rem; }
+.summary { color:#5a5a5a; line-height:1.7; font-size:1.05rem; text-align:center; margin: 0 0 1.25rem; }
 .benefits { display: none !important; }
 .benefit { display: none !important; }
 .cta-row { display:flex; gap:.75rem; flex-wrap:wrap; }
