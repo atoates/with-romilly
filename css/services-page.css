@@ -105,8 +105,21 @@
 .title { margin:0; color: var(--deep-sage); font-size: 2rem; line-height:1.15; text-align:center; }
 .panel-sep { display: none; }
 .summary { color:#5a5a5a; line-height:1.7; font-size:1.05rem; text-align:center; margin: 0 0 1.25rem; }
-.benefits { display: none !important; }
-.benefit { display: none !important; }
+.benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+    margin: 0 0 1.5rem;
+    list-style: none; /* remove default bullets */
+    padding-left: 0;  /* remove left indent */
+}
+.benefit {
+    background: #fff;
+    border-left: 4px solid var(--gold-accent);
+    border-radius: 12px;
+    padding: .85rem 1rem;
+    color: #2b2b2b;
+}
 .cta-row { display:flex; gap:.75rem; flex-wrap:wrap; }
 
 /* Panel Overlay */
