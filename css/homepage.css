@@ -234,6 +234,11 @@
     min-width: 0; /* allow content to shrink inside flex row */
 }
 
+/* Remove decorative lines on homepage services */
+.services-home .title-line-left,
+.services-home .title-line-right,
+.services-home .service-separator-line { display: none !important; }
+
 /* Service Header with Short Lines */
 .service-title-row {
     display: flex;
