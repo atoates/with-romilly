@@ -8,6 +8,8 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="assets/images/favicon.webp">
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="assets/images/stones.webp" type="image/webp">
     
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,7 +86,7 @@
     <!-- Page Header -->
     <section class="services-page-hero">
         <div class="hero-background">
-            <img src="assets/images/stones.webp" alt="" class="hero-bg-img">
+            <img src="assets/images/stones.webp" alt="" class="hero-bg-img" fetchpriority="high" loading="eager" decoding="async">
         </div>
         <div class="hero-overlay"></div>
         <div class="container">

@@ -8,6 +8,8 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="assets/images/favicon.webp">
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="assets/images/hero_image.webp" type="image/webp">
     
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,7 +86,7 @@
     <!-- Page Header with Hero Banner -->
     <section class="page-header book-page-hero">
         <div class="hero-background">
-            <img src="assets/images/hero_image.webp" alt="Spa stones" class="hero-bg-img">
+            <img src="assets/images/hero_image.webp" alt="Spa stones" class="hero-bg-img" fetchpriority="high" loading="eager" decoding="async">
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
@@ -126,7 +128,7 @@
                     <div class="book-services-grid">
                         <div class="book-service-card">
                             <div class="service-card-image">
-                                <img src="assets/images/service_reflexology.webp" alt="Reflexology" loading="lazy">
+                                <img src="assets/images/service_reflexology.webp" alt="Reflexology" loading="lazy" decoding="async">
                             </div>
                             <div class="service-card-content">
                                 <h4>Reflexology</h4>
@@ -135,7 +137,7 @@
                         </div>
                         <div class="book-service-card">
                             <div class="service-card-image">
-                                <img src="assets/images/service_Facial_reflexology.webp" alt="Facial Reflexology" loading="lazy">
+                                <img src="assets/images/service_Facial_reflexology.webp" alt="Facial Reflexology" loading="lazy" decoding="async">
                             </div>
                             <div class="service-card-content">
                                 <h4>Facial Reflexology</h4>
@@ -144,7 +146,7 @@
                         </div>
                         <div class="book-service-card">
                             <div class="service-card-image">
-                                <img src="assets/images/service_Preconceptual_reflexology.webp" alt="Preconceptual Reflexology" loading="lazy">
+                                <img src="assets/images/service_Preconceptual_reflexology.webp" alt="Preconceptual Reflexology" loading="lazy" decoding="async">
                             </div>
                             <div class="service-card-content">
                                 <h4>Preconceptual Reflexology</h4>
@@ -153,7 +155,7 @@
                         </div>
                         <div class="book-service-card">
                             <div class="service-card-image">
-                                <img src="assets/images/service_Zone_Face_Lift.webp" alt="Zone Face Lift" loading="lazy">
+                                <img src="assets/images/service_Zone_Face_Lift.webp" alt="Zone Face Lift" loading="lazy" decoding="async">
                             </div>
                             <div class="service-card-content">
                                 <h4>Zone Face Lift</h4>
