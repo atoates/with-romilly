@@ -87,48 +87,58 @@ function displayServices(services) {
     // Render TOC for quick navigation
     renderServicesToc(services);
 
-    // Wire up overlay close buttons
-    // Wire overlay open/close
+    // Overlay open/close helpers with scroll lock
+    const openOverlay = (overlay) => {
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        const closeBtn = overlay.querySelector('.overlay-close');
+        if (closeBtn) closeBtn.focus();
+    };
+    const closeOverlay = (overlay) => {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    // Wire overlay open
     document.querySelectorAll('.service-panel .media-more').forEach(btn => {
+        btn.setAttribute('role', 'button');
+        btn.setAttribute('tabindex', '0');
         btn.addEventListener('click', (e) => {
             const panel = e.currentTarget.closest('.service-panel');
             const overlay = panel && panel.querySelector('.panel-overlay');
-            if (overlay) {
-                overlay.classList.add('open');
-                overlay.setAttribute('aria-hidden', 'false');
-                const closeBtn = overlay.querySelector('.overlay-close');
-                if (closeBtn) closeBtn.focus();
+            if (overlay) openOverlay(overlay);
+        });
+        btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const panel = e.currentTarget.closest('.service-panel');
+                const overlay = panel && panel.querySelector('.panel-overlay');
+                if (overlay) openOverlay(overlay);
             }
         });
     });
 
+    // Wire overlay close buttons
     document.querySelectorAll('.service-panel .overlay-close').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const overlay = e.currentTarget.closest('.panel-overlay');
-            if (overlay) {
-                overlay.classList.remove('open');
-                overlay.setAttribute('aria-hidden', 'true');
-            }
+            if (overlay) closeOverlay(overlay);
         });
     });
 
     // Close on background click
     document.querySelectorAll('.service-panel .panel-overlay').forEach(overlay => {
         overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
-                overlay.classList.remove('open');
-                overlay.setAttribute('aria-hidden', 'true');
-            }
+            if (e.target === overlay) closeOverlay(overlay);
         });
     });
 
     // Close on Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            document.querySelectorAll('.panel-overlay.open').forEach(overlay => {
-                overlay.classList.remove('open');
-                overlay.setAttribute('aria-hidden', 'true');
-            });
+            document.querySelectorAll('.panel-overlay.open').forEach(overlay => closeOverlay(overlay));
         }
     });
 }

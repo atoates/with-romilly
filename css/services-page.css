@@ -91,7 +91,23 @@
 .service-panel.reverse .panel-media { border-radius: 0 20px 20px 0; }
 .panel-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
 .service-panel:hover .panel-media img { transform: scale(1.04); }
-.media-more { position: absolute; bottom: 1rem; right: 1rem; background: rgba(59,95,86,.85); color: #fff; padding: .6rem 1rem; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: .95rem; }
+.media-more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(59,95,86,.9);
+    color: #fff;
+    padding: .75rem 1.1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+    min-height: 44px; /* better tap target */
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    border: 2px solid rgba(255,255,255,.85);
+}
+.media-more:active { transform: translateY(1px); }
 
 .panel-content { background: #F5F0EB; padding: 2.25rem; display: flex; flex-direction: column; border-radius: 0 20px 20px 0; }
 .service-panel.reverse .panel-content { border-radius: 20px 0 0 20px; }
@@ -123,7 +139,7 @@
 .cta-row { display:flex; gap:.75rem; flex-wrap:wrap; justify-content: center; }
 
 /* Panel Overlay */
-.panel-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; padding: 2rem; z-index: 1000; }
+.panel-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; padding: 2rem; z-index: 3000; }
 .panel-overlay.open { display: flex; }
 .overlay-card { background: #fff; border-radius: 16px; max-width: 780px; width: 100%; padding: 2rem; box-shadow: 0 12px 40px rgba(0,0,0,.3); position: relative; }
 .overlay-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border-radius: 50%; border: none; background: var(--deep-sage); color: #fff; font-size: 1.25rem; display: grid; place-items: center; cursor: pointer; }
@@ -455,13 +471,7 @@
         flex-direction: column;
     }
     
-    .overlay-inner {
-        padding: 1.5rem;
-    }
-    
-    .overlay-content {
-        padding: 1.5rem;
-    }
+    .overlay-card { padding: 1.5rem; margin: 0 0.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -502,4 +512,6 @@
         padding-left: 1.5rem;
         font-size: 0.95rem;
     }
+    .media-more { bottom: .75rem; right: .75rem; padding: .7rem 1rem; font-size: .95rem; }
+    .overlay-card { padding: 1.25rem; margin: 0 .5rem; }
 }
