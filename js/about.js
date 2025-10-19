@@ -2,6 +2,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadAboutContent();
     initializeNavigation();
+    // Load Instagram feed if token configured
+    if (typeof loadInstagramFeed === 'function') {
+        loadInstagramFeed({ containerId: 'instagram-feed', limit: 8 });
+    }
 });
 
 // Load and display about content
