@@ -75,6 +75,7 @@
 .services-main {
     padding: 5rem 0;
     background: linear-gradient(to bottom, #F7F3EF 0%, #ffffff 50%, #F7F3EF 100%);
+    overflow-x: hidden; /* guard against accidental horizontal scroll */
 }
 
 /* Services Intro */
@@ -427,36 +428,15 @@
     }
     
     .panel-content { align-items: center; text-align: center; }
-    .service-content { padding: 2.5rem 1.75rem; margin: 1rem; }
+    /* Remove margins on grid children to avoid horizontal overflow */
+    .service-content { padding: 1.75rem 1rem; margin: 0; }
     .benefit { text-align: left; } /* keep readability for list items */
     
-    .service-image {
-        min-height: 350px;
-        margin: 1rem;
-        margin-bottom: 0;
-    }
+    .service-image { min-height: 350px; margin: 0; }
     
-    .service-title {
-        font-size: 1.85rem;
-    }
-    
-    .service-title-row {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .title-line-left {
-        width: 40px;
-    }
-    
-    .title-line-right {
-        flex: 1;
-        min-width: 40px;
-    }
-    
-    .service-title {
-        white-space: normal;
-    }
+    .title { font-size: 1.6rem; word-break: break-word; }
+    .title-row .title-line { width: 64px; }
+    .summary { padding: 0 .25rem; }
     
     .service-meta {
         width: 100%;
@@ -476,6 +456,10 @@
     }
     
     .overlay-card { padding: 1.5rem; margin: 0 0.5rem; }
+    
+    /* Center CTA buttons and constrain width */
+    .cta-row { justify-content: center; }
+    .cta-row .btn { width: 100%; max-width: 320px; }
 }
 
 @media (max-width: 480px) {
@@ -493,18 +477,11 @@
         gap: 0.625rem;
     }
     
-    .service-image {
-        min-height: 280px;
-    }
+    .service-image { min-height: 280px; }
     
-    .service-content {
-        padding: 2rem 1.5rem;
-        margin: 0.75rem;
-    }
-    
-    .service-title {
-        font-size: 1.65rem;
-    }
+    .service-content { padding: 1.5rem 1rem; margin: 0; }
+    .title { font-size: 1.45rem; }
+    .title-row .title-line { width: 48px; }
     
     .benefits-inline,
     .service-tags {
