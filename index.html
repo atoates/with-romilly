@@ -186,15 +186,19 @@
             </div>
         </section>
 
-        <!-- Testimonials -->
+        <!-- Testimonials (Carousel) -->
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">What Clients Say</h2>
                     <div class="divider"></div>
                 </div>
-                <div class="testimonials-grid" id="testimonials-grid">
-                    <!-- Testimonials will be loaded by JavaScript -->
+                <div class="testimonial-carousel" id="home-testimonial-carousel" aria-live="polite">
+                    <div class="testimonial-controls">
+                        <button class="testimonial-btn" id="home-testimonial-prev" aria-label="Previous testimonial">‹</button>
+                        <button class="testimonial-btn" id="home-testimonial-next" aria-label="Next testimonial">›</button>
+                    </div>
+                    <div class="testimonial-dots" id="home-testimonial-dots" aria-label="Testimonial indicators"></div>
                 </div>
             </div>
         </section>

@@ -115,7 +115,8 @@ async function loadContentData() {
         const data = await response.json();
         
         renderServices(data.services);
-        renderTestimonials(data.testimonials);
+    renderTestimonials(data.testimonials);
+    initHomeTestimonialCarousel(data.testimonials);
         renderRecommends(data.recommends);
         renderAboutText(data.about.short);
         
@@ -156,15 +157,58 @@ function renderServices(services) {
 
 // Render testimonials
 function renderTestimonials(testimonials) {
+    // Kept for potential other pages that still use grid
     const testimonialsGrid = document.getElementById('testimonials-grid');
-    if (!testimonialsGrid || !testimonials) return;
+    if (testimonialsGrid && testimonials) {
+        testimonialsGrid.innerHTML = testimonials.map(testimonial => `
+            <div class="testimonial-card fade-in-up">
+                <p class="testimonial-quote">${testimonial.quote}</p>
+                <div class="testimonial-author">— ${testimonial.author}</div>
+            </div>
+        `).join('');
+    }
+}
 
-    testimonialsGrid.innerHTML = testimonials.map(testimonial => `
-        <div class="testimonial-card fade-in-up">
-            <p class="testimonial-quote">${testimonial.quote}</p>
-            <div class="testimonial-author">— ${testimonial.author}</div>
-        </div>
-    `).join('');
+function initHomeTestimonialCarousel(testimonials) {
+    const carousel = document.getElementById('home-testimonial-carousel');
+    if (!carousel || !testimonials) return;
+
+    const slides = testimonials.map((t, i) => `
+        <div class="testimonial-slide${i === 0 ? ' active' : ''}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${testimonials.length}">
+            <blockquote class="testimonial-quote">“${t.quote}”</blockquote>
+            <cite class="testimonial-author">— ${t.author}</cite>
+        </div>`).join('');
+
+    carousel.insertAdjacentHTML('afterbegin', slides);
+
+    const dotsWrap = document.getElementById('home-testimonial-dots');
+    const prevBtn = document.getElementById('home-testimonial-prev');
+    const nextBtn = document.getElementById('home-testimonial-next');
+    dotsWrap.innerHTML = testimonials.map((_, i) => `<button class="testimonial-dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Go to testimonial ${i + 1}"></button>`).join('');
+
+    const slideEls = Array.from(carousel.querySelectorAll('.testimonial-slide'));
+    const dotEls = Array.from(dotsWrap.querySelectorAll('.testimonial-dot'));
+    let current = 0;
+    let timer;
+
+    const show = (index) => {
+        slideEls[current].classList.remove('active');
+        dotEls[current].classList.remove('active');
+        current = (index + slideEls.length) % slideEls.length;
+        slideEls[current].classList.add('active');
+        dotEls[current].classList.add('active');
+        resetTimer();
+    };
+    const next = () => show(current + 1);
+    const prev = () => show(current - 1);
+    const resetTimer = () => { if (timer) clearInterval(timer); timer = setInterval(next, 7000); };
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    dotEls.forEach(btn => btn.addEventListener('click', () => show(parseInt(btn.dataset.index))));
+    carousel.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') next(); if (e.key === 'ArrowLeft') prev(); });
+
+    resetTimer();
 }
 
 // Render recommends
