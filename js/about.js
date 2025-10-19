@@ -2,10 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadAboutContent();
     initializeNavigation();
-    // Load Instagram feed if token configured
-    if (typeof loadInstagramFeed === 'function') {
-        loadInstagramFeed({ containerId: 'instagram-feed', limit: 8 });
-    }
+    // Instagram feed paused (using LightWidget instead)
 });
 
 // Load and display about content
@@ -169,10 +166,13 @@ function initializeNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (navToggle && navMenu) {
+    // Only bind if global script hasn't already done it
+    if (navToggle && navMenu && navToggle.dataset.navBound !== 'true') {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            const isActive = navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active', isActive);
+            navToggle.setAttribute('aria-expanded', String(isActive));
+            document.body.style.overflow = isActive ? 'hidden' : '';
         });
         
         // Close menu when clicking on links
@@ -181,8 +181,13 @@ function initializeNavigation() {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
+
+        navToggle.dataset.navBound = 'true';
+        navToggle.setAttribute('aria-expanded', 'false');
     }
     
     // Smooth scrolling for anchor links

@@ -4,21 +4,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load content data
     loadContentData();
     
-    // Mobile Navigation Toggle
+    // Mobile Navigation Toggle (initialize once globally)
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
+    if (navToggle && navMenu && navToggle.dataset.navBound !== 'true') {
+        const toggleMenu = () => {
+            const isActive = navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active', isActive);
+            navToggle.setAttribute('aria-expanded', String(isActive));
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        };
+
+        navToggle.addEventListener('click', toggleMenu);
 
         // Close mobile menu when clicking on a nav link
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
 
@@ -28,8 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isClickInsideNav && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             }
         });
+
+        // Mark as initialized to avoid double-binding from page scripts
+        navToggle.dataset.navBound = 'true';
+        navToggle.setAttribute('aria-expanded', 'false');
     }
 
     // Smooth scrolling for anchor links
