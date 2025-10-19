@@ -1289,6 +1289,18 @@ p {
     border-color: var(--accent-color);
 }
 
+/* Ensure primary button is visible on the dark CTA background */
+.location-cta .cta-buttons .btn-primary {
+    background: #ffffff;
+    color: var(--primary-color);
+    border-color: #ffffff;
+}
+.location-cta .cta-buttons .btn-primary:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
 /* Contact & Forms */
 .contact-content {
     max-width: 600px;
