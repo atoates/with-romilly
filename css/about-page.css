@@ -1,11 +1,12 @@
 /* ===================================
    ABOUT PAGE PREMIUM DESIGN
+   Updated: 2025-10-19 - Reduced hero height & improved caption contrast
    =================================== */
 
 /* Hero Section */
 .about-page-hero {
     position: relative;
-    min-height: 55vh;
+    min-height: 40vh; /* Reduced from 55vh */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,6 +78,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    max-width: 100%;
+}
+
+.about-text {
+    /* Ensure text column doesn't cause grid issues */
+    min-width: 0;
 }
 
 .about-intro {
@@ -125,12 +132,15 @@
     margin: 0;
 }
 
+/* About Image - Clean, Simple Approach */
 .about-image {
     position: relative;
+    width: 100%;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 12px 48px rgba(59, 95, 86, 0.15);
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .about-image:hover {
@@ -141,6 +151,11 @@
     width: 100%;
     height: auto;
     display: block;
+    /* Override global cap from styles.css so the image fills the column */
+    max-width: none;
+    /* Decoration is handled by the container */
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .image-caption {
@@ -149,14 +164,17 @@
     left: 0;
     right: 0;
     background: linear-gradient(to top,
-        rgba(59, 95, 86, 0.85) 0%,
-        rgba(59, 95, 86, 0.55) 40%,
-        rgba(59, 95, 86, 0.0) 75%);
-    padding: 1.25rem 1.5rem 1.25rem;
+        rgba(43, 43, 43, 0.92) 0%,
+        rgba(43, 43, 43, 0.75) 30%,
+        rgba(43, 43, 43, 0.35) 60%,
+        rgba(43, 43, 43, 0.0) 100%);
+    padding: 1.5rem 1.5rem 1.25rem;
     color: #ffffff;
     text-align: center;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-    pointer-events: none; /* caption is decorative, avoid accidental taps */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    pointer-events: none;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 }
 
 .image-caption p {
@@ -170,6 +188,40 @@
     color: #EFCBD1;
     font-size: 0.95rem;
     font-style: italic;
+}
+
+/* Special Focus Banner */
+.special-focus {
+    background: linear-gradient(135deg, #3B5F56 0%, #2d4a44 100%);
+    color: #ffffff;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.special-focus::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(800px 200px at 50% 0%, rgba(255,255,255,0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.special-focus .special-focus-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.special-focus .section-title {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.special-focus p {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin: 0;
 }
 
 /* Qualifications Section */
@@ -192,8 +244,8 @@
 
 .qualifications-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem 1.5rem;
 }
 
 .qualification-item {
@@ -215,24 +267,28 @@
 }
 
 .qualification-icon {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: linear-gradient(135deg, #3B5F56 0%, #A8C0B0 100%);
     color: #ffffff;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
     flex-shrink: 0;
 }
+.qualification-icon svg { width: 20px; height: 20px; display: block; }
 
 .qualification-text {
     font-size: 1.1rem;
     color: #5a5a5a;
     line-height: 1.6;
     padding-top: 0.25rem;
+}
+
+/* Responsive tweaks for qualifications */
+@media (max-width: 768px) {
+    .qualifications-grid { grid-template-columns: 1fr; }
 }
 
 /* Philosophy Section */
@@ -551,7 +607,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .about-page-hero {
-        min-height: 45vh;
+        min-height: 35vh; /* reduce banner height on mobile too */
     }
     
     .about-main {
@@ -570,7 +626,8 @@
     .about-image {
         order: 1;
         border-radius: 20px;
-        overflow: clip;
+        /* Use hidden to ensure the caption gradient clips to the rounded corners on all browsers */
+        overflow: hidden;
     }
     .image-caption { padding: 0.9rem 1rem; }
     .image-caption p { font-size: 0.95rem; }

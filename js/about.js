@@ -33,10 +33,32 @@ function displayAboutStory(about) {
 function displayQualifications(qualifications) {
     const qualificationsGrid = document.getElementById('qualifications-grid');
     if (!qualificationsGrid || !qualifications) return;
-    
-    qualificationsGrid.innerHTML = qualifications.map((qualification, index) => `
-        <div class="qualification-item" style="animation-delay: ${index * 0.1}s">
-            <div class="qualification-icon">✓</div>
+
+    const icons = {
+        reflexologist: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a4 4 0 014 4v2h1a3 3 0 013 3v8a3 3 0 01-3 3H7a3 3 0 01-3-3v-8a3 3 0 013-3h1V6a4 4 0 014-4z" fill="currentColor"/></svg>`,
+        association: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" fill="currentColor"/></svg>`,
+        diploma: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2"/></svg>`,
+        pregnancy: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 3a4 4 0 110 8 4 4 0 010-8z" fill="currentColor"/><path d="M7 20a5 5 0 1110 0H7z" fill="currentColor"/></svg>`,
+        facial: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 20c1.5-4 6-6 8-6s6 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+        insured: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z" fill="currentColor"/></svg>`
+    };
+
+    const pickIcon = (text) => {
+        const t = text.toLowerCase();
+        if (t.includes('association')) return icons.association;
+        if (t.includes('naturopathy') || t.includes('diploma')) return icons.diploma;
+        if (t.includes('pre-conceptual') || t.includes('pregnancy')) return icons.pregnancy;
+        if (t.includes('facial') || t.includes('zone face lift')) return icons.facial;
+        if (t.includes('insured') || t.includes('certified')) return icons.insured;
+        if (t.includes('reflexologist') || t.includes('reflexology')) return icons.reflexologist;
+        return icons.reflexologist;
+    };
+
+    const items = qualifications.slice(0, 6); // ensure 3 rows x 2 columns
+
+    qualificationsGrid.innerHTML = items.map((qualification, index) => `
+        <div class="qualification-item" style="animation-delay: ${index * 0.05}s">
+            <div class="qualification-icon">${pickIcon(qualification)}</div>
             <div class="qualification-text">${qualification}</div>
         </div>
     `).join('');
