@@ -1147,6 +1147,59 @@ p {
     font-size: 0.95rem;
 }
 
+/* Testimonial carousel (shared across pages) */
+.testimonial-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.testimonial-slide {
+    background: var(--background-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    padding: var(--space-2xl) var(--space-xl);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .4s ease, transform .4s ease;
+    position: absolute;
+    inset: 0;
+}
+.testimonial-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: var(--space-lg);
+}
+.testimonial-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: .5rem .85rem;
+    cursor: pointer;
+}
+.testimonial-dots {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    margin-top: .5rem;
+}
+.testimonial-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    border: none;
+}
+.testimonial-dot.active { background: var(--primary-color); }
+
 /* Recommends */
 .recommends-grid {
     display: grid;
