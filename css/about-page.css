@@ -250,11 +250,11 @@
 
 .qualification-item {
     display: flex;
-    align-items: start;
-    gap: 1.25rem;
+    align-items: center;
+    gap: 1rem;
     background: #ffffff;
     border-radius: 16px;
-    padding: 1.75rem 2rem;
+    padding: 1.25rem 1.5rem;
     box-shadow: 0 4px 16px rgba(59, 95, 86, 0.08);
     border: 1px solid #E8E8E8;
     transition: all 0.3s ease;
@@ -267,8 +267,8 @@
 }
 
 .qualification-icon {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: linear-gradient(135deg, #3B5F56 0%, #A8C0B0 100%);
     color: #ffffff;
@@ -276,20 +276,60 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(59,95,86,0.18);
 }
-.qualification-icon svg { width: 20px; height: 20px; display: block; }
+.qualification-icon svg { width: 26px; height: 26px; display: block; }
 
 .qualification-text {
-    font-size: 1.1rem;
+    font-size: 1.075rem;
     color: #5a5a5a;
     line-height: 1.6;
-    padding-top: 0.25rem;
+    padding-top: 0;
 }
 
 /* Responsive tweaks for qualifications */
 @media (max-width: 768px) {
     .qualifications-grid { grid-template-columns: 1fr; }
 }
+
+/* Testimonials carousel */
+.testimonial-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.testimonial-slide {
+    background: #ffffff;
+    border: 1px solid #E8E8E8;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(59,95,86,0.08);
+    padding: 2rem 1.75rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .4s ease, transform .4s ease;
+    position: absolute;
+    inset: 0;
+}
+.testimonial-slide.active { opacity: 1; transform: translateY(0); position: relative; }
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+.testimonial-btn {
+    background: #3B5F56;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: .5rem .85rem;
+    cursor: pointer;
+}
+.testimonial-dots { display: flex; gap: .5rem; justify-content: center; margin-top: .5rem; }
+.testimonial-dot { width: 8px; height: 8px; border-radius: 50%; background: #A8C0B0; border: none; }
+.testimonial-dot.active { background: #3B5F56; }
 
 /* Philosophy Section */
 .philosophy {

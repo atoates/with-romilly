@@ -35,12 +35,18 @@ function displayQualifications(qualifications) {
     if (!qualificationsGrid || !qualifications) return;
 
     const icons = {
-        reflexologist: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a4 4 0 014 4v2h1a3 3 0 013 3v8a3 3 0 01-3 3H7a3 3 0 01-3-3v-8a3 3 0 013-3h1V6a4 4 0 014-4z" fill="currentColor"/></svg>`,
-        association: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" fill="currentColor"/></svg>`,
-        diploma: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2"/></svg>`,
-        pregnancy: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 3a4 4 0 110 8 4 4 0 010-8z" fill="currentColor"/><path d="M7 20a5 5 0 1110 0H7z" fill="currentColor"/></svg>`,
-        facial: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 20c1.5-4 6-6 8-6s6 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
-        insured: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z" fill="currentColor"/></svg>`
+        // foot reflexology / practitioner
+        reflexologist: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M8.5 3.5c1.1 0 2 .9 2 2 0 1.6-1.6 3-3.2 4.8C5.4 12 4 14 4 16.2 4 18.4 5.6 20 7.8 20c2.7 0 4.5-2.3 5.4-4.3.7-1.6 1.8-2.4 3-3.2 1.4-1 2.8-2 2.8-4 0-2-1.6-3.5-3.6-3.5-1.4 0-2.4.7-3.2 1.6-.3-1.6-1.6-3.1-3.7-3.1-1.2 0-2.3.7-2.9 1.5-.2.3-.3.6-.3 1 .1.7.6 1 .7 1 .3 0 .3-.1.5-.3.3-.3.7-.7 1.5-.7z"/></svg>`,
+        // association / membership
+        association: `<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><path d=\"M3 10l9-7 9 7v9a2 2 0 01-2 2H5a2 2 0 01-2-2v-9z\"/><path d=\"M9 21V9h6v12\" fill=\"#fff\" opacity=\".25\"/></svg>`,
+        // diploma / certificate
+        diploma: `<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M7 9h10M7 12h7\" stroke=\"#fff\" stroke-width=\"2\"/></svg>`,
+        // pregnancy
+        pregnancy: `<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><circle cx=\"15\" cy=\"7\" r=\"3.5\"/><path d=\"M7 21a6 6 0 1112 0H7z\"/></svg>`,
+        // face / zone face lift
+        facial: `<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><path d=\"M12 3c4.4 0 8 3.6 8 8 0 5.2-4.5 10-8 10S4 16.2 4 11c0-4.4 3.6-8 8-8z\"/><circle cx=\"9\" cy=\"11\" r=\"1\" fill=\"#fff\"/><circle cx=\"15\" cy=\"11\" r=\"1\" fill=\"#fff\"/><path d=\"M8.5 15c1 .8 2.6 1.4 3.5 1.4S14.5 15.8 15.5 15\" stroke=\"#fff\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>`,
+        // insured / shield
+        insured: `<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><path d=\"M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z\"/></svg>`
     };
 
     const pickIcon = (text) => {
@@ -72,23 +78,58 @@ function displayQualifications(qualifications) {
 
 // Display testimonials
 function displayTestimonials(testimonials) {
-    const testimonialsGrid = document.getElementById('testimonials-grid');
-    if (!testimonialsGrid || !testimonials) return;
-    
-    testimonialsGrid.innerHTML = testimonials.map((testimonial, index) => `
-        <div class="testimonial-card" style="animation-delay: ${index * 0.2}s">
-            <blockquote class="testimonial-quote">
-                "${testimonial.quote}"
-            </blockquote>
-            <cite class="testimonial-author">— ${testimonial.author}</cite>
-        </div>
-    `).join('');
-    
-    // Add animation
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    testimonialCards.forEach(card => {
-        card.classList.add('fade-in-up');
+    const carousel = document.getElementById('testimonial-carousel');
+    if (!carousel || !testimonials) return;
+
+    const slides = testimonials.map((t, i) => {
+        const delay = i * 0.05;
+        return `<div class="testimonial-slide${i === 0 ? ' active' : ''}" style="animation-delay:${delay}s" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${testimonials.length}">
+            <blockquote class="testimonial-quote">“${t.quote}”</blockquote>
+            <cite class="testimonial-author">— ${t.author}</cite>
+        </div>`;
+    }).join('');
+
+    const dots = testimonials.map((_, i) => `<button class="testimonial-dot${i === 0 ? ' active' : ''}" data-index="${i}" aria-label="Go to testimonial ${i + 1}"></button>`).join('');
+
+    // Insert slides before controls/dots wrapper
+    carousel.insertAdjacentHTML('afterbegin', slides);
+    document.getElementById('testimonial-dots').innerHTML = dots;
+
+    let current = 0;
+    const total = testimonials.length;
+    const slideEls = Array.from(carousel.querySelectorAll('.testimonial-slide'));
+    const dotEls = Array.from(carousel.querySelectorAll('.testimonial-dot'));
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    let timer;
+
+    function show(index) {
+        slideEls[current].classList.remove('active');
+        dotEls[current].classList.remove('active');
+        current = (index + total) % total;
+        slideEls[current].classList.add('active');
+        dotEls[current].classList.add('active');
+        resetTimer();
+    }
+
+    function next() { show(current + 1); }
+    function prev() { show(current - 1); }
+    function resetTimer() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(next, 7000); // auto-rotate every 7s
+    }
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    dotEls.forEach(btn => btn.addEventListener('click', () => show(parseInt(btn.dataset.index))));
+
+    // keyboard accessibility
+    carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
     });
+
+    resetTimer();
 }
 
 // Fallback content if JSON fails to load
