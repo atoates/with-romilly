@@ -81,7 +81,7 @@ img, video, svg, canvas {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: var(--space-lg);
     color: var(--text-primary);
@@ -89,13 +89,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.1;
 }
 
 h2 {
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h3 {
@@ -169,7 +169,7 @@ p {
 
 .service-duration,
 .service-price {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-primary);
 }
 
@@ -190,7 +190,7 @@ p {
     padding: var(--space-md) var(--space-2xl);
     border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.95rem;
     transition: var(--transition);
     border: 2px solid transparent;
@@ -278,7 +278,7 @@ p {
 .page-title {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: var(--space-lg);
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     color: white;
@@ -499,7 +499,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: var(--space-lg);
     color: var(--text-primary);
@@ -507,13 +507,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.1;
 }
 
 h2 {
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h3 {
@@ -586,7 +586,7 @@ p {
 .nav-logo {
     font-family: var(--font-heading);
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--primary-color);
     text-decoration: none;
     transition: all 0.3s ease;
@@ -614,7 +614,7 @@ p {
 .nav-logo-text {
     font-family: var(--font-heading);
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: -0.02em;
 }
 
@@ -634,7 +634,7 @@ p {
 .nav-link {
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
@@ -673,7 +673,7 @@ p {
     padding: 0.75rem 1.75rem !important;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.95rem;
     transition: all 0.3s ease;
     border: none;
@@ -745,7 +745,7 @@ p {
     padding: var(--space-md) var(--space-2xl);
     border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.95rem;
     transition: var(--transition);
     border: 2px solid transparent;
@@ -838,7 +838,7 @@ p {
 .hero-title {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: var(--space-xl);
     animation: fadeInUp 1s ease-out;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -1025,7 +1025,7 @@ p {
 
 .service-duration,
 .service-price {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-primary);
 }
 
@@ -1144,7 +1144,7 @@ p {
 }
 
 .testimonial-author {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
     font-size: 0.95rem;
 }
@@ -1237,7 +1237,7 @@ p {
 }
 
 .recommend-title {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: var(--space-sm);
     color: var(--primary-color);
 }
@@ -1325,7 +1325,7 @@ p {
 .form-group label {
     display: block;
     margin-bottom: var(--space-sm);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-primary);
     font-size: 0.95rem;
 }
@@ -1447,7 +1447,7 @@ p {
 
 .footer-logo span {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: -0.01em;
 }
@@ -1468,20 +1468,20 @@ p {
 
 /* Footer navigation columns */
 .footer-nav { display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 2.5rem; }
-.footer-col h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; letter-spacing: .01em; }
+.footer-col h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.1rem; letter-spacing: .01em; }
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
 .footer-col li { margin-bottom: .85rem; }
 .footer-col a { color: rgba(255,255,255,.8); text-decoration: none; transition: color .2s ease; }
 .footer-col a:hover { color: var(--gold); }
 
 /* Contact */
-.footer-contact h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; }
+.footer-contact h4 { color: #fff; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.05rem; }
 .footer-contact p { margin: 0 0 .5rem; color: rgba(255,255,255,.8); }
 .footer-contact a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
 
 /* Accreditation badge with light background so logo is visible */
 .footer-accredit { align-self: start; }
-.footer-accredit h4 { color: #fff; margin-bottom: .85rem; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; opacity: .95; }
+.footer-accredit h4 { color: #fff; margin-bottom: .85rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; opacity: .95; }
 .accreditation-badge { background: linear-gradient(180deg,#fff, #f6f6f6); border-radius: 16px; padding: 14px 16px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(0,0,0,.06); box-shadow: 0 10px 30px rgba(0,0,0,.18); }
 .accreditation-logo { max-height: 72px; width: auto; display: block; object-fit: contain; filter: none; mix-blend-mode: normal; }
 
@@ -1490,7 +1490,7 @@ p {
     margin-bottom: 1.5rem;
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: -0.01em;
     position: relative;
     padding-bottom: 0.75rem;
@@ -1931,7 +1931,7 @@ select:focus {
 .page-title {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: var(--space-lg);
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -2004,7 +2004,7 @@ select:focus {
     background: rgba(43, 43, 43, 0.6);
     color: #fff;
     border-radius: 999px;
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
     list-style: none;
     backdrop-filter: blur(4px);
@@ -2088,7 +2088,7 @@ select:focus {
 .service-title {
     font-family: var(--font-heading);
     font-size: 1.875rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
     margin: 0;
     grid-area: title;
@@ -2114,7 +2114,7 @@ select:focus {
 
 .service-price {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--primary-color);
 }
 
@@ -2175,7 +2175,7 @@ select:focus {
     white-space: nowrap;
 }
 
-.meta-chip.price { color: var(--primary-color); border-color: var(--primary-color); font-weight: 700; }
+.meta-chip.price { color: var(--primary-color); border-color: var(--primary-color); font-weight: 400; }
 
 .service-tags { margin: var(--space-lg) 0; }
 .tags-title { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: var(--space-sm); }
@@ -2190,7 +2190,7 @@ select:focus {
 
 .service-details summary {
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
     list-style: none;
 }
@@ -2240,7 +2240,7 @@ select:focus {
 .service-helps h4 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
     margin-bottom: var(--space-md);
 }
@@ -2349,7 +2349,7 @@ select:focus {
     font-size: 1.18rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 .book-service-info p {
     font-size: 1.01rem;
@@ -2373,7 +2373,7 @@ select:focus {
     font-size: 1.35rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 .booking-widget .widget-header p {
     color: var(--text-secondary);
@@ -2443,7 +2443,7 @@ select:focus {
 
 .footer-accreditation h4 {
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1.25rem;
