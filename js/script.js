@@ -107,12 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', throttle(function() {
         updateActiveNavLink();
         animateOnScroll();
-        updateHeaderBackground();
     }, 100));
 
     // Initial calls
     updateActiveNavLink();
-    updateHeaderBackground();
     
     // Set dynamic copyright year
     updateCopyrightYear();
@@ -478,18 +476,7 @@ function initScrollAnimations() {
 }
 
 // Header background effect
-function updateHeaderBackground() {
-    const header = document.querySelector('.header');
-    if (header) {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(247, 243, 239, 0.98)';
-            header.style.backdropFilter = 'blur(10px)';
-        } else {
-            header.style.backgroundColor = 'rgba(247, 243, 239, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-        }
-    }
-}
+// Header background now controlled via CSS only (removed inline style override)
 
 // Keyboard navigation support
 document.addEventListener('keydown', function(e) {
