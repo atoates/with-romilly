@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 76px;
+    margin-top: 120px; /* match taller global header */
 }
 
 .services-page-hero .hero-background {

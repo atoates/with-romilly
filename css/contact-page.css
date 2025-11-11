@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 88px;
+    margin-top: 120px; /* match taller header */
 }
 
 .contact-page-hero .hero-background {

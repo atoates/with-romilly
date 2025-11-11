@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 88px;
+    margin-top: 120px; /* accommodate taller centered header */
 }
 
 .hero-background {
