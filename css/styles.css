@@ -206,8 +206,8 @@ p {
 }
 
 .btn-primary:hover {
-    background: var(--primary-light);
-    border-color: var(--primary-light);
+    background: var(--primary-color); /* Darken to deep sage on hover */
+    border-color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -724,8 +724,8 @@ p {
 }
 
 .btn-primary:hover {
-    background: var(--primary-light);
-    border-color: var(--primary-light);
+    background: var(--primary-color); /* Darken to deep sage on hover */
+    border-color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -1160,7 +1160,7 @@ p {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--primary-light);
+    background: var(--primary-color); /* Darken to deep sage on hover */
     border: none;
 }
 .testimonial-dot.active { background: var(--primary-color); }
@@ -2067,7 +2067,7 @@ select:focus {
 }
 
 .service-duration {
-    background: var(--primary-light);
+    background: var(--primary-color); /* Darken to deep sage on hover */
     color: white;
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--border-radius);
