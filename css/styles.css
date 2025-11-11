@@ -12,7 +12,7 @@
     --blush-rose: #EFCBD1;
     --warm-linen: #F7F3EF;
     --charcoal: #2B2B2B;
-    --gold-accent: #C8A96B;
+    --gold-accent: #A8C0B0;
     
     /* Semantic Color Variables */
     --primary-color: var(--deep-sage);
@@ -48,7 +48,7 @@
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--background);
@@ -195,14 +195,14 @@ p {
     transition: var(--transition);
     border: 2px solid transparent;
     cursor: pointer;
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     min-height: 48px;
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: white;
-    border-color: var(--primary-color);
+    border-color: var(--soft-sage);
 }
 
 .btn-primary:hover {
@@ -215,11 +215,11 @@ p {
 .btn-secondary {
     background: transparent;
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border-color: var(--soft-sage);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
@@ -446,7 +446,7 @@ p {
     --blush-rose: #EFCBD1;
     --warm-linen: #F7F3EF;
     --charcoal: #2B2B2B;
-    --gold-accent: #C8A96B;
+    --gold-accent: #A8C0B0;
     
     /* Semantic Color Variables */
     --primary-color: var(--deep-sage);
@@ -482,7 +482,7 @@ p {
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--background);
@@ -635,10 +635,10 @@ p {
 }
 
 .nav-link {
-    color: var(--text-primary);
+    color: #6B8579; /* Lighter sage tone */
     text-decoration: none;
     font-weight: 400;
-    font-size: 1.05rem;
+    font-size: 1.1rem; /* Increased from 1.05 */
     font-family: var(--font-heading);
     letter-spacing: 0.02em;
     transition: color 0.3s ease;
@@ -653,12 +653,12 @@ p {
 
 .nav-cta {
     background: transparent;
-    color: var(--text-primary) !important;
+    color: #6B8579 !important; /* Match nav links */
     padding: 0.5rem 0 !important;
     border-radius: 0;
     text-decoration: none;
     font-weight: 400;
-    font-size: 1.05rem;
+    font-size: 1.1rem; /* Increased from 1.05 */
     border: none;
 }
 
@@ -713,14 +713,14 @@ p {
     transition: var(--transition);
     border: 2px solid transparent;
     cursor: pointer;
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     min-height: 48px;
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: white;
-    border-color: var(--primary-color);
+    border-color: var(--soft-sage);
 }
 
 .btn-primary:hover {
@@ -733,11 +733,11 @@ p {
 .btn-secondary {
     background: transparent;
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border-color: var(--soft-sage);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
@@ -1143,7 +1143,7 @@ p {
     margin-top: var(--space-lg);
 }
 .testimonial-btn {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: #fff;
     border: none;
     border-radius: 999px;
@@ -1213,7 +1213,7 @@ p {
 
 /* Location CTA */
 .location-cta {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: white;
     padding: var(--space-4xl) 0;
     text-align: center;
@@ -1300,7 +1300,7 @@ p {
     padding: var(--space-md) var(--space-lg);
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius);
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     font-size: 1rem;
     transition: var(--transition);
     background: white;
@@ -1310,7 +1310,7 @@ p {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--soft-sage);
     box-shadow: 0 0 0 3px rgba(59, 95, 86, 0.1);
 }
 
@@ -1801,11 +1801,11 @@ select:focus {
 .btn-outline {
     background: transparent;
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border-color: var(--soft-sage);
 }
 
 .btn-outline:hover {
-    background: var(--primary-color);
+    background: var(--soft-sage);
     color: #fff;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
