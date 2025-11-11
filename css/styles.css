@@ -614,7 +614,7 @@ p {
 
 .nav-logo-text {
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 2.2rem;
     font-weight: 400;
     letter-spacing: 0.08em;
     color: #ffffff; /* match original white brand text */

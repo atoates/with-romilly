@@ -101,7 +101,7 @@
     padding: .75rem 1.1rem;
     border-radius: 999px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1;
     min-height: 44px; /* better tap target */
@@ -111,6 +111,7 @@
     white-space: normal; /* allow wrapping on small screens */
     overflow-wrap: anywhere;
     text-align: center;
+    font-family: 'Arapey', serif;
 }
 .media-more:active { transform: translateY(1px); }
 
