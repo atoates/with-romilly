@@ -66,7 +66,7 @@
 /* Main Title */
 .hero-main-title {
     font-size: clamp(3rem, 7vw, 5rem);
-    font-weight: 700;
+    font-weight: 400;
     color: #ffffff;
     margin: 0;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -83,7 +83,7 @@
 
 .hero-service-name {
     font-size: clamp(1.75rem, 4vw, 3rem);
-    font-weight: 600;
+    font-weight: 400;
     color: #ffffff;
     margin: 0;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -97,7 +97,8 @@
     padding: 1rem 3rem;
     border-radius: 50px;
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: var(--font-heading);
     text-decoration: none;
     transition: all 0.3s ease;
     border: 2px solid transparent;

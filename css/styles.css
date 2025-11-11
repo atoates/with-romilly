@@ -553,7 +553,7 @@ p {
    =================================== */
 
 .header {
-    background: #D7EAD9;
+    background: #B6CFB3;
     position: fixed;
     top: 0;
     left: 0;
@@ -563,7 +563,7 @@ p {
 }
 
 .header.scrolled {
-    background: #D7EAD9;
+    background: #B6CFB3;
 }
 
 .nav {
@@ -575,7 +575,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.35rem;
+    gap: 0.15rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -605,6 +605,7 @@ p {
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
+    filter: brightness(0) invert(1) saturate(0) opacity(.95);
 }
 
 .nav-logo:hover .nav-logo-img {
@@ -613,16 +614,16 @@ p {
 
 .nav-logo-text {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.08em;
     color: #ffffff; /* match original white brand text */
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.75rem;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -637,9 +638,11 @@ p {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
     transition: color 0.3s ease;
-    padding: 0.5rem 0;
+    padding: 0.45rem 0;
     display: inline-block;
 }
 
@@ -655,7 +658,7 @@ p {
     border-radius: 0;
     text-decoration: none;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.05rem;
     border: none;
 }
 
