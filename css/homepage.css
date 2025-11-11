@@ -33,9 +33,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-        rgba(59, 95, 86, 0.65) 0%, 
-        rgba(168, 192, 176, 0.45) 50%,
-        rgba(239, 203, 209, 0.25) 100%);
+        rgba(59, 95, 86, 0.5) 0%, 
+        rgba(168, 192, 176, 0.35) 50%,
+        rgba(239, 203, 209, 0.2) 100%);
     z-index: 2;
 }
 
@@ -65,7 +65,7 @@
 
 /* Main Title */
 .hero-main-title {
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(2.75rem, 6.5vw, 4.5rem);
     font-weight: 400;
     color: #ffffff;
     margin: 0;
@@ -82,7 +82,7 @@
 }
 
 .hero-service-name {
-    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     font-weight: 400;
     color: #ffffff;
     margin: 0;
