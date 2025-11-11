@@ -33,8 +33,8 @@
     --border-radius: 16px;
     
     /* Typography */
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Arapey', serif;
+    --font-body: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
     /* Spacing Scale */
     --space-xs: 4px;
@@ -53,6 +53,7 @@ body {
     color: var(--text-primary);
     background-color: var(--background);
     font-size: 16px;
+    font-weight: 300; /* Avenir Light weight */
 }
 
 /* Global mobile guardrails */
@@ -466,8 +467,8 @@ p {
     --border-radius: 16px;
     
     /* Typography */
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Arapey', serif;
+    --font-body: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
     /* Spacing Scale */
     --space-xs: 4px;
@@ -486,6 +487,7 @@ body {
     color: var(--text-primary);
     background-color: var(--background);
     font-size: 16px;
+    font-weight: 300; /* Avenir Light weight */
 }
 
 .container {
