@@ -4,9 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "http-server -p 5173 -c-1",
+    "start:https": "http-server -p 5173 -c-1 --ssl --cert scripts/dev-cert.pem --key scripts/dev-key.pem",
     "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "sharp": "^0.34.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
