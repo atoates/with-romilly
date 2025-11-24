@@ -173,5 +173,18 @@
     
     <!-- Setmore Booking Integration -->
     <script src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js" id="setmore_script" data-setmore-domain="https://with-romilly.setmore.com"></script>
+    <script>
+    // Initialize Setmore for all booking buttons
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.setmore-button').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.setmorePopup) {
+                    window.setmorePopup();
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>

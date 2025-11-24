@@ -51,7 +51,7 @@ function displayServices(services) {
                 ${topBenefits.map(b => `<li class=\"benefit\">${b}</li>`).join('')}
               </ul>` : ''}
               <div class="cta-row">
-                <a href="#" class="btn btn-primary" id="setmore-book-btn">Book This Service</a>
+                <a href="https://with-romilly.setmore.com" class="btn btn-primary setmore-button" target="_blank" rel="noopener">Book This Service</a>
                 <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
               </div>
             </div>
@@ -168,7 +168,7 @@ function displayFallbackServices() {
                 </div>
                 <p class="service-summary">Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.</p>
                 <div class="service-actions">
-                    <a href="#" class="btn btn-primary" id="setmore-book-btn">Book This Service</a>
+                    <a href="https://with-romilly.setmore.com" class="btn btn-primary setmore-button" target="_blank" rel="noopener">Book This Service</a>
                 </div>
             </div>
         </div>
@@ -181,7 +181,7 @@ function displayFallbackServices() {
                 </div>
                 <p class="service-summary">Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.</p>
                 <div class="service-actions">
-                    <a href="#" class="btn btn-primary" id="setmore-book-btn">Book This Service</a>
+                    <a href="https://with-romilly.setmore.com" class="btn btn-primary setmore-button" target="_blank" rel="noopener">Book This Service</a>
                 </div>
             </div>
         </div>
