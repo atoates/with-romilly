@@ -36,7 +36,7 @@ function handleFormSubmission(e) {
         const emailContent = createEmailContent(data);
         
         // Open email client with pre-filled content
-        const emailLink = `mailto:withromilly@gmail.com?subject=New Contact Form Submission from ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailContent)}`;
+        const emailLink = `mailto:romilly@withromilly.com?subject=New Contact Form Submission from ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailContent)}`;
         window.location.href = emailLink;
         
         // Show success message
