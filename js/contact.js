@@ -119,7 +119,7 @@ function getServiceText(serviceValue) {
         'reflexology': 'Reflexology (50 min) - £75',
         'facial-reflexology': 'Facial Reflexology (45 min) - £80',
         'preconceptual-reflexology': 'Preconceptual Reflexology (50 min) - £75',
-        'zone-face-lift': 'Zone Face Lift (75 min) - £80',
+        'zone-face-lift': 'Zone Face Lift (75 min) - £105',
         'consultation': 'General Consultation'
     };
     

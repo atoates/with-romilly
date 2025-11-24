@@ -5,8 +5,8 @@
     "subtitle": "Mobile Reflexologist in West London",
     "email": "withromilly@gmail.com",
     "phone": "+44 7974 182 612",
-    "phoneDisplay": "07974 182 612",
-    "whatsapp": "https://wa.me/447974182612",
+    "phoneDisplay": "07356 626 138",
+    "whatsapp": "https://wa.me/447356626138",
     "location": "Mobile Reflexology in West and NW London",
     "locationShort": "West and NW London",
     "social": { 
@@ -19,7 +19,7 @@
       "title": "Reflexology",
       "duration": "50 min",
       "price": 85,
-      "heroImage": "assets/images/service_reflexology.webp",
+      "heroImage": "assets/images/reflex.JPG",
       "summary": "Deeply relaxing and therapeutic; encourages the body to return to a state of homeostasis and bring you back to optimum health.",
       "description": "Reflexology is a well-established, non-invasive complementary therapy which is recognised by the NHS and many hospices. It is a deeply relaxing and stress relieving therapy which can help a wide-range of mental and physical conditions as well as aiding detoxification. It is well known to calm the nervous system and boost the immune system. The body's organs, glands and systems are mapped on our feet, hands and face, and by stimulating these reflex points with reflexology it un-blocks any stagnation, restores balance and promotes the body's own healing processes. Reflexology encourages the body to return to a state of homeostasis and brings it back to optimum health. Each treatment promotes the release of endorphins in the body (feel good hormones), improves circulation and boosts mood and wellbeing.",
       "bullets": [
@@ -83,7 +83,7 @@
       "slug": "zone-face-lift",
       "title": "Zone Face Lift",
       "duration": "60 min",
-      "price": 110,
+      "price": 105,
       "heroImage": "assets/images/service_Zone_Face_Lift.webp",
       "summary": "Award-winning holistic facial combining reflexology, Gua Sha and massage techniques for natural lifting.",
       "description": "The Zone Face Lift facial is an award-winning therapy developed by Ziggie Bergman which has been hailed a credible alternative to Botox. It is a kinder holistic approach to helping you naturally look your best. The results speak for themselves! Each treatment starts with a cleanse, hot towel steam and luxury massage. ZFL combines pressure-point massage, sculpting Gua Sha, along with Native American and Asian massage techniques to gently release emotions held in the face. You will leave the session feeling revived and with a more youthful and 'bright' appearance. Zone Face Lift promotes collagen and elastin production and helps to de-puff the face. It sculpts and smooths your skin, lifts the face and neck, and leaves you feeling deeply relaxed with a truly healthy glow.",
@@ -157,7 +157,7 @@
     "qualifications": [
       "Qualified Reflexologist, London School of Reflexology",
       "Member of the Association of Reflexologists",
-      "Diploma in Naturopathy",
+      "Diploma in Naturopathy & Nutrition for Everyday Living",
       "Pre-Conceptual and Pregnancy Reflexology trained",
       "Facial Reflexology and Zone Face Lift certified",
       "Fully insured and certified"

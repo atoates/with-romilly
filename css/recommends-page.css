@@ -32,10 +32,7 @@
 .recommends-page-hero .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, 
-        rgba(59, 95, 86, 0.75) 0%, 
-        rgba(168, 192, 176, 0.6) 50%,
-        rgba(239, 203, 209, 0.35) 100%);
+    background: none;
     z-index: 2;
 }
 
@@ -54,14 +51,14 @@
 .recommends-page-hero .page-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 400;
-    color: #ffffff;
+    color: #FFF1EF;
     margin-bottom: 1rem;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .recommends-page-hero .page-subtitle {
     font-size: clamp(1.125rem, 2vw, 1.375rem);
-    color: rgba(255, 255, 255, 0.95);
+    color: #FFF1EF;
     line-height: 1.6;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

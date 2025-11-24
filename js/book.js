@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadServicesQuickRef();
     initializeNavigation();
-    initializeBookingWidget();
 });
 
 // Load services for quick reference
@@ -64,78 +63,6 @@ function displayFallbackServices() {
             <p class="service-quick-summary">Powerfully calming for the nervous system and rejuvenating for skin.</p>
         </div>
     `;
-}
-
-// Initialize booking widget functionality
-function initializeBookingWidget() {
-    // Monitor for Setmore iframe load
-    const bookingButton = document.getElementById('Setmore_button_iframe');
-    
-    if (bookingButton) {
-        bookingButton.addEventListener('click', function(e) {
-            // Track booking button click (for analytics if needed)
-            console.log('Booking widget opened');
-            
-            // Add a small delay to show loading state
-            showBookingLoading();
-        });
-    }
-    
-    // Listen for Setmore events if they're available
-    window.addEventListener('message', function(event) {
-        // Handle messages from Setmore iframe
-        if (event.origin === 'https://with-romilly.setmore.com' || 
-            event.origin === 'https://assets.setmore.com') {
-            
-            if (event.data && event.data.type === 'setmore_booking_complete') {
-                // Handle successful booking
-                showBookingSuccess();
-            }
-        }
-    });
-}
-
-// Show loading state for booking
-function showBookingLoading() {
-    const container = document.querySelector('.booking-button-container');
-    const originalContent = container.innerHTML;
-    
-    container.innerHTML = `
-        <div class="booking-loading">
-            <div class="loading-spinner"></div>
-            <p>Opening booking calendar...</p>
-        </div>
-    `;
-    
-    // Restore original content after a short delay
-    setTimeout(() => {
-        container.innerHTML = originalContent;
-        // Re-initialize the booking widget
-        initializeBookingWidget();
-    }, 2000);
-}
-
-// Show booking success message
-function showBookingSuccess() {
-    const notification = document.createElement('div');
-    notification.className = 'booking-success-notification';
-    notification.innerHTML = `
-        <div class="success-content">
-            <div class="success-icon">✅</div>
-            <h4>Booking Confirmed!</h4>
-            <p>Thank you for booking with With Romilly. You'll receive a confirmation email shortly.</p>
-        </div>
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Remove notification after 5 seconds
-    setTimeout(() => {
-        notification.classList.add('fade-out');
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 5000);
 }
 
 // Navigation functionality

@@ -41,7 +41,7 @@
       "email": "withromilly@gmail.com",
       "url": "https://withromilly.com/book.html",
       "openingHours": "Mo-Su 09:00-18:00",
-      "priceRange": "£75-£80"
+      "priceRange": "£75-£105"
     }
     </script>
 </head>
@@ -84,22 +84,22 @@
         </div>
     </section>
 
-    <!-- Booking Widget Section - Primary -->
+    <!-- Booking Links Section -->
     <section class="booking-widget-primary">
         <div class="container">
             <div class="booking-intro-section">
                 <h2>Book Your Appointment</h2>
-                <p class="intro-text">Select your preferred service, date, and time from the available slots below.</p>
+                <p class="intro-text">Use the Setmore links below to choose the treatment, date, and time that work best for you.</p>
             </div>
             
-            <div class="booking-widget">
-                <div class="booking-button-container">
-                    <!-- Start Square Appointments Embed Code -->
-                    <script src='https://app.squareup.com/appointments/buyer/widget/fpqof4q4oov61f/LJ05K84ABCDZW.js'></script>
-                    <!-- End Square Appointments Embed Code -->
+            <div class="booking-widget booking-links">
+                <div class="setmore-buttons">
+                    <a href="https://with-romilly.setmore.com" class="btn btn-primary btn-large" target="_blank" rel="noopener">Book via Setmore</a>
+                    <a href="https://wa.me/447356626138" class="btn btn-secondary btn-large" target="_blank" rel="noopener">WhatsApp Romilly</a>
+                    <a href="tel:+447356626138" class="btn btn-secondary btn-large">Call 07356 626 138</a>
                 </div>
                 <div class="booking-note">
-                    <p><strong>Note:</strong> After selecting your appointment time, you'll receive a confirmation email with all the details and any preparation instructions.</p>
+                    <p><strong>What to expect:</strong> Setmore will confirm your booking instantly. You’ll also receive a follow-up email from Romilly with any preparation details you might need.</p>
                 </div>
             </div>
         </div>
@@ -115,11 +115,14 @@
                     <div class="book-services-grid">
                         <div class="book-service-card">
                             <div class="service-card-image">
-                                <img src="assets/images/service_reflexology.webp" alt="Reflexology" loading="lazy" decoding="async">
+                                <img src="assets/images/reflex.JPG" alt="Reflexology" loading="lazy" decoding="async">
                             </div>
                             <div class="service-card-content">
                                 <h4>Reflexology</h4>
                                 <p>Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.</p>
+                                <div class="service-card-actions">
+                                    <a href="https://with-romilly.setmore.com/services/0cbf64c0-e592-47a2-adf3-00d36145632d" class="btn btn-primary btn-small" target="_blank" rel="noopener">Book</a>
+                                </div>
                             </div>
                         </div>
                         <div class="book-service-card">
@@ -129,6 +132,9 @@
                             <div class="service-card-content">
                                 <h4>Facial Reflexology</h4>
                                 <p>Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.</p>
+                                <div class="service-card-actions">
+                                    <a href="https://with-romilly.setmore.com/services/55938a08-ecc4-4218-877d-1b15ca6348d7" class="btn btn-primary btn-small" target="_blank" rel="noopener">Book</a>
+                                </div>
                             </div>
                         </div>
                         <div class="book-service-card">
@@ -138,6 +144,9 @@
                             <div class="service-card-content">
                                 <h4>Preconceptual Reflexology</h4>
                                 <p>Supporting fertility, hormonal balance and wellbeing for those trying to conceive.</p>
+                                <div class="service-card-actions">
+                                    <a href="https://with-romilly.setmore.com/services/0cbf64c0-e592-47a2-adf3-00d36145632d" class="btn btn-primary btn-small" target="_blank" rel="noopener">Book</a>
+                                </div>
                             </div>
                         </div>
                         <div class="book-service-card">
@@ -146,7 +155,10 @@
                             </div>
                             <div class="service-card-content">
                                 <h4>Zone Face Lift</h4>
-                                <p>Holistic facial treatment combining reflexology and massage for rejuvenation and radiance.</p>
+                                <p>Holistic facial treatment combining reflexology and massage.</p>
+                                <div class="service-card-actions">
+                                    <a href="https://with-romilly.setmore.com/services/403e4e43-4cfe-43cd-b7a4-3c86fd94420d" class="btn btn-primary btn-small" target="_blank" rel="noopener">Book</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,203 +174,9 @@
                 <h2>Health Consultation Questions</h2>
                 <p class="consultation-intro">Please complete these essential questions before your appointment. This information helps ensure your safety and allows me to tailor the treatment to your needs.</p>
                 
-                <form class="consultation-form" id="consultationForm">
-                    <!-- Medical Consent -->
-                    <div class="form-section consent-section">
-                        <div class="consent-box">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="consent" required>
-                                <span class="checkmark"></span>
-                                <span class="consent-text">I understand that reflexologists do not give medical diagnosis or treatment but do correct imbalances that are revealed in each session. I further agree that it is my responsibility to consult my GP about my pain, problem or illness that I am presently aware of, or become alerted to the possibility of as a result of a session.</span>
-                            </label>
-                        </div>
+                <div class="consultation-embed">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfi1ybhbsAQstTSdInlqXmXTBFvyyBbT1WLlc0oNPiFGTVOxQ/viewform?embedded=true" width="640" height="3604" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
-
-                    <!-- Medical History -->
-                    <div class="form-section">
-                        <label for="medicalHistory">
-                            <strong>Medical History:</strong> (illnesses, diseases, disorders, accidents, injuries, operations, PMS? etc) Please state rough dates:
-                        </label>
-                        <textarea id="medicalHistory" name="medicalHistory" rows="4" placeholder="Please describe your medical history..."></textarea>
-                    </div>
-
-                    <!-- Allergies -->
-                    <div class="form-section">
-                        <label for="allergies">
-                            <strong>Do you have any allergies?</strong> If yes please state
-                        </label>
-                        <textarea id="allergies" name="allergies" rows="2" placeholder="List any allergies..."></textarea>
-                    </div>
-
-                    <!-- Reason for Seeking Reflexology -->
-                    <div class="form-section">
-                        <label for="reason">
-                            <strong>Reason for seeking reflexology:</strong> How can I help you?
-                        </label>
-                        <textarea id="reason" name="reason" rows="3" placeholder="What brings you to reflexology today?"></textarea>
-                    </div>
-
-                    <!-- Contraindications Table -->
-                    <div class="form-section contraindications-section">
-                        <h3>Contraindications</h3>
-                        <p class="contraindications-note"><strong>CONTRAINDICATIONS:</strong> Reflexology is a very safe therapy however some contraindications require medical permission OR informed consent before treatment. Please select any that apply.<br>I will contact you for further details if required.</p>
-                        
-                        <div class="contraindications-table">
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="pregnancy-first-trimester">
-                                        Pregnancy (in first trimester)
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="slipped-disc">
-                                        Slipped disc
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="cardiovascular">
-                                        Cardiovascular conditions (thrombosis, phlebitis, hypertension, hypotension, heart conditions)
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="lumps-swellings">
-                                        Undiagnosed lumps, swellings
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="oedema">
-                                        Medical oedema
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="pain">
-                                        Undiagnosed pain
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="osteoporosis">
-                                        Osteoporosis
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="asthma">
-                                        Asthma
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="arthritis">
-                                        Arthritis
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="nervous-system">
-                                        Any dysfunction of the nervous system (e.g. Multiple sclerosis, Parkinson's disease, Motor neurone disease)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="psychotic">
-                                        Nervous/Psychotic conditions
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="trapped-nerve">
-                                        Trapped/Pinched nerve (e.g. sciatica)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="epilepsy">
-                                        Epilepsy
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="whiplash">
-                                        Whiplash
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="diabetes">
-                                        Diabetes
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="botox">
-                                        Botox/filler in the last 3-4 weeks
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="operations">
-                                        Recent operations and/or imminent medical tests or procedures
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="kidney">
-                                        Kidney infections
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="contraindications-row">
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="injury">
-                                        Injury or condition linked to area worked
-                                    </label>
-                                </div>
-                                <div class="contraindication-item">
-                                    <label>
-                                        <input type="checkbox" name="contraindication" value="fever">
-                                        Fever
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contraindications-details">
-                                If you have answered yes to any of the above, please give details:
-                            </label>
-                            <textarea id="contraindications-details" name="contraindications-details" rows="3" placeholder="Please provide details..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-actions">
-                        <p class="form-note"><strong>SEE MORE Q'S ON NEXT PAGE</strong> - This information will be sent with your booking confirmation.</p>
-                        <button type="submit" class="btn btn-primary btn-large">Submit Consultation Form</button>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
@@ -455,7 +273,7 @@
                         <div class="contact-icon">📞</div>
                         <div class="contact-details">
                             <h4>Call or Text</h4>
-                            <a href="tel:+447974182612" class="contact-link">07974 182 612</a>
+                            <a href="tel:+447356626138" class="contact-link">07356 626 138</a>
                             <p>Speak directly with Romilly</p>
                         </div>
                     </div>
@@ -464,7 +282,7 @@
                         <div class="contact-icon">💬</div>
                         <div class="contact-details">
                             <h4>WhatsApp</h4>
-                            <a href="https://wa.me/447974182612" class="contact-link" target="_blank" rel="noopener">Message on WhatsApp</a>
+                            <a href="https://wa.me/447356626138" class="contact-link" target="_blank" rel="noopener">Message on WhatsApp</a>
                             <p>Quick and convenient messaging</p>
                         </div>
                     </div>
