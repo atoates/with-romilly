@@ -12,40 +12,43 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-wrapper">
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
                 <a href="index.html" class="nav-logo">
                     <img src="assets/images/logo_green.webp" alt="With Romilly" class="nav-logo-img">
                     <span class="nav-logo-text">With Romilly</span>
                 </a>
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="recommends.html" class="nav-link">Recommends</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="book.html" class="btn btn-primary nav-cta">Book Now</a>
-                </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span><span></span><span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">My Services</a></li>
+                    <li class="nav-item"><a href="book.html" class="nav-link nav-cta">Book Appointment</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Me</a></li>
+                    <li class="nav-item"><a href="recommends.html" class="nav-link">Romilly Recommends</a></li>
+                </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section class="page-header">
+    <!-- Page Header -->
+    <section class="page-header" style="margin-top: 120px; min-height: 35vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(59, 95, 86, 0.85) 0%, rgba(168, 192, 176, 0.7) 100%);">
         <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">Terms of Service</h1>
-                <p class="page-subtitle">Booking, cancellations and treatment policies</p>
+            <div class="page-header-content" style="text-align: center; padding: 2.25rem 1.5rem;">
+                <h1 class="page-title" style="color: #ffffff; font-weight: 400; text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">Terms of Service</h1>
+                <p class="page-subtitle" style="color: rgba(255, 255, 255, 0.95); font-size: 1.25rem; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">Booking, cancellations and treatment policies</p>
             </div>
         </div>
     </section>
 
-    <section class="content">
+    <section class="content" style="padding: 4rem 0; background: var(--warm-linen);">
         <div class="container">
-            <div class="prose">
+            <div class="prose" style="max-width: 800px; margin: 0 auto; font-family: var(--font-body); line-height: 1.8;">
                 <h2>Appointments</h2>
                 <p>All treatments are by appointment only. Please arrive on time. If you are running late, your session may be shortened to respect the next client.</p>
 
@@ -56,17 +59,70 @@
                 <p>Please inform us of any medical conditions, allergies, or recent injuries prior to your treatment. Treatments are complementary and not a substitute for medical care.</p>
 
                 <h2>Contact</h2>
-                <p>Questions? Contact <a href="mailto:withromilly@gmail.com">withromilly@gmail.com</a> or call <a href="tel:+447356626138">07356 626 138</a>.</p>
+                <p>Questions? Contact <a href="mailto:withromilly@gmail.com">withromilly@gmail.com</a> or call <a href="tel:+447974182612">07974 182 612</a>.</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a class="footer-logo" href="index.html" aria-label="With Romilly home">
+                        <img src="assets/images/logo_green.webp" alt="With Romilly logo">
+                        <span>With Romilly</span>
+                    </a>
+                    <p class="footer-tagline">Relax. Rebalance. Restore.</p>
+                    <p class="footer-desc">Professional reflexology treatments in Queen's Park, London. Helping you restore balance through the ancient healing art of reflexology.</p>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="services.html">My Services</a></li>
+                            <li><a href="book.html">Book Appointment</a></li>
+                            <li><a href="contact.html">Contact Me</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:withromilly@gmail.com">withromilly@gmail.com</a></li>
+                            <li><a href="tel:+447974182612">07974 182 612</a></li>
+                            <li>Queen's Park, London W9</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer-accredit">
+                    <h4>Accredited Member</h4>
+                    <div class="accreditation-badge" aria-label="Association of Reflexologists">
+                        <img src="assets/images/association_logo.webp" alt="Association of Reflexologists" class="accreditation-logo">
+                    </div>
+                </div>
+            </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 With Romilly. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 With Romilly. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
