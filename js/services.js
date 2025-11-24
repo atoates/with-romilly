@@ -52,7 +52,7 @@ function displayServices(services) {
               </ul>` : ''}
               <div class="cta-row">
                 <a href="https://with-romilly.setmore.com" class="btn btn-primary setmore-button" target="_blank" rel="noopener">Book This Service</a>
-                <a href="mailto:withromilly@gmail.com?subject=Enquiry about ${service.title}" class="btn btn-outline">Ask a Question</a>
+                <a href="contact.html" class="btn btn-outline">Ask a Question</a>
               </div>
             </div>
           </div>
