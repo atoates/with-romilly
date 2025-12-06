@@ -208,7 +208,7 @@ p {
 .btn-primary:hover {
     background: var(--primary-color); /* Darken to deep sage on hover */
     border-color: var(--primary-color);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -221,7 +221,7 @@ p {
 .btn-secondary:hover {
     background: var(--soft-sage);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -233,7 +233,7 @@ p {
 
 .btn-accent:hover {
     background: var(--blush-rose);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -408,7 +408,7 @@ p {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 var(--space-md);
+        padding: 0 var(--space-lg); /* Increased from md for better edge spacing */
     }
 
     .hero {
@@ -553,17 +553,19 @@ p {
    =================================== */
 
 .header {
-    background: #B6CFB3;
+    background: transparent; /* Start transparent to show hero */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header.scrolled {
-    background: #B6CFB3;
+    background: rgba(182, 207, 179, 0.95); /* #B6CFB3 with opacity */
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
@@ -736,7 +738,7 @@ p {
 .btn-primary:hover {
     background: var(--primary-color); /* Darken to deep sage on hover */
     border-color: var(--primary-color);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -749,7 +751,7 @@ p {
 .btn-secondary:hover {
     background: var(--soft-sage);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -761,7 +763,7 @@ p {
 
 .btn-accent:hover {
     background: var(--blush-rose);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -1639,10 +1641,39 @@ p {
     transform: translateY(0);
 }
 
+/* Staggered Animation Delays */
+.services-grid > .fade-in-up:nth-child(1), 
+.recommends-grid > .fade-in-up:nth-child(1), 
+.testimonials-grid > .fade-in-up:nth-child(1) { transition-delay: 0.1s; }
+
+.services-grid > .fade-in-up:nth-child(2), 
+.recommends-grid > .fade-in-up:nth-child(2), 
+.testimonials-grid > .fade-in-up:nth-child(2) { transition-delay: 0.2s; }
+
+.services-grid > .fade-in-up:nth-child(3), 
+.recommends-grid > .fade-in-up:nth-child(3), 
+.testimonials-grid > .fade-in-up:nth-child(3) { transition-delay: 0.3s; }
+
+.services-grid > .fade-in-up:nth-child(4), 
+.recommends-grid > .fade-in-up:nth-child(4), 
+.testimonials-grid > .fade-in-up:nth-child(4) { transition-delay: 0.4s; }
+
 /* Responsive Design */
 /* ===================================
    RESPONSIVE MOBILE STYLES
    =================================== */
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .recommends-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
 
 @media (max-width: 768px) {
     /* Header & Navigation */
@@ -1757,7 +1788,7 @@ p {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 var(--space-md);
+        padding: 0 var(--space-lg); /* Increased from md for better edge spacing */
     }
 
     .hero {

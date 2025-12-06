@@ -103,11 +103,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize scroll animations
     initScrollAnimations();
     
-    // Update active nav link on scroll
+    // Update active nav link and handle scroll effects
     window.addEventListener('scroll', throttle(function() {
+        const scrollY = window.scrollY;
+        
+        // Sticky Header Effect
+        const header = document.querySelector('.header');
+        if (header) {
+            if (scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        // Hero Parallax Effect
+        const heroBg = document.querySelector('.hero-bg-img');
+        if (heroBg) {
+            heroBg.style.transform = `translateY(${scrollY * 0.4}px)`;
+        }
+
         updateActiveNavLink();
         animateOnScroll();
-    }, 100));
+    }, 10)); // Smoother throttle for parallax
 
     // Initial calls
     updateActiveNavLink();
