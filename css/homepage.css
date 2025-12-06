@@ -32,7 +32,8 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: none;
+    /* Add a very subtle dark gradient at the bottom/center to help text pop, but keep it mostly clear */
+    background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 70%);
     z-index: 2;
 }
 
@@ -66,7 +67,7 @@
     font-weight: 400;
     color: #FFF1EF;
     margin: 0;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5); /* Increased shadow for readability without overlay */
     letter-spacing: 0.02em;
 }
 
@@ -83,7 +84,7 @@
     font-weight: 400;
     color: #FFF1EF;
     margin: 0;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); /* Increased shadow */
     letter-spacing: 0.01em;
 }
 
