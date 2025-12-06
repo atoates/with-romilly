@@ -638,7 +638,7 @@ p {
 }
 
 .nav-link {
-    color: #6B8579; /* Lighter sage tone */
+    color: #EFCBD1; /* Blush Rose - restored based on user feedback */
     text-decoration: none;
     font-weight: 400;
     font-size: 1.2rem; /* Increased for better visibility */
@@ -661,7 +661,7 @@ p {
 
 .nav-cta {
     background: transparent;
-    color: #6B8579 !important; /* Match nav links */
+    color: #EFCBD1 !important; /* Match nav links */
     padding: 0.5rem 0 !important;
     border-radius: 0;
     text-decoration: none;
