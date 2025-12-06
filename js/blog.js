@@ -48,21 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Fetch content data (Normal Mode)
-    fetch('src/data/content.json')
-        .then(response => response.json())
+    // Use absolute path to ensure it works from any page depth
+    fetch('/src/data/content.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             // Logic for Blog Listing Page
             if (blogGrid && data.blog) {
                 // Sort posts by date (newest first)
                 const sortedPosts = data.blog.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+                if (sortedPosts.length === 0) {
+                    blogGrid.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">No articles found.</p>';
+                    return;
+                }
+
+                blogGrid.innerHTML = ''; // Clear loading state
+                
                 sortedPosts.forEach(post => {
                     const article = document.createElement('article');
                     article.className = 'blog-card fade-in-up';
                     
                     article.innerHTML = `
                         <a href="blog-post.html?id=${post.id}" class="blog-card-link" aria-label="Read ${post.title}">
-                            <img src="${post.image}" alt="${post.title}" class="blog-card-image" loading="lazy">
+                            <img src="${post.image}" alt="${post.title}" class="blog-card-image" loading="lazy" onerror="this.style.display='none'">
                         </a>
                         <div class="blog-card-content">
                             <div class="blog-date">${formatDate(post.date)}</div>
@@ -102,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             imgEl.src = post.image;
                             imgEl.alt = post.title;
                             imgEl.style.display = 'block';
+                        } else {
+                            imgEl.style.display = 'none';
                         }
                         
                         document.getElementById('post-body').innerHTML = post.content;
@@ -119,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error loading blog content:', error);
             if (blogGrid) {
-                blogGrid.innerHTML = '<p>Sorry, we couldn\'t load the articles at this time. Please try again later.</p>';
+                blogGrid.innerHTML = `<p style="text-align: center; grid-column: 1/-1;">Sorry, we couldn't load the articles at this time. Please try again later. <br><small>${error.message}</small></p>`;
             }
         });
 });
