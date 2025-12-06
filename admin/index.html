@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin - With Romilly</title>
+    <style>
+        :root {
+            --primary: #1E3A34;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --border: #e0e0e0;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--light);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+        }
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            height: fit-content;
+        }
+        h2 { margin-top: 0; color: var(--primary); }
+        
+        /* List Styles */
+        .post-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .post-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .post-item:last-child { border-bottom: none; }
+        .post-info h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+        .post-date { color: #666; font-size: 0.85rem; }
+        .actions { display: flex; gap: 0.5rem; }
+        
+        /* Form Styles */
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        textarea { min-height: 200px; resize: vertical; }
+        
+        /* Buttons */
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+        .btn-danger { background: #dc3545; color: var(--white); }
+        .btn:disabled { opacity: 0.7; cursor: not-allowed; }
+        .btn-sm { padding: 0.25rem 0.5rem; font-size: 0.85rem; }
+        
+        /* Notifications */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            display: none;
+            animation: slideIn 0.3s ease;
+            z-index: 100;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Status Bar */
+        .status-bar {
+            background: #fff3cd;
+            color: #856404;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>With Romilly Blog Admin</h1>
+        <button onclick="logout()" class="btn btn-secondary btn-sm">Logout</button>
+    </header>
+    
+    <div id="unsavedChanges" class="status-bar">You have unsaved changes. Click 'Save Article' to update the preview.</div>
+
+    <div class="container">
+        <!-- Sidebar List -->
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Articles</h2>
+                <button onclick="newItem()" class="btn btn-primary btn-sm">+ New</button>
+            </div>
+            <ul class="post-list" id="postList">
+                <li style="padding: 1rem; text-align: center; color: #666;">Loading articles from GitHub...</li>
+            </ul>
+        </div>
+
+        <!-- Editor Form -->
+        <div class="card">
+            <h2 id="formTitle">Edit Article</h2>
+            <form id="blogForm">
+                <input type="hidden" id="id">
+                
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image URL</label>
+                    <input type="text" id="image" placeholder="assets/images/..." value="assets/images/stones.webp">
+                    <small style="color: #666;">Use paths like 'assets/images/name.webp'. Ensure the image exists in the repo.</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="summary">Summary</label>
+                    <textarea id="summary" style="min-height: 80px;" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content (HTML)</label>
+                    <textarea id="content" required></textarea>
+                    <small style="color: #666; display: block; margin-top: 0.25rem;">Use HTML tags like &lt;p&gt;, &lt;strong&gt;, &lt;h3&gt;.</small>
+                </div>
+                
+                <div class="actions" style="justify-content: flex-end; margin-top: 2rem;">
+                    <button type="button" onclick="deleteItem()" class="btn btn-danger" id="deleteBtn" style="margin-right: auto;">Delete</button>
+                    <button type="submit" id="saveBtn" class="btn btn-primary">Publish Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Saved successfully!</div>
+
+    <script>
+        // --- CONFIGURATION ---
+        const REPO_OWNER = 'atoates';
+        const REPO_NAME = 'with-romilly';
+        const FILE_PATH = 'src/data/content.json';
+        const BRANCH = 'main'; // or 'master'
+        
+        // --- STATE ---
+        let allData = null;
+        let currentPosts = [];
+        let fileSha = null; // Required for GitHub API updates
+        
+        // --- AUTH ---
+        const token = localStorage.getItem('githubToken');
+        if (!token) window.location.href = 'login.html';
+
+        // --- API FUNCTIONS ---
+        
+        async function fetchContent() {
+            const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`;
+            
+            try {
+                const response = await fetch(url, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (!response.ok) throw new Error(`GitHub API Error: ${response.statusText}`);
+                
+                const data = await response.json();
+                fileSha = data.sha;
+                
+                // Decode Base64 content (handle potential newlines/formatting issues)
+                const content = new TextDecoder().decode(Uint8Array.from(atob(data.content), c => c.charCodeAt(0)));
+                allData = JSON.parse(content);
+                currentPosts = allData.blog || [];
+                
+                renderList();
+            } catch (error) {
+                console.error(error);
+                alert('Failed to load data from GitHub. Check console for details.');
+                if (error.message.includes('401') || error.message.includes('403')) logout();
+            }
+        }
+
+        async function saveContentToGitHub(message) {
+            const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
+            
+            // Update the data object
+            allData.blog = currentPosts;
+            
+            // Prepare content (indentation of 2 spaces)
+            const jsonString = JSON.stringify(allData, null, 2);
+            
+            // Encode to Base64 properly (handling UTF-8 characters)
+            const contentEncoded = btoa(unescape(encodeURIComponent(jsonString)));
+            
+            const body = {
+                message: message || 'Update blog content via Admin CMS',
+                content: contentEncoded,
+                sha: fileSha,
+                branch: BRANCH
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(body)
+                });
+
+                if (!response.ok) {
+                    const err = await response.json();
+                    throw new Error(err.message || 'Failed to save');
+                }
+
+                const data = await response.json();
+                fileSha = data.content.sha; // Update SHA for next save
+                
+                showToast('Changes published to GitHub!');
+            } catch (error) {
+                console.error(error);
+                alert(`Failed to save: ${error.message}`);
+            }
+        }
+
+        // --- UI FUNCTIONS ---
+
+        function renderList() {
+            const list = document.getElementById('postList');
+            list.innerHTML = '';
+            
+            if (currentPosts.length === 0) {
+                list.innerHTML = '<li style="padding:1rem; text-align:center;">No articles found.</li>';
+                return;
+            }
+            
+            // Sort by date desc
+            const sorted = [...currentPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            sorted.forEach(post => {
+                const li = document.createElement('li');
+                li.className = 'post-item';
+                li.innerHTML = `
+                    <div class="post-info">
+                        <h3>${post.title}</h3>
+                        <span class="post-date">${post.date}</span>
+                    </div>
+                    <div class="actions">
+                        <button onclick="editItem('${post.id}')" class="btn btn-secondary btn-sm">Edit</button>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+        }
+
+        function newItem() {
+            document.getElementById('blogForm').reset();
+            document.getElementById('id').value = '';
+            document.getElementById('formTitle').textContent = 'New Article';
+            document.getElementById('deleteBtn').style.display = 'none';
+            document.getElementById('date').valueAsDate = new Date();
+        }
+
+        function editItem(id) {
+            const post = currentPosts.find(p => p.id === id);
+            if (!post) return;
+            
+            document.getElementById('id').value = post.id;
+            document.getElementById('title').value = post.title;
+            document.getElementById('date').value = post.date;
+            document.getElementById('image').value = post.image;
+            document.getElementById('summary').value = post.summary;
+            document.getElementById('content').value = post.content;
+            
+            document.getElementById('formTitle').textContent = 'Edit Article';
+            document.getElementById('deleteBtn').style.display = 'block';
+        }
+
+        async function deleteItem() {
+            const id = document.getElementById('id').value;
+            if (!id || !confirm('Are you sure you want to delete this article? This will commit the deletion to GitHub.')) return;
+            
+            const btn = document.getElementById('deleteBtn');
+            btn.textContent = 'Deleting...';
+            btn.disabled = true;
+
+            currentPosts = currentPosts.filter(p => p.id !== id);
+            
+            await saveContentToGitHub(`Delete article: ${id}`);
+            
+            btn.textContent = 'Delete';
+            btn.disabled = false;
+            newItem();
+            renderList();
+        }
+
+        document.getElementById('blogForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const btn = document.getElementById('saveBtn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Publishing...';
+            btn.disabled = true;
+
+            const id = document.getElementById('id').value;
+            const title = document.getElementById('title').value;
+            
+            const post = {
+                id: id || generateSlug(title),
+                title: title,
+                date: document.getElementById('date').value,
+                image: document.getElementById('image').value,
+                summary: document.getElementById('summary').value,
+                content: document.getElementById('content').value
+            };
+            
+            if (id) {
+                const index = currentPosts.findIndex(p => p.id === id);
+                if (index !== -1) currentPosts[index] = post;
+            } else {
+                currentPosts.push(post);
+            }
+            
+            await saveContentToGitHub(`Update article: ${title}`);
+            
+            btn.textContent = originalText;
+            btn.disabled = false;
+            
+            if (!id) newItem(); // Reset form if it was a new item
+            renderList();
+        });
+
+        function generateSlug(text) {
+            return text.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-');
+        }
+
+        function logout() {
+            localStorage.removeItem('githubToken');
+            window.location.href = 'login.html';
+        }
+        
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg || 'Saved successfully!';
+            t.style.display = 'block';
+            setTimeout(() => t.style.display = 'none', 3000);
+        }
+
+        // Init
+        fetchContent();
+        newItem();
+    </script>
+</body>
+</html>

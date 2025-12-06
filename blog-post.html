@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - With Romilly</title>
+    <meta name="description" content="Read our latest article on wellness and reflexology.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/images/favicon.webp">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Blog Post specific styles */
+        .blog-post-header {
+            padding: 140px 0 4rem;
+            background: var(--soft-sage);
+            text-align: center;
+            color: var(--primary-color);
+        }
+        
+        .blog-post-title {
+            font-family: 'Arapey', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+        }
+        
+        .blog-post-meta {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .blog-post-content {
+            padding: 4rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .blog-featured-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .blog-body {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        .blog-body p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-body h2 {
+            font-family: 'Arapey', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-navigation {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 2rem;
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn-text {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-text:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-post-title {
+                font-size: 2.2rem;
+            }
+            .blog-post-content {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/images/logo_green.webp" alt="With Romilly" class="nav-logo-img">
+                    <span class="nav-logo-text">With Romilly</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">My Services</a></li>
+                    <li class="nav-item"><a href="book.html" class="nav-link nav-cta">Book Appointment</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Me</a></li>
+                    <li class="nav-item"><a href="recommends.html" class="nav-link">Romilly Recommends</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Content -->
+    <main id="main-content">
+        <article class="blog-post">
+            <header class="blog-post-header">
+                <div class="container">
+                    <div class="blog-post-meta" id="post-date"></div>
+                    <h1 class="blog-post-title" id="post-title">Loading...</h1>
+                </div>
+            </header>
+            
+            <div class="container">
+                <div class="blog-post-content">
+                    <img src="" alt="" class="blog-featured-image" id="post-image" style="display:none;">
+                    <div class="blog-body" id="post-body">
+                        <!-- Content injected here -->
+                    </div>
+                    
+                    <div class="blog-navigation">
+                        <a href="blog.html" class="btn-text">&larr; Back to Journal</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="footer-logo" href="index.html" aria-label="With Romilly home">
+                        <img src="assets/images/logo_green.webp" alt="With Romilly logo">
+                        <span>With Romilly</span>
+                    </a>
+                    <p class="footer-tagline">Relax. Rebalance. Restore.</p>
+                    <div class="footer-social" aria-label="Social links">
+                        <a class="social-link" href="https://www.instagram.com/with_romilly" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6.01 4.9.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.91s-.01 3.64-.07 4.91c-.15 3.22-1.67 4.77-4.92 4.92-1.26.06-1.64.07-4.9.07s-3.64-.01-4.91-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.2 15.64 2.2 15.26 2.2 12s.01-3.64.07-4.91C2.42 3.83 3.94 2.28 7.2 2.13 8.46 2.07 8.84 2.06 12 2.06zM12 5.9a6.1 6.1 0 1 0 0 12.2 6.1 6.1 0 0 0 0-12.2zm7-1.7a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer">
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html#reflexology">Reflexology</a></li>
+                            <li><a href="services.html#facial-reflexology">Facial Reflexology</a></li>
+                            <li><a href="services.html#preconceptual-pregnancy">Pre-conceptual & Pregnancy</a></li>
+                            <li><a href="services.html#zone-face-lift">Zone Face Lift</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="recommends.html">Recommends</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="book.html">Book</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer-accredit">
+                    <h4>Accredited Member</h4>
+                    <div class="accreditation-badge" aria-label="Association of Reflexologists">
+                        <img src="assets/images/association_logo.webp" alt="Association of Reflexologists" class="accreditation-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 With Romilly. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

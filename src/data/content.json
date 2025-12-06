@@ -128,13 +128,13 @@
   "recommends": [
     { 
       "name": "Hayou Method Bamboo Body Tapper", 
-  "image": "assets/images/bamboobodytapper.webp", 
+      "image": "assets/images/bamboobodytapper.webp", 
       "description": "Gentle body tapping for circulation and lymphatic drainage. The Hayou Method body tapper helps stimulate blood flow and supports the lymphatic system.",
       "url": "https://hayoumethod.com" 
     },
     { 
       "name": "Theta Naturals Co. Connect & Restore Bath Salts", 
-  "image": "assets/images/theta-salts.webp", 
+      "image": "assets/images/theta-salts.webp", 
       "description": "Mineral-rich bath salts for deep relaxation and muscle relief. Infused with natural ingredients to help you unwind and restore.",
       "url": "https://thetanaturalsco.com" 
     },
@@ -162,5 +162,103 @@
       "Facial Reflexology and Zone Face Lift certified",
       "Fully insured and certified"
     ]
-  }
+  },
+  "blog": [
+    {
+      "id": "winter-wellness-reflexology",
+      "title": "Winter Wellness with Reflexology",
+      "date": "2025-11-15",
+      "summary": "As the days grow shorter and colder, our bodies naturally crave more rest. Discover how reflexology can support your immune system during the winter months.",
+      "content": "<p>Winter is a time for turning inward. Nature slows down, and so should we. In Traditional Chinese Medicine, winter is associated with the Water element and the Kidneys, which store our vital essence or 'Jing'.</p><p>Reflexology is a wonderful way to support your body during this season. By stimulating the reflexes associated with the immune system—specifically the lymphatic system and the spleen—we can give our natural defences a boost.</p><p>During a winter session, I focus particularly on the kidney meridian points on the feet to help nourish your energy reserves, leaving you feeling grounded and restored.</p>",
+      "image": "assets/images/stones.webp"
+    },
+    {
+      "id": "facial-reflexology-stress",
+      "title": "The Benefits of Facial Reflexology for Stress",
+      "date": "2025-10-10",
+      "summary": "Facial reflexology is not just a beauty treatment; it's a powerful tool for calming the nervous system and reducing stress.",
+      "content": "<p>Our faces hold a tremendous amount of tension. When we are stressed, we often unknowingly clench our jaws or furrow our brows. Facial Reflexology works directly with the cranial nerves and the central nervous system to release this held tension.</p><p>Because the face is so close to the brain, the effects of facial reflexology are often felt very quickly. Clients frequently report falling into a deep state of relaxation within minutes.</p><p>Beyond the deep sense of calm, this treatment boosts circulation to the face, giving you a natural, healthy glow—a perfect antidote to the stress of daily life.</p>",
+      "image": "assets/images/service_Facial_reflexology.webp"
+    },
+    {
+      "id": "balancing-energy-levels",
+      "title": "Back to Routine: Balancing Energy Levels",
+      "date": "2025-09-05",
+      "summary": "September often brings a return to routine. Here’s how to maintain your energy levels without burning out.",
+      "content": "<p>After the relaxed pace of summer, September can feel like a jolt to the system. The return to school runs, tighter work schedules, and earlier evenings can be draining.</p><p>Reflexology can help balance your energy levels by regulating the endocrine system. We focus on the adrenal reflexes to manage cortisol levels (the stress hormone) and the thyroid reflex to support metabolism and energy production.</p><p> taking an hour for yourself to rebalance can make the transition into autumn much smoother and more manageable.</p>",
+      "image": "assets/images/reflex.JPG"
+    },
+    {
+      "id": "summer-foot-health",
+      "title": "Summer Self-Care: Hydration and Foot Health",
+      "date": "2025-08-12",
+      "summary": "Summer means sandals and bare feet! Tips for keeping your feet healthy and your body hydrated.",
+      "content": "<p>In the heat of summer, our feet can often swell or feel tired. Staying hydrated is crucial, not just for your overall health but for your tissues and joints.</p><p>A simple self-care tip is to roll a frozen water bottle under the arches of your feet at the end of a hot day. This helps cool the blood and reduce inflammation.</p><p>Regular reflexology treatments during the summer also help improve circulation and reduce fluid retention (oedema) in the ankles and legs.</p>",
+      "image": "assets/images/spa.webp"
+    },
+    {
+      "id": "pregnancy-reflexology-support",
+      "title": "Pregnancy and Reflexology: A Gentle Support",
+      "date": "2025-07-20",
+      "summary": "How reflexology can support you and your baby through the trimesters of pregnancy.",
+      "content": "<p>Pregnancy is a time of immense change for the body. Hormones fluctuate, the skeletal structure shifts, and sleep can be elusive. Reflexology offers a safe, non-invasive way to support these changes.</p><p>In the second and third trimesters, reflexology can be particularly helpful for common complaints like backache, digestive issues, and swelling.</p><p>It also provides a precious hour of calm connection with your baby, allowing your body to relax completely and prepare for labour.</p>",
+      "image": "assets/images/service_Preconceptual_reflexology.webp"
+    },
+    {
+      "id": "boost-immunity-naturally",
+      "title": "Natural Ways to Boost Immunity",
+      "date": "2025-06-15",
+      "summary": "As we move into summer, it's still important to keep our immune system strong. Here are some naturopathic tips.",
+      "content": "<p>A strong immune system relies on a healthy gut. Including probiotic-rich foods like sauerkraut, kimchi, or kefir in your diet can support your microbiome.</p><p>Vitamin C is also vital, and summer berries are packed with it! Eating seasonally is one of the best things you can do for your health.</p><p>Reflexology supports immunity by stimulating the lymphatic system, helping the body to eliminate toxins and circulate white blood cells more efficiently.</p>",
+      "image": "assets/images/bamboobodytapper.webp"
+    },
+    {
+      "id": "zone-face-lift-explained",
+      "title": "Understanding the Zone Face Lift",
+      "date": "2025-05-22",
+      "summary": "What makes the Zone Face Lift different from a standard facial? Exploring this 'spiritual facelift'.",
+      "content": "<p>The Zone Face Lift is often called a 'spiritual facelift' because it works on more than just the physical appearance. It combines traditional reflexology points on the face with ancient healing techniques from Native American and Asian traditions.</p><p>Using tools like Gua Sha crystals, we gently sculpt and lift the facial muscles. But we also work to release emotions held in the face—worry lines, jaw tension, and furrowed brows often soften significantly after a treatment.</p><p>The result is a glowing complexion and a deeply peaceful state of mind.</p>",
+      "image": "assets/images/service_Zone_Face_Lift.webp"
+    },
+    {
+      "id": "spring-detox-reflexology",
+      "title": "Spring Cleaning Your Body with Detox Reflexology",
+      "date": "2025-04-08",
+      "summary": "Spring is the season of the Liver. Learn how to support your body's natural detoxification processes.",
+      "content": "<p>In Traditional Chinese Medicine, spring is associated with the Wood element and the Liver. It's the perfect time to focus on detoxification and letting go of what no longer serves us.</p><p>During spring treatments, I focus on the liver and gall bladder reflexes. This can help with sluggish digestion, headaches, and feelings of frustration or irritability.</p><p>Drinking plenty of water with lemon and moving your body gently every day are simple ways to support this seasonal shift.</p>",
+      "image": "assets/images/stones.webp"
+    },
+    {
+      "id": "sleep-better-insomnia",
+      "title": "Sleep Better: Reflexology for Insomnia",
+      "date": "2025-03-14",
+      "summary": "Struggling to sleep? Discover how reflexology can reset your circadian rhythm and promote deep rest.",
+      "content": "<p>Sleep is the foundation of health, yet so many of us struggle to get enough of it. Reflexology is renowned for its ability to improve sleep quality.</p><p>By stimulating the pineal gland reflex, we can help regulate the production of melatonin, the sleep hormone. We also work with the solar plexus point, which is the centre of emotional relaxation in the body.</p><p>Many clients report having the best night's sleep they've had in years after a session.</p>",
+      "image": "assets/images/reflex.JPG"
+    },
+    {
+      "id": "heart-health-self-love",
+      "title": "Self-Love and Heart Health",
+      "date": "2025-02-10",
+      "summary": "February is often associated with hearts. Let's look at caring for our emotional heart through holistic therapies.",
+      "content": "<p>Self-care is the ultimate form of self-love. Taking time out of your busy schedule to lie down, close your eyes, and be cared for is incredibly healing.</p><p>Reflexology can help open the chest area and improve circulation, supporting physical heart health. Emotionally, it helps to release grief or sadness that may be stored in the body.</p><p>This month, treat yourself with the same kindness and attention you give to others.</p>",
+      "image": "assets/images/Amethyst.webp"
+    },
+    {
+      "id": "new-year-naturopathy",
+      "title": "New Year, New Balance: Naturopathy Tips",
+      "date": "2025-01-05",
+      "summary": "Instead of harsh resolutions, try gentle naturopathic adjustments to start your year with balance.",
+      "content": "<p>January often brings a pressure to 'fix' ourselves with extreme diets or fitness regimes. As a Naturopath, I believe in gentle, sustainable changes.</p><p>Start by simply increasing your water intake and adding one more portion of vegetables to your daily meals. Focus on nourishment rather than restriction.</p><p>Reflexology can support any new healthy habits by keeping your body in a state of balance and reducing the stress that often leads us to fall back into old patterns.</p>",
+      "image": "assets/images/theta-salts.webp"
+    },
+    {
+      "id": "managing-holiday-stress",
+      "title": "Managing Holiday Stress Naturally",
+      "date": "2024-12-01",
+      "summary": "The festive season can be overwhelming. Here are some tips to stay grounded and calm.",
+      "content": "<p>The holidays are a time of joy, but also of high expectations and busy schedules. It's easy to run on empty.</p><p>Remember to breathe. Deep belly breathing activates the parasympathetic nervous system—your 'rest and digest' mode. Even just five minutes a day can make a difference.</p><p>Reflexology is a perfect way to take a pause during the festive rush. It allows you to disconnect from the noise and reconnect with yourself, so you can enjoy the season fully.</p>",
+      "image": "assets/images/Smudge.webp"
+    }
+  ]
 }
