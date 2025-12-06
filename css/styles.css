@@ -553,7 +553,7 @@ p {
    =================================== */
 
 .header {
-    background: transparent; /* Start transparent to show hero */
+    background: #B6CFB3; /* Start with #B6CFB3 background immediately */
     position: fixed;
     top: 0;
     left: 0;
@@ -630,7 +630,7 @@ p {
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0.4rem 0 0;
+    padding: 0.2rem 0 0; /* Reduced padding to move menu back up */
 }
 
 .nav-item {
@@ -787,7 +787,8 @@ p {
     background-blend-mode: overlay;
     color: #FFF1EF;
     padding: 8rem 0 6rem;
-    margin-top: 88px;
+    margin-top: 0; /* Removed margin since header is now solid and overlaps less or is handled differently */
+    padding-top: 140px; /* Added padding-top to account for fixed header */
     text-align: center;
     position: relative;
     overflow: hidden;
