@@ -4,11 +4,50 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Function to format date
     const formatDate = (dateString) => {
+        if (!dateString) return '';
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-GB', options);
     };
 
-    // Fetch content data
+    // CHECK FOR PREVIEW MODE
+    const urlParams = new URLSearchParams(window.location.search);
+    const isPreview = urlParams.get('preview') === 'true';
+
+    if (isPreview && postTitle) {
+        const previewData = sessionStorage.getItem('blogPreviewData');
+        if (previewData) {
+            try {
+                const post = JSON.parse(previewData);
+                
+                document.title = `[Preview] ${post.title} - With Romilly`;
+                document.getElementById('post-title').textContent = post.title;
+                document.getElementById('post-date').textContent = formatDate(post.date) + ' (Preview)';
+                
+                const imgEl = document.getElementById('post-image');
+                if (post.image) {
+                    imgEl.src = post.image;
+                    imgEl.alt = post.title;
+                    imgEl.style.display = 'block';
+                } else {
+                    imgEl.style.display = 'none';
+                }
+                
+                document.getElementById('post-body').innerHTML = post.content;
+                
+                // Add a banner
+                const banner = document.createElement('div');
+                banner.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#ffeb3b;color:#000;text-align:center;padding:10px;z-index:9999;font-weight:bold;';
+                banner.textContent = 'PREVIEW MODE - This content is not saved.';
+                document.body.prepend(banner);
+                
+                return; // Stop further execution
+            } catch (e) {
+                console.error('Invalid preview data', e);
+            }
+        }
+    }
+
+    // Fetch content data (Normal Mode)
     fetch('src/data/content.json')
         .then(response => response.json())
         .then(data => {
@@ -48,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Logic for Single Blog Post Page
             if (postTitle && data.blog) {
-                const urlParams = new URLSearchParams(window.location.search);
                 const postId = urlParams.get('id');
                 
                 if (postId) {
@@ -85,4 +123,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 });
-
