@@ -55,5 +55,43 @@ function injectStickyBookCta() {
     cta.className = 'sticky-book-cta';
     cta.setAttribute('aria-label', 'Book an appointment');
     cta.textContent = 'Book';
+
+    // Inline critical styles so the CTA never renders as a stray unstyled
+    // footer link when styles.css is cached stale.
+    Object.assign(cta.style, {
+        position: 'fixed',
+        right: '1.25rem',
+        zIndex: '1000',
+        background: '#3B5F56',
+        color: '#fff',
+        fontFamily: "'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        fontSize: '1rem',
+        fontWeight: '600',
+        textDecoration: 'none',
+        padding: '0.875rem 1.5rem',
+        borderRadius: '999px',
+        boxShadow: '0 8px 32px rgba(59, 95, 86, 0.16)',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minWidth: '4.5rem',
+        minHeight: '3rem',
+        display: 'none',
+    });
+
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+    const updateStickyCta = () => {
+        const isMobile = mobileQuery.matches;
+        const hasCookieBanner = !!document.querySelector('.cookie-consent');
+        cta.style.display = isMobile ? 'flex' : 'none';
+        cta.style.bottom = isMobile && hasCookieBanner ? '6.5rem' : '1.25rem';
+    };
+
+    mobileQuery.addEventListener('change', updateStickyCta);
+    updateStickyCta();
+
     document.body.appendChild(cta);
+
+    // Cookie banner is injected after DOMContentLoaded — recheck once it appears.
+    setTimeout(updateStickyCta, 100);
 }
