@@ -109,6 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.title = `${post.title} - With Romilly`;
                         document.getElementById('post-title').textContent = post.title;
                         document.getElementById('post-date').textContent = formatDate(post.date);
+
+                        let canonical = document.querySelector('link[rel="canonical"]');
+                        if (!canonical) {
+                            canonical = document.createElement('link');
+                            canonical.rel = 'canonical';
+                            document.head.appendChild(canonical);
+                        }
+                        canonical.href = `https://withromilly.com/blog-post.html?id=${post.id}`;
                         
                         const imgEl = document.getElementById('post-image');
                         if (post.image) {

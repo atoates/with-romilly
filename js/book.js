@@ -36,7 +36,7 @@ function displayServicesQuickRef(services) {
     `).join('');
 }
 
-// Fallback services if JSON fails to load
+// Fallback services if JSON fails to load — prices match content.json
 function displayFallbackServices() {
     const servicesQuick = document.getElementById('services-quick');
     if (!servicesQuick) return;
@@ -47,7 +47,7 @@ function displayFallbackServices() {
                 <h4>Reflexology</h4>
                 <div class="service-quick-meta">
                     <span class="duration">50 min</span>
-                    <span class="price">£75</span>
+                    <span class="price">£85</span>
                 </div>
             </div>
             <p class="service-quick-summary">Deeply relaxing and therapeutic for all the body's systems.</p>
@@ -57,7 +57,7 @@ function displayFallbackServices() {
                 <h4>Facial Reflexology</h4>
                 <div class="service-quick-meta">
                     <span class="duration">45 min</span>
-                    <span class="price">£80</span>
+                    <span class="price">£90</span>
                 </div>
             </div>
             <p class="service-quick-summary">Powerfully calming for the nervous system and rejuvenating for skin.</p>

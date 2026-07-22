@@ -2,15 +2,25 @@
   "brand": {
     "name": "With Romilly",
     "tagline": "Relax. Rebalance. Restore.",
-    "subtitle": "Mobile Reflexologist in West London",
+    "subtitle": "Reflexologist in Queen's Park — mobile home visits across West & NW London",
     "email": "romilly@withromilly.com",
-    "phone": "+44 7974 182 612",
+    "phone": "+447356626138",
     "phoneDisplay": "07356 626 138",
     "whatsapp": "https://wa.me/447356626138",
-    "location": "Mobile Reflexology in West and NW London",
-    "locationShort": "West and NW London",
-    "social": { 
-      "instagram": "https://instagram.com/with_romilly" 
+    "siteUrl": "https://withromilly.com",
+    "address": {
+      "street": "43 Croxley Road",
+      "locality": "Queen's Park",
+      "postalCode": "W9 3HJ",
+      "country": "GB"
+    },
+    "areaServed": ["Queen's Park", "Maida Vale", "Kilburn", "St John's Wood", "West Hampstead", "West London", "NW London"],
+    "location": "Based in Queen's Park, W9 — mobile reflexology across West and NW London",
+    "locationShort": "Queen's Park & West/NW London",
+    "priceRange": "£85–£105",
+    "setmoreUrl": "https://with-romilly.setmore.com",
+    "social": {
+      "instagram": "https://instagram.com/with_romilly"
     }
   },
   "services": [
@@ -19,7 +29,7 @@
       "title": "Reflexology",
       "duration": "50 min",
       "price": 85,
-      "heroImage": "assets/images/reflex.JPG",
+      "heroImage": "assets/images/reflex.webp",
       "summary": "Deeply relaxing and therapeutic; encourages the body to return to a state of homeostasis and bring you back to optimum health.",
       "description": "Reflexology is a well-established, non-invasive complementary therapy which is recognised by the NHS and many hospices. It is a deeply relaxing and stress relieving therapy which can help a wide-range of mental and physical conditions as well as aiding detoxification. It is well known to calm the nervous system and boost the immune system. The body's organs, glands and systems are mapped on our feet, hands and face, and by stimulating these reflex points with reflexology it un-blocks any stagnation, restores balance and promotes the body's own healing processes. Reflexology encourages the body to return to a state of homeostasis and brings it back to optimum health. Each treatment promotes the release of endorphins in the body (feel good hormones), improves circulation and boosts mood and wellbeing.",
       "bullets": [
@@ -185,8 +195,8 @@
       "title": "Back to Routine: Balancing Energy Levels",
       "date": "2025-09-05",
       "summary": "September often brings a return to routine. Here’s how to maintain your energy levels without burning out.",
-      "content": "<p>After the relaxed pace of summer, September can feel like a jolt to the system. The return to school runs, tighter work schedules, and earlier evenings can be draining.</p><p>Reflexology can help balance your energy levels by regulating the endocrine system. We focus on the adrenal reflexes to manage cortisol levels (the stress hormone) and the thyroid reflex to support metabolism and energy production.</p><p> taking an hour for yourself to rebalance can make the transition into autumn much smoother and more manageable.</p>",
-      "image": "assets/images/reflex.JPG"
+      "content": "<p>After the relaxed pace of summer, September can feel like a jolt to the system. The return to school runs, tighter work schedules, and earlier evenings can be draining.</p><p>Reflexology can help balance your energy levels by regulating the endocrine system. We focus on the adrenal reflexes to manage cortisol levels (the stress hormone) and the thyroid reflex to support metabolism and energy production.</p><p>Taking an hour for yourself to rebalance can make the transition into autumn much smoother and more manageable.</p>",
+      "image": "assets/images/reflex.webp"
     },
     {
       "id": "summer-foot-health",
@@ -234,7 +244,7 @@
       "date": "2025-03-14",
       "summary": "Struggling to sleep? Discover how reflexology can reset your circadian rhythm and promote deep rest.",
       "content": "<p>Sleep is the foundation of health, yet so many of us struggle to get enough of it. Reflexology is renowned for its ability to improve sleep quality.</p><p>By stimulating the pineal gland reflex, we can help regulate the production of melatonin, the sleep hormone. We also work with the solar plexus point, which is the centre of emotional relaxation in the body.</p><p>Many clients report having the best night's sleep they've had in years after a session.</p>",
-      "image": "assets/images/reflex.JPG"
+      "image": "assets/images/reflex.webp"
     },
     {
       "id": "heart-health-self-love",

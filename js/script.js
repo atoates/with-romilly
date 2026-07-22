@@ -132,8 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set dynamic copyright year
     updateCopyrightYear();
-
-    console.log('With Romilly website initialized successfully!');
 });
 
 // Load and render content data
@@ -277,7 +275,7 @@ function renderFallbackContent() {
                     <p class="service-summary">Deeply relaxing and restorative treatment.</p>
                     <div class="service-meta">
                         <span class="service-duration">50 min</span>
-                        <span class="service-price">75</span>
+                        <span class="service-price">£85</span>
                     </div>
                     <a href="services.html#reflexology" class="btn btn-primary">Learn More</a>
                 </div>

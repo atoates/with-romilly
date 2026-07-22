@@ -222,6 +222,45 @@
     font-size: 1.125rem;
 }
 
+.form-errors,
+.form-success {
+    margin-bottom: 1.5rem;
+}
+
+.error-message,
+.success-message {
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+}
+
+.error-message {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.error-message h4,
+.success-message h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.error-message ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.success-message {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.success-message p {
+    margin: 0;
+    color: inherit;
+}
+
 /* Practice Info Section */
 .practice-info {
     padding: 5rem 0;

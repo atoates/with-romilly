@@ -164,7 +164,7 @@ function displayFallbackServices() {
                 <h3 class="service-title">Reflexology</h3>
                 <div class="service-meta">
                     <span class="service-duration">50 min</span>
-                    <span class="service-price">£75</span>
+                    <span class="service-price">£85</span>
                 </div>
                 <p class="service-summary">Deeply relaxing and therapeutic for all the body's systems, helping you return to a state of balance.</p>
                 <div class="service-actions">
@@ -177,7 +177,7 @@ function displayFallbackServices() {
                 <h3 class="service-title">Facial Reflexology</h3>
                 <div class="service-meta">
                     <span class="service-duration">45 min</span>
-                    <span class="service-price">£80</span>
+                    <span class="service-price">£90</span>
                 </div>
                 <p class="service-summary">Powerfully calming for the nervous system; boosts circulation, reduces tension and rejuvenates skin.</p>
                 <div class="service-actions">

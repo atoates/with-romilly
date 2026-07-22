@@ -2491,3 +2491,56 @@ select:focus {
     .book-service-card { min-height: 220px; }
     .booking-widget { padding: 0.7rem 0.3rem; }
 }
+
+/* Visually hidden (accessible honeypot etc.) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Sticky mobile Book CTA */
+.sticky-book-cta {
+    display: none;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 1000;
+    background: var(--primary-color);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: 999px;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.sticky-book-cta:hover,
+.sticky-book-cta:focus {
+    background: var(--primary-light);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .sticky-book-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 4.5rem;
+        min-height: 3rem;
+    }
+
+    body:has(.cookie-consent) .sticky-book-cta {
+        bottom: 6.5rem;
+    }
+}
